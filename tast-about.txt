@@ -26,10 +26,21 @@
 	详情--jyy
 	搜索框--未定
 	
-二、命名规则
+二、代码规范（参考）
+	html类名：	[页面名]-[功能]-[位置]-[标签]
+		|---	首页顶部搜索框：home-search-top-input
+	图片资源：	[分类]-[使用位置]-[名称]
+		|---	用在app底部导航栏的分类索引：app-home-classify.png
+	变量命名：	小驼峰，变量中的长单词可缩写
+		|---	动态组件使用的组件名变量：compName
+	注释：		命名'抽象'的变量；连续多个较大块元素的样式；函数的中心逻辑、关键变量...
+	
+	
 
 三、文件、资源目录
 	路由器：	/src/router
 	组件：		/src/components
 	路由页面：	/src/views
 	状态管理：	/src/store
+	商品图片：	/src/assets/imgs
+	app图标：	/public/imgs
