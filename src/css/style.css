@@ -1,0 +1,15 @@
+/* 不同设备自适应样式 */
+
+/* 最大宽度不大于360px的设备：galaxy5 */
+@media only screen and (max-width: 360px) {
+    html{
+        font-size: 20px!important;
+    }
+}
+
+/* 最大宽度介于414-361的设备：iPhone(678)P */
+@media only screen and (max-width: 414px) and (min-width: 361px) {
+    html{
+        font-size: 23px!important;
+    }
+}
