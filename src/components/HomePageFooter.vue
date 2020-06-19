@@ -24,16 +24,17 @@ export default {};
 
 <style>
 .footer {
-  height: 60px;
+  max-width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 .navBtn {
-  font-size: 1rem;
+  width: 20%;
   text-decoration: none;
+  display: flex;
 }
 .navBtn img {
-  width: 72px;
+  width: 100%;
 }
 </style>

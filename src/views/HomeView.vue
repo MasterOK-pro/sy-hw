@@ -34,7 +34,4 @@ export default {
   display: flex;
   flex-direction: column;
 }
-.homeview p {
-  position: absolute;
-}
 </style>

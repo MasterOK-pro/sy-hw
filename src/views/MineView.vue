@@ -1,6 +1,7 @@
 <template>
   <div class="mine">
-    <div class="test">mine</div>
+    
+    <mine-body></mine-body>
     <!-- app首页底部导航按钮 -->
     <home-page-footer></home-page-footer>
   </div>
@@ -8,10 +9,13 @@
 
 <script>
 import HomePageFooter from "../components/HomePageFooter.vue";
+import MineBody from '../components/MineBody.vue'
 
 export default {
   components: {
-    HomePageFooter: HomePageFooter
+    HomePageFooter: HomePageFooter,
+    /* es6简写，组件选项对象和自定义标签名同名 */
+    MineBody
   }
 };
 </script>
@@ -19,13 +23,9 @@ export default {
 <style scoped>
 .mine {
   height: 100%;
-  font-size: 1rem;
-  color: green;
   display: flex;
   flex-direction: column;
-}
-.test {
-  margin-top: 50px;
-  flex-grow: 1;
+  position: relative;
+  background-color: #f8f8f8;
 }
 </style>>
