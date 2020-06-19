@@ -6,6 +6,7 @@ import HomeView from '../views/HomeView.vue'
 import Classify from '../views/ClassifyView.vue'
 import Cart from '../views/CartView.vue'
 import Mine from '../views/MineView.vue'
+import ProductDetail from '../views/ProductDetail.vue'
 
 Vue.use(VueRouter)
 
@@ -26,6 +27,10 @@ Vue.use(VueRouter)
     {
       path: '/mine',
       component: Mine
+    },
+    {
+      path:'/product',
+      component:ProductDetail
     }
 ]
 
