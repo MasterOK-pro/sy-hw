@@ -1,6 +1,6 @@
 <template>
   <div class="classify">
-    <div class="test">classify</div>
+    <div class="test" @click="toProduct">classify</div>
     <!-- app首页底部导航按钮 -->
     <home-page-footer></home-page-footer>
   </div>
@@ -12,6 +12,11 @@ import HomePageFooter from "../components/HomePageFooter.vue";
 export default {
   components: {
     HomePageFooter: HomePageFooter
+  },
+  methods:{
+    toProduct(){
+      this.$router.push("product");
+    }
   }
 };
 </script>
