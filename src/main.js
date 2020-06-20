@@ -4,15 +4,16 @@ import router from './router'
 import store from './store'
 import './css/style.css'
 
-import { Icon } from 'vant'
+import { Icon,Swipe, SwipeItem } from 'vant'
 import 'vant/lib/index.css'
 import 'vant/lib/index.css'
 Vue.use(Icon)
-
-import { Swipe, SwipeItem } from 'vant'
-
 Vue.use(Swipe);
 Vue.use(SwipeItem);
+
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import 'swiper/css/swiper.css'
+Vue.use(VueAwesomeSwiper)
 
 Vue.config.productionTip = false
 

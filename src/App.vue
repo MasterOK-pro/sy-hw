@@ -8,8 +8,8 @@
 <script>
 export default {
   created () {
-    // this.$router.push ('/');
-  }
+    this.$store.state.appRefuse = false;
+}
 };
 </script>
 <style>
