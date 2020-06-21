@@ -8,7 +8,6 @@ import {Swipe, SwipeItem, Icon} from 'vant';
 Vue.use(Vant);
 import './css/style.css'
 
-import { Icon,Swipe, SwipeItem } from 'vant'
 import 'vant/lib/index.css'
 Vue.use(Icon)
 Vue.use(Swipe);
