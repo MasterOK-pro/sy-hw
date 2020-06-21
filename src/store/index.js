@@ -5,7 +5,11 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    appRefuse: Boolean
   },
   mutations: {
+    appRefused (state) {
+      state.appRefuse = true;
+    }
   }
 })
