@@ -1,5 +1,6 @@
 <template>
   <div class="product-container">
+    <!-- 头部 -->
     <div class="header">
       <div class="back" @click="back"></div>
       <div class="nav">
@@ -10,198 +11,353 @@
       </div>
       <div class="menu"></div>
     </div>
-    <!-- 轮播图 -->
-    <van-swipe @change="onChange">
-      <van-swipe-item>
-        <div class="img-div">
-          <img src="../assets/images/swiper-1.jpg" alt />
+    <!-- 中间部分 -->
+    <div class="middle">
+      <!-- 轮播图 -->
+      <van-swipe @change="onChange">
+        <van-swipe-item>
+          <div class="img-div">
+            <img src="../assets/images/swiper-1.jpg" alt />
+          </div>
+        </van-swipe-item>
+        <van-swipe-item>
+          <div class="img-div">
+            <img src="../assets/images/swiper-2.png" alt />
+          </div>
+        </van-swipe-item>
+        <van-swipe-item>
+          <div class="img-div">
+            <img src="../assets/images/swiper-3.png" alt />
+          </div>
+        </van-swipe-item>
+        <van-swipe-item>
+          <div class="img-div">
+            <img src="../assets/images/swiper-4.png" alt />
+          </div>
+        </van-swipe-item>
+        <van-swipe-item>
+          <div class="img-div">
+            <img src="../assets/images/swiper-5.png" alt />
+          </div>
+        </van-swipe-item>
+        <van-swipe-item>
+          <div class="img-div">
+            <img src="../assets/images/swiper-6.png" alt />
+          </div>
+        </van-swipe-item>
+        <van-swipe-item>
+          <div class="img-div">
+            <img src="../assets/images/swiper-7.png" alt />
+          </div>
+        </van-swipe-item>
+        <van-swipe-item>
+          <div class="img-div">
+            <img src="../assets/images/swiper-8.png" alt />
+          </div>
+        </van-swipe-item>
+        <template #indicator>
+          <div class="custom-indicator">{{ current + 1 }}/8</div>
+        </template>
+      </van-swipe>
+      <!-- 价格及描述 -->
+      <div class="pro-meta-area">
+        <div class="pro-meta">
+          <p class="p-price">
+            <span class="pro-price">
+              <small>￥</small>
+              <span>5988</span>
+            </span>
+            <span class="detail-span">HUAWEI P40 Pro 5G 全网通 8GB+128GB（零度白）</span>
+          </p>
         </div>
-      </van-swipe-item>
-      <van-swipe-item>
-        <div class="img-div">
-          <img src="../assets/images/swiper-2.png" alt />
+
+        <!-- 促销信息 -->
+        <div class="pro-box">
+          <p class="box-label">促销</p>
+          <div class="pro-box-content">
+            <div class="pro-content">
+              <span class="pro-btn">一站式换新</span>
+              <p>APP专享，最高补贴1000元</p>
+            </div>
+            <div class="pro-content">
+              <span class="pro-btn">整点赠礼</span>
+              <p>0点/10点/16点/20点下单前100名赠mini 蓝牙音箱</p>
+            </div>
+            <div class="pro-content">
+              <span class="pro-btn b-1">商品赠券</span>
+              <span class="pro-btn b-2">商品赠券</span>
+              <span class="pro-btn b-3">分期免息</span>
+              <span class="pro-btn b-4">赠送积分</span>
+            </div>
+          </div>
+
+          <div class="pro-menu"></div>
         </div>
-      </van-swipe-item>
-      <van-swipe-item>
-        <div class="img-div">
-          <img src="../assets/images/swiper-3.png" alt />
-        </div>
-      </van-swipe-item>
-      <van-swipe-item>
-        <div class="img-div">
-          <img src="../assets/images/swiper-4.png" alt />
-        </div>
-      </van-swipe-item>
-      <van-swipe-item>
-        <div class="img-div">
-          <img src="../assets/images/swiper-5.png" alt />
-        </div>
-      </van-swipe-item>
-      <van-swipe-item>
-        <div class="img-div">
-          <img src="../assets/images/swiper-6.png" alt />
-        </div>
-      </van-swipe-item>
-      <van-swipe-item>
-        <div class="img-div">
-          <img src="../assets/images/swiper-7.png" alt />
-        </div>
-      </van-swipe-item>
-      <van-swipe-item>
-        <div class="img-div">
-          <img src="../assets/images/swiper-8.png" alt />
-        </div>
-      </van-swipe-item>
-      <template #indicator>
-        <div class="custom-indicator">{{ current + 1 }}/8</div>
-      </template>
-    </van-swipe>
-    <!-- 价格及描述 -->
-    <div class="pro-meta-area">
-      <div class="pro-meta">
-        <p class="p-price">
-          <span class="pro-price">
-            <small>￥</small>
-            <span>5988</span>
-          </span>
-          <span class="detail-span">HUAWEI P40 Pro 5G 全网通 8GB+128GB（零度白）</span>
-        </p>
       </div>
 
-      <!-- 促销信息 -->
-      <div class="pro-box">
-        <p class="box-label">促销</p>
-        <div class="pro-box-content">
-          <div class="pro-content">
-            <span class="pro-btn">一站式换新</span>
-            <p>APP专享，最高补贴1000元</p>
+      <div class="pro-meta-area2">
+        <div class="pro-meta-area2-one">
+          <!-- 颜色 -->
+          <div class="one-color">
+            <p class="box-label">颜色</p>
+            <div class="color-choice">
+              <div
+                class="color-detail"
+                @click="colorChoice(1)"
+                :class="[colorIndex== 1 ? 'active':'']"
+              >亮黑色</div>
+              <div class="color-detail" @click="colorChoice(2)" :class="{active:colorIndex==2}">深海蓝</div>
+              <div class="color-detail" @click="colorChoice(3)" :class="{active:colorIndex==3}">晨曦金</div>
+              <div class="color-detail" @click="colorChoice(4)" :class="{active:colorIndex==4}">零度白</div>
+              <div class="color-detail" @click="colorChoice(5)" :class="{active:colorIndex==5}">冰霜银</div>
+            </div>
           </div>
-          <div class="pro-content">
-            <span class="pro-btn">整点赠礼</span>
-            <p>0点/10点/16点/20点下单前100名赠mini 蓝牙音箱</p>
+          <!-- 版本 -->
+          <div class="one-color">
+            <p class="box-label">版本</p>
+            <div class="version-choice">
+              <div
+                class="version-detail"
+                @click="colorChoice(6)"
+                :class="{active:colorIndex==6}"
+              >5G全网通 8GB+256GB</div>
+              <div
+                class="version-detail"
+                @click="colorChoice(7)"
+                :class="{active:colorIndex==7}"
+              >5G全网通 8GB+128GB</div>
+              <div
+                class="version-detail"
+                @click="colorChoice(8)"
+                :class="{active:colorIndex==8}"
+              >5G全网通 6GB+128GB</div>
+            </div>
           </div>
-          <div class="pro-content">
-            <span class="pro-btn b-1">商品赠券</span>
-            <span class="pro-btn b-2">商品赠券</span>
-            <span class="pro-btn b-3">分期免息</span>
-            <span class="pro-btn b-4">赠送积分</span>
+          <!-- 类型 -->
+          <div class="one-color">
+            <p class="box-label type-label">类型</p>
+            <div class="version-detail type-detail">官方标配</div>
+          </div>
+
+          <!-- 数量 -->
+          <div class="one-color">
+            <p class="box-label type-label">数量</p>
+            <div class="count-div">
+              <div class="minus" @click="proMinus"></div>
+              <input type="text" :value="count" readonly />
+              <div class="plus" @click="proAdd"></div>
+            </div>
+          </div>
+
+          <!-- 保障 -->
+          <div class="promt-box">
+            <p class="box-label type-label">保障</p>
+            <div class="pro-promt">
+              <span>选购</span>
+              <span class="pro-promt-item">无忧服务</span>
+              <span class="pro-promt-item">碎屏宝</span>
+              <span class="pro-promt-item">延长宝</span>
+            </div>
+            <div class="pro-menu"></div>
+          </div>
+
+          <!-- 免息 -->
+          <div class="promt-box">
+            <p class="box-label type-label">免息</p>
+            <div class="pro-promt">花呗/掌上生活分期直购，最高享12期免息</div>
+            <div class="pro-menu"></div>
           </div>
         </div>
+      </div>
 
+      <!-- 搭配 -->
+      <div class="match-box">
+        <p class="box-label type-label">搭配</p>
+        <div class="match-content">
+          <div class="match-img">
+            <img class src="../assets/images/match-1.png" alt />
+          </div>
+          <em class="iconadd"></em>
+          <div class="match-img">
+            <img class src="../assets/images/match-2.png" alt />
+            <span class="sale-price">省150</span>
+          </div>
+          <em class="iconadd"></em>
+          <div class="match-img">
+            <img class src="../assets/images/match-3.png" alt />
+            <span class="sale-price">省100</span>
+          </div>
+          <em class="iconadd"></em>
+          <div class="match-img">
+            <img class src="../assets/images/match-4.png" alt />
+            <span class="sale-price">省30</span>
+          </div>
+          <div class="qianjin"></div>
+        </div>
+      </div>
+
+      <!-- 送至 -->
+
+      <div class="pro-meta-address">
+        <p class="box-label">送至</p>
+        <div class="related-box">
+          <div class="related-area">
+            <span class="addressSelect">江苏 苏州市 沧浪区</span>
+          </div>
+          <div class="arrived-tips">
+            <span class="xianhuo">现货</span>
+            <span>，今天21:59前付款，预计6月21日（周日）送达</span>
+          </div>
+        </div>
         <div class="pro-menu"></div>
       </div>
-    </div>
 
-    <div class="pro-meta-area2">
-      <div class="pro-meta-area2-one">
-        <!-- 颜色 -->
-        <div class="one-color">
-          <p class="box-label">颜色</p>
-          <div class="color-choice">
-            <div class="color-detail">亮黑色</div>
-            <div class="color-detail">深海蓝</div>
-            <div class="color-detail">晨曦金</div>
-            <div class="color-detail">零度白</div>
-            <div class="color-detail">冰霜银</div>
-          </div>
+      <!-- 服务 -->
+      <div class="service-box">
+        <p class="box-label">服务</p>
+        <div class="p-service">
+          <span class="baoyou">
+            <i class="gou"></i>
+            <span class="by">已满48元包邮</span>
+          </span>
+          <span class="baoyou">
+            <i class="gou"></i>
+            <span class="by">由华为终端提供商品、发货开票及售后服务</span>
+          </span>
         </div>
-        <!-- 版本 -->
-        <div class="one-color">
-          <p class="box-label">版本</p>
-          <div class="version-choice">
-            <div class="version-detail">5G全网通 8GB+256GB</div>
-            <div class="version-detail">5G全网通 8GB+128GB</div>
-            <div class="version-detail">5G全网通 6GB+128GB</div>
-          </div>
-        </div>
-        <!-- 类型 -->
-        <div class="one-color">
-          <p class="box-label type-label">类型</p>
-          <div class="version-detail type-detail">官方标配</div>
-        </div>
+        <div class="pro-menu"></div>
+      </div>
 
-        <!-- 数量 -->
-        <div class="one-color">
-          <p class="box-label type-label">数量</p>
-          <div class="count-div">
-            <div class="minus"></div>
-            <input type="text" value="1" readonly />
-            <div class="plus"></div>
-          </div>
-        </div>
-
-        <!-- 保障 -->
-        <div class="promt-box">
-          <p class="box-label type-label">保障</p>
-          <div class="pro-promt">
-            <span>选购</span>
-            <span class="pro-promt-item">无忧服务</span>
-            <span class="pro-promt-item">碎屏宝</span>
-            <span class="pro-promt-item">延长宝</span>
-          </div>
-          <div class="pro-menu"></div>
-        </div>
-
-        <!-- 免息 -->
-        <div class="promt-box">
-          <p class="box-label type-label">免息</p>
-          <div class="pro-promt">花呗/掌上生活分期直购，最高享12期免息</div>
-          <div class="pro-menu"></div>
+      <!-- 推荐 -->
+      <div class="recommend-box">
+        <p class="box-label">推荐</p>
+        <div class="recommend-item-box">
+          <span class="recommend-item">HUAWEI P40 Pro</span>
+          <span class="recommend-item">HUAWEI VR Glass</span>
         </div>
       </div>
-    </div>
 
-    <!-- 搭配 -->
-    <div class="match-box">
-      <p class="box-label type-label">搭配</p>
-      <div class="match-content">
-        <div class="match-img">
-          <img class src="../assets/images/match-1.png" alt />
-        </div>
-        <em class="iconadd"></em>
-        <div class="match-img">
-          <img class src="../assets/images/match-2.png" alt />
-          <span class="sale-price">省150</span>
-        </div>
-        <em class="iconadd"></em>
-        <div class="match-img">
-          <img class src="../assets/images/match-3.png" alt />
-          <span class="sale-price">省100</span>
-        </div>
-        <em class="iconadd"></em>
-        <div class="match-img">
-          <img class src="../assets/images/match-4.png" alt />
-          <span class="sale-price">省30</span>
+      <!-- 替换 -->
+      <div class="replace-box">
+        <p class="box-label"></p>
+        <div class="replace-middle">
+          <span class="pro-btn">以旧换新</span>
+          <span class="reuse">高价回收送多重购新补贴</span>
         </div>
         <div class="qianjin"></div>
       </div>
-    </div>
-
-    <!-- 送至 -->
-
-    <div class="pro-meta-address">
-      <p class="box-label">送至</p>
-      <div class="related-box">
-        <div class="related-area">
-          <span class="addressSelect">江苏 苏州市 沧浪区</span>
+      <!-- 用户评价 -->
+      <div class="user-review">
+        <div class="review-header">
+          <span class="total-review">用户评价 (11508)</span>
+          <div class="good-review">
+            <span class="good-detail">
+              <span class="goodrate">99%</span>
+              <span>好评</span>
+            </span>
+            <div class="qianjin"></div>
+          </div>
         </div>
-        <div class="arrived-tips">
-          <span class="xianhuo">现货</span>
-          <span>，今天21:59前付款，预计6月21日（周日）送达</span>
+
+        <div class="review-area">
+          <my-swiper></my-swiper>
+          <div class="prd-consult-area">
+            <span class="prd-consult-btn">查看全部评价</span>
+            <span class="prd-consult-btn">购买咨询(58)</span>
+          </div>
         </div>
       </div>
-      <div class="pro-menu"></div>
+
+      <div class="loading-action">
+        <div class="loading-sep"></div>
+      </div>
+      <!-- 规格参数 -->
+      <div class="new-specification">
+        <div class="new-spe-title">规格参数</div>
+        <div class="new-spe-content">
+          <div class="spe-detail">
+            <label>传播名</label>
+            <p>HUAWEI P40</p>
+          </div>
+          <div class="spe-detail">
+            <label>后置摄像头</label>
+            <p>
+              超感知徕卡三摄：5000万像素超感知摄
+              像头（广角， f/1.9光圈 ）+ 1600万像素超广
+              角摄像头（f/2.2光圈）+ 800万像素长焦摄
+              像头（f/2.4光圈，支持OIS光学
+              防抖"（备注:"不同模式的照片和视频的像素可能有差异，请以实际为准。"
+            </p>
+          </div>
+        </div>
+        <div class="spe-btn">
+          <div class="prd-consult-btn">查看全部参数</div>
+        </div>
+      </div>
+
+      <p>
+        <img src="../assets/images/pro-detail-1.jpg" alt class="pro-detail-img" />
+      </p>
+      <p>
+        <img src="../assets/images/pro-detail-2.jpg" alt class="pro-detail-img" />
+      </p>
+      <p>
+        <img src="../assets/images/pro-detail-3.jpg" alt class="pro-detail-img" />
+      </p>
+      <p>
+        <img src="../assets/images/pro-detail-4.jpg" alt class="pro-detail-img" />
+      </p>
+      <p>
+        <img src="../assets/images/pro-detail-5.jpg" alt class="pro-detail-img" />
+      </p>
+      <p>
+        <img src="../assets/images/pro-detail-6.jpg" alt class="pro-detail-img" />
+      </p>
+      <p>
+        <img src="../assets/images/pro-detail-7.jpg" alt class="pro-detail-img" />
+      </p>
+      <p>
+        <img src="../assets/images/pro-detail-8.jpg" alt class="pro-detail-img" />
+      </p>
     </div>
 
+    <!-- 底部 -->
+    <div class="pro-footer">
+      <div class="pro-property-left">
+        <div class="pro-property-left-item">
+          <div class="home-img"></div>
+          <p>首页</p>
+        </div>
+        <div class="pro-property-left-item">
+          <div class="service-img"></div>
+          <p>客服</p>
+        </div>
+        <div class="pro-property-left-item">
+          <div class="cart-img"></div>
+          <p>购物车</p>
+        </div>
+      </div>
 
+      <div class="pro-property-right">
+        <div class="button-round">加入购物车</div>
+        <div class="button-round-primary">立即购买</div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import ProductReviewSwiper from "./ProductReviewSwiper.vue";
+
 export default {
+  components: {
+    "my-swiper": ProductReviewSwiper
+  },
   data() {
     return {
-      current: 0
+      current: 0,
+      count: 1,
+      colorIndex: 4
     };
   },
   methods: {
@@ -210,14 +366,26 @@ export default {
     },
     onChange(index) {
       this.current = index;
+    },
+    proAdd() {
+      this.count++;
+    },
+    proMinus() {
+      if (this.count > 1) {
+        this.count--;
+      }
+    },
+    colorChoice(index) {
+      this.colorIndex = index;
+      // console.log(this.colorIndex);
     }
   }
 };
 </script>
 
-<style>
+<style scoped>
 /* 最大宽度介于414-361的设备：iphone(678)p */
-@media only screen and (max-width: 414px) and (min-width: 361px) {
+/* @media only screen and (max-width: 414px) and (min-width: 361px) {
   html {
     font-size: 23px !important;
   }
@@ -232,16 +400,22 @@ body,
 #app {
   width: 100%;
   height: 100%;
+} */
+
+a {
+  text-decoration: none;
 }
+
 .product-container {
   height: 100%;
   background-color: rgb(249, 249, 249);
-  overflow: auto;
-  /* background-color: blueviolet; */
+  display: flex;
+  flex-direction: column;
 }
 
 /* 头部导航样式 */
 .header {
+  width: 100%;
   height: 2rem;
   padding: 0 0.8rem;
   background-color: #fff;
@@ -249,6 +423,7 @@ body,
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  flex-shrink: 0;
 }
 
 .header div {
@@ -279,6 +454,12 @@ body,
   height: 1.2rem;
   background-image: url("../assets/images/elip2.png");
   background-size: cover;
+  margin-right: -0.3rem;
+}
+
+.middle {
+  flex-grow: 1;
+  overflow: auto;
 }
 
 /* 轮播图样式 */
@@ -549,6 +730,7 @@ img {
 }
 /* 搭配 */
 .match-box {
+  max-width: 100%;
   padding: 0 0.8rem;
   /* border: 1px solid red; */
   height: 3.5rem;
@@ -618,7 +800,7 @@ img {
   align-items: center;
 }
 
-.related-box{
+.related-box {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -645,14 +827,363 @@ img {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  max-width: 12.55rem;
 }
 
 .xianhuo {
   color: #d0021b;
 }
 
-.pro-meta-address .pro-menu{
+.pro-meta-address .pro-menu {
   margin-right: -0.3rem;
   flex-shrink: 0;
+}
+
+/* 服务 */
+.service-box {
+  height: auto;
+  padding: 0.6rem 0 0 0.8rem;
+  position: relative;
+  background-color: #fff;
+  border-top: 1px solid rgba(234, 234, 234, 0.5);
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0.5rem;
+}
+
+.p-service {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  color: #333;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 0.6rem;
+}
+
+.p-service :first-child {
+  margin-bottom: 0.2rem;
+}
+
+.gou {
+  display: inline-block;
+  height: 0.8rem;
+  width: 0.8rem;
+  margin-right: 0.3rem;
+  background-size: cover;
+  background: url("../assets/images/gou.png") no-repeat center;
+}
+.baoyou {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-shrink: 0;
+  flex-grow: 1;
+}
+
+.by {
+  margin-top: -0.15rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 推荐 */
+.recommend-box {
+  margin-bottom: 0.5rem;
+  padding: 0.3em 0.8em 0;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.recommend-item-box {
+  flex-shrink: 0;
+}
+.recommend-item {
+  font-size: 0.6rem;
+  color: #333;
+  display: inline-block;
+  padding: 0 0.5rem;
+  height: 1.3rem;
+  line-height: 1.3rem;
+  background: #f3f3f3;
+  border-radius: 0.6rem;
+  margin: 0.4rem 0.4rem 0.4rem 0;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 12rem;
+  overflow: hidden;
+}
+
+/* 替换 */
+.replace-box {
+  height: 2rem;
+  padding: 0 0.8em;
+  display: flex;
+  flex-direction: row;
+  background: #fff;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.replace-box .box-label {
+  background: url("../assets/images/xunhuan.png") no-repeat left center;
+  background-size: 0.9rem 0.9rem;
+  margin-top: 0.3rem;
+}
+
+.replace-middle {
+  flex-grow: 1;
+}
+.reuse {
+  color: #333;
+  font-size: 0.6rem;
+  margin-left: 0.3rem;
+}
+
+/* 用户评价 */
+.user-review {
+  max-width: 100%;
+  height: 12.2rem;
+  background: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.review-header {
+  padding: 0.5rem 0.8rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.total-review {
+  font-size: 0.7rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.good-review {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.goodrate {
+  color: #ca141d;
+  font-size: 0.6rem;
+  font-weight: bold;
+  margin-right: 0.2rem;
+}
+
+.good-review :nth-child(2) {
+  color: #666;
+  font-size: 0.6rem;
+}
+
+.good-detail {
+  margin-right: -1.3em;
+  margin-top: -0.1rem;
+}
+
+.prd-consult-area {
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.prd-consult-btn {
+  display: inline-block;
+  width: 6rem;
+  height: 1.5rem;
+  line-height: 1.55rem;
+  border-radius: 1rem;
+  border: 1px solid #e0e0e0;
+  text-align: center;
+  font-size: 0.65rem;
+  margin: 0.8rem 0;
+  margin-right: 0.3rem;
+  color: #333;
+}
+
+.loading-action {
+  padding: 0.15rem 0 0.75rem 0;
+  height: 0.3rem;
+}
+
+.loading-sep {
+  max-width: 100%;
+  height: 0;
+  margin: 0 0.8rem;
+  border: 1px solid #eee;
+}
+
+.active {
+  color: #ca151e;
+  border-color: #ca151e;
+}
+
+.new-specification {
+  padding: 0 0.8rem 0.8rem 0.8rem;
+  margin-bottom: 0.5rem;
+  background-image: linear-gradient(
+    0deg,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0.8) 25%,
+    #ffffff 100%
+  );
+  height: 11.43rem;
+}
+
+.new-spe-title {
+  padding: 0.8rem 0;
+  color: #333;
+  font-weight: bold;
+  font-size: 0.65rem;
+}
+
+.new-spe-content {
+  max-height: 5.9rem;
+  overflow: hidden;
+}
+
+.spe-detail {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0.6rem;
+}
+
+.spe-detail label {
+  width: 4.2rem;
+  font-size: 0.6rem;
+  color: #999;
+  flex-shrink: 0;
+}
+
+.spe-detail p {
+  font-size: 0.6rem;
+  color: #333;
+  line-height: normal;
+  word-break: break-all;
+}
+
+.spe-btn {
+  margin-top: 0.8rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  font-size: 0.65rem;
+  max-width: 100%;
+  height: 2rem;
+}
+
+.spe-btn .prd-consult-btn {
+  width: 8rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+}
+
+.pro-detail-img {
+  max-width: 100%;
+}
+
+.pro-footer {
+  background-color: #fff;
+  height: 2.4rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  bottom: 0;
+}
+
+.pro-property-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+}
+
+.pro-property-left-item {
+  width: 2.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.pro-property-left-item p {
+  font-size: 0.5rem;
+  color: #333;
+}
+.home-img {
+  width: 100%;
+  height: 1.2rem;
+  background-image: url("../assets/images/pro-home.png");
+  background-size: 1.2rem 1.2rem;
+  background-repeat: no-repeat;
+  margin: 0.25rem auto 0.1rem;
+  background-position: center center;
+}
+.service-img {
+  width: 100%;
+  height: 1.2rem;
+  background-image: url("../assets/images/pro-service.png");
+  background-size: 1.2rem 1.2rem;
+  background-repeat: no-repeat;
+  margin: 0.25rem auto 0.1rem;
+  background-position: center center;
+}
+.cart-img {
+  width: 100%;
+  height: 1.2rem;
+  background-image: url("../assets/images/pro-cart.png");
+  background-size: 1.2rem 1.2rem;
+  background-repeat: no-repeat;
+  margin: 0.25rem auto 0.1rem;
+  background-position: center center;
+}
+
+.pro-property-right {
+  padding-right: 0.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+}
+
+.button-round {
+  height: 1.85rem;
+  font-size: 0.75rem;
+  color: #fff;
+  background-image: linear-gradient(90deg, #ff814a 0, #f45333 100%);
+  border-radius: 0.93rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.button-round-primary {
+  width: 100%;
+  height: 1.85rem;
+  font-size: 0.75rem;
+  color: #fff;
+  background-image: linear-gradient(90deg, #e43e2d 0, #ca141d 100%);
+  border-radius: 0.93rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 </style>

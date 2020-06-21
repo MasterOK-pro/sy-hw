@@ -4,7 +4,7 @@ import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 
 import Classify from '../views/ClassifyView.vue'
-import Cart from '../views/CartView.vue'
+import Cart from '../views/ShoppingCart.vue'
 import Mine from '../views/MineView.vue'
 import ProductDetail from '../views/ProductDetail.vue'
 
