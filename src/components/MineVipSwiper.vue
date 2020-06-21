@@ -34,13 +34,12 @@ export default {
     }
   },
   mounted() {
-    console.log("Current Swiper instance object", this.swiper);
     this.swiper.slideTo(0, 1000, false);
   }
 };
 </script>
 
-<style>
+<style scoped>
 /* 权益滑块 */
 .content-adver-box.vipright {
   padding: 0 0 0.4rem 0.5rem;
@@ -48,11 +47,16 @@ export default {
 .content-adver-box.vipright .content-swiper {
   padding: 0;
 }
+.vipright-list,.swiper-wrapper,.swiper-slide
+,.vipright-item,.vipright-item-left,
+.vipright-item-right{
+  height: 100%;
+}
 .vipright-list .van-swipe-item {
   padding: 0.4rem 0.25rem;
 }
 .vipright-item {
-  /* padding-left: -0.25rem; */
+  padding: 0.4rem 0.25rem;
   max-height: 100%;
   display: flex;
 }
@@ -84,5 +88,6 @@ export default {
 }
 .vipright-item img {
   margin-left: 0.1rem;
+  width: 1.7rem;
 }
 </style>
