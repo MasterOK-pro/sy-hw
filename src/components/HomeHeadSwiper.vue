@@ -48,9 +48,11 @@ export default {
 <style scoped>
 .swiper-slide {
   padding: 0 0.3rem;
+  height: 7.35rem;
 }
 .swiper-slide img {
   border-radius: 0.5rem;
+  max-height: 100%;
 }
 .swiper-pagination {
   bottom: 0;
