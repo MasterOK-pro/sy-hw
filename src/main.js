@@ -11,6 +11,7 @@ import './css/style.css'
 Vue.use(Swipe);
 Vue.use(SwipeItem);
 
+
 Vue.config.productionTip = false
 
 new Vue({
