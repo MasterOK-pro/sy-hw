@@ -101,20 +101,36 @@
           <div class="one-color">
             <p class="box-label">颜色</p>
             <div class="color-choice">
-              <div class="color-detail">亮黑色</div>
-              <div class="color-detail">深海蓝</div>
-              <div class="color-detail">晨曦金</div>
-              <div class="color-detail">零度白</div>
-              <div class="color-detail">冰霜银</div>
+              <div
+                class="color-detail"
+                @click="colorChoice(1)"
+                :class="[colorIndex== 1 ? 'active':'']"
+              >亮黑色</div>
+              <div class="color-detail" @click="colorChoice(2)" :class="{active:colorIndex==2}">深海蓝</div>
+              <div class="color-detail" @click="colorChoice(3)" :class="{active:colorIndex==3}">晨曦金</div>
+              <div class="color-detail" @click="colorChoice(4)" :class="{active:colorIndex==4}">零度白</div>
+              <div class="color-detail" @click="colorChoice(5)" :class="{active:colorIndex==5}">冰霜银</div>
             </div>
           </div>
           <!-- 版本 -->
           <div class="one-color">
             <p class="box-label">版本</p>
             <div class="version-choice">
-              <div class="version-detail">5G全网通 8GB+256GB</div>
-              <div class="version-detail">5G全网通 8GB+128GB</div>
-              <div class="version-detail">5G全网通 6GB+128GB</div>
+              <div
+                class="version-detail"
+                @click="colorChoice(6)"
+                :class="{active:colorIndex==6}"
+              >5G全网通 8GB+256GB</div>
+              <div
+                class="version-detail"
+                @click="colorChoice(7)"
+                :class="{active:colorIndex==7}"
+              >5G全网通 8GB+128GB</div>
+              <div
+                class="version-detail"
+                @click="colorChoice(8)"
+                :class="{active:colorIndex==8}"
+              >5G全网通 6GB+128GB</div>
             </div>
           </div>
           <!-- 类型 -->
@@ -127,9 +143,9 @@
           <div class="one-color">
             <p class="box-label type-label">数量</p>
             <div class="count-div">
-              <div class="minus"></div>
-              <input type="text" value="1" readonly />
-              <div class="plus"></div>
+              <div class="minus" @click="proMinus"></div>
+              <input type="text" :value="count" readonly />
+              <div class="plus" @click="proAdd"></div>
             </div>
           </div>
 
@@ -246,10 +262,7 @@
         <div class="review-area">
           <my-swiper></my-swiper>
           <div class="prd-consult-area">
-            <span
-              class="prd-consult-btn"
-              href="https://m.vmall.com/product/10086013232739.html#10086426925958"
-            >查看全部评价</span>
+            <span class="prd-consult-btn">查看全部评价</span>
             <span class="prd-consult-btn">购买咨询(58)</span>
           </div>
         </div>
@@ -258,10 +271,78 @@
       <div class="loading-action">
         <div class="loading-sep"></div>
       </div>
+      <!-- 规格参数 -->
+      <div class="new-specification">
+        <div class="new-spe-title">规格参数</div>
+        <div class="new-spe-content">
+          <div class="spe-detail">
+            <label>传播名</label>
+            <p>HUAWEI P40</p>
+          </div>
+          <div class="spe-detail">
+            <label>后置摄像头</label>
+            <p>
+              超感知徕卡三摄：5000万像素超感知摄
+              像头（广角， f/1.9光圈 ）+ 1600万像素超广
+              角摄像头（f/2.2光圈）+ 800万像素长焦摄
+              像头（f/2.4光圈，支持OIS光学
+              防抖"（备注:"不同模式的照片和视频的像素可能有差异，请以实际为准。"
+            </p>
+          </div>
+        </div>
+        <div class="spe-btn">
+          <div class="prd-consult-btn">查看全部参数</div>
+        </div>
+      </div>
+
+      <p>
+        <img src="../assets/images/pro-detail-1.jpg" alt class="pro-detail-img" />
+      </p>
+      <p>
+        <img src="../assets/images/pro-detail-2.jpg" alt class="pro-detail-img" />
+      </p>
+      <p>
+        <img src="../assets/images/pro-detail-3.jpg" alt class="pro-detail-img" />
+      </p>
+      <p>
+        <img src="../assets/images/pro-detail-4.jpg" alt class="pro-detail-img" />
+      </p>
+      <p>
+        <img src="../assets/images/pro-detail-5.jpg" alt class="pro-detail-img" />
+      </p>
+      <p>
+        <img src="../assets/images/pro-detail-6.jpg" alt class="pro-detail-img" />
+      </p>
+      <p>
+        <img src="../assets/images/pro-detail-7.jpg" alt class="pro-detail-img" />
+      </p>
+      <p>
+        <img src="../assets/images/pro-detail-8.jpg" alt class="pro-detail-img" />
+      </p>
     </div>
 
     <!-- 底部 -->
-    <div class="footer">我是底部</div>
+    <div class="pro-footer">
+      <div class="pro-property-left">
+        <div class="pro-property-left-item">
+          <div class="home-img"></div>
+          <p>首页</p>
+        </div>
+        <div class="pro-property-left-item">
+          <div class="service-img"></div>
+          <p>客服</p>
+        </div>
+        <div class="pro-property-left-item">
+          <div class="cart-img"></div>
+          <p>购物车</p>
+        </div>
+      </div>
+
+      <div class="pro-property-right">
+        <div class="button-round">加入购物车</div>
+        <div class="button-round-primary">立即购买</div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -274,7 +355,9 @@ export default {
   },
   data() {
     return {
-      current: 0
+      current: 0,
+      count: 1,
+      colorIndex: 4
     };
   },
   methods: {
@@ -283,6 +366,18 @@ export default {
     },
     onChange(index) {
       this.current = index;
+    },
+    proAdd() {
+      this.count++;
+    },
+    proMinus() {
+      if (this.count > 1) {
+        this.count--;
+      }
+    },
+    colorChoice(index) {
+      this.colorIndex = index;
+      // console.log(this.colorIndex);
     }
   }
 };
@@ -320,6 +415,7 @@ a {
 
 /* 头部导航样式 */
 .header {
+  width: 100%;
   height: 2rem;
   padding: 0 0.8rem;
   background-color: #fff;
@@ -358,6 +454,7 @@ a {
   height: 1.2rem;
   background-image: url("../assets/images/elip2.png");
   background-size: cover;
+  margin-right: -0.3rem;
 }
 
 .middle {
@@ -365,10 +462,6 @@ a {
   overflow: auto;
 }
 
-.footer {
-  height: 5rem;
-  border: 1px solid red;
-}
 /* 轮播图样式 */
 .custom-indicator {
   position: absolute;
@@ -896,21 +989,6 @@ img {
   margin-top: -0.1rem;
 }
 
-.review-area {
-  margin-left: 0.8rem;
-}
-
-/* .swiper-box {
-  height: 6rem;
-  margin-right: 0.6rem;
-  box-shadow: 0rem 0rem 0.25rem 0rem rgba(0, 0, 0, 0.1);
-}
-
-.last-img {
-  height: 6.2rem;
-  width: 6.2rem;
-} */
-
 .prd-consult-area {
   max-width: 100%;
   display: flex;
@@ -939,10 +1017,173 @@ img {
   height: 0.3rem;
 }
 
-.loading-sep{
+.loading-sep {
   max-width: 100%;
   height: 0;
-  margin: 0 .8rem;
+  margin: 0 0.8rem;
   border: 1px solid #eee;
+}
+
+.active {
+  color: #ca151e;
+  border-color: #ca151e;
+}
+
+.new-specification {
+  padding: 0 0.8rem 0.8rem 0.8rem;
+  margin-bottom: 0.5rem;
+  background-image: linear-gradient(
+    0deg,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0.8) 25%,
+    #ffffff 100%
+  );
+  height: 11.43rem;
+}
+
+.new-spe-title {
+  padding: 0.8rem 0;
+  color: #333;
+  font-weight: bold;
+  font-size: 0.65rem;
+}
+
+.new-spe-content {
+  max-height: 5.9rem;
+  overflow: hidden;
+}
+
+.spe-detail {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0.6rem;
+}
+
+.spe-detail label {
+  width: 4.2rem;
+  font-size: 0.6rem;
+  color: #999;
+  flex-shrink: 0;
+}
+
+.spe-detail p {
+  font-size: 0.6rem;
+  color: #333;
+  line-height: normal;
+  word-break: break-all;
+}
+
+.spe-btn {
+  margin-top: 0.8rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  font-size: 0.65rem;
+  max-width: 100%;
+  height: 2rem;
+}
+
+.spe-btn .prd-consult-btn {
+  width: 8rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+}
+
+.pro-detail-img {
+  max-width: 100%;
+}
+
+.pro-footer {
+  background-color: #fff;
+  height: 2.4rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  bottom: 0;
+}
+
+.pro-property-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+}
+
+.pro-property-left-item {
+  width: 2.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.pro-property-left-item p {
+  font-size: 0.5rem;
+  color: #333;
+}
+.home-img {
+  width: 100%;
+  height: 1.2rem;
+  background-image: url("../assets/images/pro-home.png");
+  background-size: 1.2rem 1.2rem;
+  background-repeat: no-repeat;
+  margin: 0.25rem auto 0.1rem;
+  background-position: center center;
+}
+.service-img {
+  width: 100%;
+  height: 1.2rem;
+  background-image: url("../assets/images/pro-service.png");
+  background-size: 1.2rem 1.2rem;
+  background-repeat: no-repeat;
+  margin: 0.25rem auto 0.1rem;
+  background-position: center center;
+}
+.cart-img {
+  width: 100%;
+  height: 1.2rem;
+  background-image: url("../assets/images/pro-cart.png");
+  background-size: 1.2rem 1.2rem;
+  background-repeat: no-repeat;
+  margin: 0.25rem auto 0.1rem;
+  background-position: center center;
+}
+
+.pro-property-right {
+  padding-right: 0.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+}
+
+.button-round {
+  height: 1.85rem;
+  font-size: 0.75rem;
+  color: #fff;
+  background-image: linear-gradient(90deg, #ff814a 0, #f45333 100%);
+  border-radius: 0.93rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.button-round-primary {
+  width: 100%;
+  height: 1.85rem;
+  font-size: 0.75rem;
+  color: #fff;
+  background-image: linear-gradient(90deg, #e43e2d 0, #ca141d 100%);
+  border-radius: 0.93rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 </style>
