@@ -249,68 +249,14 @@
         </li>
       </ul>
     </div>
-    <div class="body-footer">
-      <p class="login">
-        <a href>登录</a>
-        <a href="https://club.huawei.com/thread-1144534-1-1.html">反馈</a>
-      </p>
-      <p class="device">
-        <a href>
-          <img src="../../public/imgs/mine-footer-client.png" alt />
-          <span>客户端</span>
-        </a>
-        <a href class="active">
-          <img src="../../public/imgs/mine-footer-touch.png" alt />
-          <span>触屏版</span>
-        </a>
-        <a href>
-          <img src="../../public/imgs/mine-footer-pc.png" alt />
-          <span>电脑版</span>
-        </a>
-      </p>
-      <p class="copyright">
-        <a
-          target="_self"
-          href="https://consumer.huawei.com/minisite/cloudservice/vmall/privacy-statement.htm?country=CN&language=zh_CN"
-          class="top3"
-        >隐私协议</a>
-        <a
-          target="_self"
-          href="https://consumer.huawei.com/minisite/cloudservice/vmall/terms.htm?country=CN&language=zh_CN"
-          class="top3"
-        >用户协议</a>
-        <a
-          target="_self"
-          href="https://consumer.huawei.com/minisite/cloudservice/vmall/cookies.htm?country=CN&language=zh_CN"
-          class="top3"
-        >关于Cookie</a>
-        <br />
-        <span>
-          Copyright 2012-
-          <span class="space"></span>VMALL.COM 版权所有
-        </span>
-        <br />
-        <a
-          href="https://res.vmallres.com/pimages///sale/2019-04/Vhy8y3yxVJXg0FE74dh0.png"
-          target="_self"
-        >营业执照</a>
-        <span>备案主体编号：44201919072182</span>
-        <br />
-        <a href="http://beian.miit.gov.cn/" target="_self">粤公网安备 44190002003939号</a>
-        <a
-          href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44190002003939"
-          target="_self"
-        >粤公网安备 44190002003939号</a>
-        <br />
-        <span>增值电信业务经营许可证：粤B2-20190762</span>
-      </p>
-    </div>
+    <copyright></copyright>
   </div>
 </template>
 
 <script>
 import MineVipSwiper from "./MineVipSwiper.vue";
 import MineLiveSwiper from "./MineLiveSwiper.vue";
+import Copyright from "./Copyright";
 export default {
   mounted() {
     let ticketTop = document.querySelector(".mid-body-ticket");
@@ -354,7 +300,8 @@ export default {
   },
   components: {
     MineVipSwiper,
-    MineLiveSwiper
+    MineLiveSwiper,
+    Copyright
   },
   methods: {
     toProduct() {
@@ -392,11 +339,7 @@ export default {
 };
 </script>
 
-<style>
-.mine-mid-body {
-  flex-grow: 1;
-  overflow-y: auto;
-}
+<style scoped>
 .mine-mid-body::-webkit-scrollbar {
   display: none;
 }
@@ -452,8 +395,8 @@ export default {
   color: #fff;
   line-height: 100%;
 }
-.mine-topbar-left img {
-  max-height: 100%;
+.topbar-left-user {
+  width: 1.2rem;
   margin-right: 0.5em;
 }
 
@@ -483,7 +426,8 @@ export default {
   position: relative;
 }
 .mid-body-top-dfltUser img {
-  max-height: 100%;
+  height: 3rem;
+  width: 3rem;
 }
 .mid-body-top-login {
   margin-left: 0.45rem;
@@ -594,7 +538,7 @@ export default {
 }
 /* 订单轮播广告 */
 .content-adver-box {
-  width: calc(100% + 1rem);
+  width: 100%;
   height: 4.5rem;
   margin-top: 0.4rem;
   margin-left: -0.5rem;
@@ -602,16 +546,21 @@ export default {
   position: relative;
 }
 .my-swipe {
+  width: 100%;
   height: 4.5rem;
   padding: 0 0.5rem;
 }
+.van-swipe-item{
+  width: 100%;
+  padding-right: 0.5rem;
+}
 .van-swipe-item img {
-  max-height: 100%;
+  width: 100%;
   border-radius: 0.25rem 0.25rem;
 }
 .van-swipe__indicators {
-  bottom: 0.2rem !important;
-  left: 85% !important;
+  bottom: 0.2rem!important;
+  left: 85%!important;
 }
 /* vmall样式 */
 .vmall .content-status-item {
@@ -625,6 +574,7 @@ export default {
 }
 .vmall .content-status-item img {
   max-width: 2rem;
+  max-height: 2rem;
 }
 /* 为您推荐 */
 .content-adver-box.recmd {
@@ -650,102 +600,5 @@ export default {
 .recmd-item img {
   width: 100%;
   border-radius: 0.2rem;
-}
-/* 页面底部版权相关 */
-.body-footer,
-.body-footer a {
-  padding: 0 0.15rem;
-  background-color: #fff;
-  color: #9b9b9b;
-}
-.body-footer p {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-.body-footer p:last-child {
-  display: block;
-  text-align: center;
-}
-/* 登录行 */
-.body-footer .login {
-  height: 2rem;
-  border-bottom: 1px solid #eaeaea;
-}
-.body-footer .login a {
-  display: inline-block;
-  width: 3.5rem;
-  text-align: center;
-  color: #333;
-  font-size: 0.7rem;
-}
-.body-footer .login a:first-child::before {
-  content: "";
-  width: 1px;
-  height: 1rem;
-  background-color: #eaeaea;
-  position: absolute;
-  top: 0.5rem;
-  left: 50%;
-}
-/* 设备行 */
-.body-footer .device {
-  padding: 0.5rem 0;
-}
-.body-footer .device a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 1.8rem;
-  margin-left: 1.8rem;
-}
-.body-footer .device a:first-child {
-  margin-left: 0;
-}
-.device img {
-  width: 1.8rem;
-  height: 1.8rem;
-}
-.device a.active {
-  color: #4d4d4d;
-}
-.device a span {
-  font-size: 0.6rem;
-}
-/* 版权行 */
-.body-footer .copyright {
-  padding: 0.25rem 0 0.9rem;
-  font-size: 0.6rem;
-}
-.copyright a {
-  font-size: 0.6rem;
-}
-.copyright .top3 {
-  padding: 0 0.5rem;
-  margin-bottom: 0.3rem;
-  position: relative;
-}
-.copyright a,
-.copyright span {
-  padding: 0 0.2rem;
-}
-.copyright .top3:nth-child(2)::before {
-  content: "";
-  width: 1px;
-  height: 0.5rem;
-  background-color: #eaeaea;
-  position: absolute;
-  top: 0.25rem;
-  left: 0%;
-}
-.copyright .top3:nth-child(2)::after {
-  content: "";
-  width: 1px;
-  height: 0.5rem;
-  background-color: #eaeaea;
-  position: absolute;
-  top: 0.25rem;
-  right: 0%;
 }
 </style>

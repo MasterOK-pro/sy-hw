@@ -25,7 +25,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .homeview {
   height: 100%;
   font-size: 2rem;

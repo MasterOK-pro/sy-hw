@@ -1,6 +1,5 @@
 <template>
   <div class="mine">
-    
     <mine-body></mine-body>
     <!-- app首页底部导航按钮 -->
     <home-page-footer></home-page-footer>
@@ -21,6 +20,10 @@ export default {
 </script>
 
 <style scoped>
+.mine-mid-body {
+  flex-grow: 1;
+  overflow-y: auto;
+}
 .mine {
   height: 100%;
   display: flex;

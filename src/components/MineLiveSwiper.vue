@@ -28,13 +28,12 @@ export default {
     }
   },
   mounted() {
-    console.log("Current Swiper instance object", this.swiper);
     this.swiper.slideTo(0, 1000, false);
   }
 };
 </script>
 
-<style>
+<style scoped>
 /* 套用权益滑块的样式 */
 .content-adver-box.vipright {
   padding: 0 0 0.4rem 0.5rem;
@@ -52,5 +51,6 @@ export default {
 }
 .live-list img{
   width: 7.3rem;
+  margin-left: 0.4rem;
 }
 </style>
