@@ -17,7 +17,7 @@
 
         <div class="pro-panels">
           <label for class="checkbox">
-            <input class="item-checkbox" @change="itemSelect" type="checkbox" />
+            <input class="item-checkbox" v-model="item.checked" type="checkbox" />
           </label>
           <div class="sc-pro-href">
             <p class="p-img">
@@ -45,7 +45,7 @@
 
                 <span class="input-number">
                   <div class="minus" @click="reduce(index)"></div>
-                  <input type="text" readonly :value="item.count" />
+                  <input type="text" readonly v-model="item.count" />
                   <div class="add" @click="add(index)"></div>
                 </span>
               </div>
@@ -71,7 +71,12 @@
     <!-- 底部 -->
     <div class="footer">
       <div class="input-wrap">
-        <input class="footer-check select-all" @change="allSelect" type="checkbox" />
+        <input
+          class="footer-check select-all"
+          v-model="allChecked"
+          @change="allSelect"
+          type="checkbox"
+        />
         <span class="sc-all">全选</span>
       </div>
       <div class="price">
@@ -95,34 +100,70 @@ export default {
   },
   data() {
     return {
-      totalCount:0,
-      totalPrice:0,
-      cartList: [
-        {
-          img: require("../assets/images/cart-img-1.png"),
-          desc:
-            "荣耀X10 麒麟820双模5G九频 90Hz全速屏 RYYB高感光摄影 6GB+128GB（竞速蓝）",
-          config: " 竞速蓝,全网通 6GB+128GB,官方标配",
-          price: "2199",
-          count: 1
-        },
-        {
-          img: require("../assets/images/cart-img-2.png"),
-          desc:
-            "荣耀30 Pro 50倍超稳远摄 超感光高清夜拍 双模5G 麒麟990 5G SoC 8GB+128GB 幻夜黑",
-          config: " 幻夜黑,Pro 8GB+128GB,官方标配",
-          price: "3999",
-          count: 1
-        },
-        {
-          img: require("../assets/images/cart-img-3.png"),
-          desc: "HUAWEI P40 5G 全网通 8GB+128GB（零度白）",
-          config: " 零度白,5G全网通 8GB+128GB,官方标配",
-          price: "4488",
-          count: 1
-        }
-      ]
+      cartList: [],
+      allChecked: false
     };
+  },
+
+  computed: {
+    totalPrice: function() {
+      let totalPrice = 0;
+      this.cartList.map(item => {
+        if (item.checked === true) {
+          totalPrice += parseFloat(item.price) * item.count;
+        }
+      });
+      let allChecked = true;
+      for (let i = 0; i < this.cartList.length; i++) {
+        if (this.cartList[i].checked === false) {
+          allChecked = false;
+          break;
+        }
+      }
+      this.allChecked = allChecked;
+      return totalPrice;
+    },
+    totalCount: function() {
+      let totalCount = 0;
+      this.cartList.map(item => {
+        if (item.checked === true) {
+          totalCount += item.count;
+        }
+      });
+      return totalCount;
+    }
+  },
+  mounted() {
+    let cartList = [
+      {
+        img: require("../assets/images/cart-img-1.png"),
+        desc:
+          "荣耀X10 麒麟820双模5G九频 90Hz全速屏 RYYB高感光摄影 6GB+128GB（竞速蓝）",
+        config: " 竞速蓝,全网通 6GB+128GB,官方标配",
+        price: "2199",
+        count: 1
+      },
+      {
+        img: require("../assets/images/cart-img-2.png"),
+        desc:
+          "荣耀30 Pro 50倍超稳远摄 超感光高清夜拍 双模5G 麒麟990 5G SoC 8GB+128GB 幻夜黑",
+        config: " 幻夜黑,Pro 8GB+128GB,官方标配",
+        price: "3999",
+        count: 1
+      },
+      {
+        img: require("../assets/images/cart-img-3.png"),
+        desc: "HUAWEI P40 5G 全网通 8GB+128GB（零度白）",
+        config: " 零度白,5G全网通 8GB+128GB,官方标配",
+        price: "4488",
+        count: 1
+      }
+    ];
+
+    cartList.map(item => {
+      item.checked = false;
+    });
+    this.cartList = cartList;
   },
   methods: {
     reduce(index) {
@@ -135,35 +176,12 @@ export default {
         this.cartList[index].count++;
       }
     },
-    allSelect(e) {
-      let selectAll = document.querySelector(".select-all");
-      let itemCheckbox = document.querySelectorAll(".item-checkbox");
-      // console.log(e.target);
-      if (e.target.checked) {
-        itemCheckbox.forEach(function(item) {
-          item.checked = true;
-        });
-      } else {
-        itemCheckbox.forEach(function(item) {
-          item.checked = false;
-        });
-      }
-    },
-    itemSelect(e) {
-      let flag = true;
-      let itemCheckbox = document.querySelectorAll(".item-checkbox");
-      let selectAll = document.querySelector(".select-all");
-      if (e.target.checked){
-          e.target.parentElement.classList.add("item-selected");
-      } else {
-          e.target.parentElement.classList.remove("item-selected");
-      }
-      itemCheckbox.forEach(function(item) {
-        if (!item.checked) {
-          flag = false;
-        }
-      });
-      selectAll.checked = flag;
+    allSelect() {
+      let allSelected = true;
+      //只有商品都选中且全选按钮为true时，全选才选中
+      this.cartList.map(item => (allSelected = item.checked && allSelected));
+      // 若全选为false，则商品都不选中
+      this.cartList.map(item => (item.checked = !allSelected));
     }
   }
 };
