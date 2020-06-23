@@ -250,6 +250,7 @@
       </ul>
     </div>
     <copyright></copyright>
+    <to-top :show="showTop"></to-top>
   </div>
 </template>
 
@@ -257,6 +258,8 @@
 import MineVipSwiper from "./MineVipSwiper.vue";
 import MineLiveSwiper from "./MineLiveSwiper.vue";
 import Copyright from "./Copyright";
+import ToTop from "./ToTop.vue";
+
 export default {
   mounted() {
     let ticketTop = document.querySelector(".mid-body-ticket");
@@ -272,6 +275,7 @@ export default {
   },
   data() {
     return {
+      showTop: false, // 不显示'返回顶部'
       viprightList: [
         {
           value: 100,
@@ -301,7 +305,8 @@ export default {
   components: {
     MineVipSwiper,
     MineLiveSwiper,
-    Copyright
+    Copyright,
+    ToTop
   },
   methods: {
     toProduct() {
@@ -309,6 +314,7 @@ export default {
     },
     scroll() {
       let bottomUsr = this.rem*3;
+      let scrollTop = event.target.scrollTop;
 
       /* 计算代金券顶部至视窗头的距离 */
       let ticketTop = document.querySelector(".mid-body-ticket");
@@ -333,6 +339,13 @@ export default {
       }
       if (ticTop > 2*this.rem) {
         this.textOpacity = 0;
+      }
+      /* '回到顶部'显示控制 */
+      if (scrollTop > 720) {
+        this.showTop = true;
+      }
+      if (scrollTop <= 720) {
+        this.showTop = false;
       }
     }
   }

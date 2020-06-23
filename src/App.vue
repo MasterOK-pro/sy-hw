@@ -7,9 +7,9 @@
 </template>
 <script>
 export default {
-  created () {
+  created() {
     this.$store.state.appRefuse = false;
-}
+  }
 };
 </script>
 <style>
@@ -24,5 +24,6 @@ body,
 #app {
   width: 100%;
   height: 100%;
+  background-color: #f9f9f9;
 }
 </style>
