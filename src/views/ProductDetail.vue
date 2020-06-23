@@ -273,6 +273,7 @@
       </div>
       <!-- 规格参数 -->
       <div class="new-specification">
+        <div class="icon-mask-specify"></div>
         <div class="new-spe-title">规格参数</div>
         <div class="new-spe-content">
           <div class="spe-detail">
@@ -1039,6 +1040,17 @@ img {
     #ffffff 100%
   );
   height: 11.43rem;
+  position: relative;
+}
+
+.icon-mask-specify {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-size: contain;
+  background-image: url("../assets/images/mask.png");
 }
 
 .new-spe-title {
@@ -1089,6 +1101,7 @@ img {
   width: 8rem;
   height: 1.5rem;
   line-height: 1.5rem;
+  z-index: 100;
 }
 
 .pro-detail-img {
@@ -1182,7 +1195,7 @@ img {
   border-radius: 0.93rem;
   display: flex;
   align-items: center;
-  justify-content: center;  
+  justify-content: center;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
