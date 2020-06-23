@@ -51,10 +51,10 @@
         </div>
         <div class="second-picture">
           <div class="p1 pic">
-            <img src="./images/qq.png" alt />
+            <img src="../../public/imgs/denglu-qq.png" alt />
           </div>
           <div class="p2 pic">
-            <img src="./images/zhifu.png" alt />
+            <img src="../../public/imgs/denglu-zhifu.png" alt />
           </div>
         </div>
         <div class="footer-end">

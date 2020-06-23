@@ -2,7 +2,7 @@ var ProductList = [
     {
         name:"HUAWEI P40 Pro 5G 全网通 8GB+128GB（零度白）",
         price:5988,
-        oldPrice:"",
+        oldPrice:"",/* 首页 */
         swiperImg:[
             "../assets/images/swiper-1.jpg",
             "../assets/images/swiper-2.jpg",
@@ -13,12 +13,12 @@ var ProductList = [
             "../assets/images/swiper-7.jpg",
             "../assets/images/swiper-8.jpg",
         ],
-        desc:"全系优惠100元",
+        desc:"全系优惠100元",/* 首页优惠信息 */
         config:{
             color:["亮黑色","深海蓝","晨曦金","零度白","冰霜银"],
             version:["5G全网通 8GB+256GB","5G全网通 8GB+128GB","5G全网通 6GB+128GB"]
         },
-        classify:"phone",
+        classify:"phone",/* 分类 */
         introImg:[
             "../assets/images/pro-detail-1.jpg",
             "../assets/images/pro-detail-2.jpg",
