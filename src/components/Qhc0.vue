@@ -2,25 +2,27 @@
   <div class="zujian1">
     <div class="boxa1">
       <a href>
-        <img src="../../assets/images/a1.jpg" alt />
+        <img src="../assets/images/a1.jpg" alt />
       </a>
     </div>
     <div class="boxa2">
       <a href>
-        <img src="../../assets/images/a2.jpg" alt />
+        <img src="../assets/images/a2.jpg" alt />
       </a>
     </div>
 
     <!-- 轮播 -->
-
-    <swiper ref="mySwiper" :options="swiperOptions">
-      <swiper-slide><a href=""><img src="../../assets/images/1.png" alt=""></a></swiper-slide>
-      <swiper-slide><a href=""><img src="../../assets/images/2.png" alt=""></a></swiper-slide>
-      <swiper-slide><a href=""><img src="../../assets/images/3.png" alt=""></a></swiper-slide>
-      <swiper-slide><a href=""><img src="../../assets/images/4.png" alt=""></a></swiper-slide>
-      <swiper-slide><a href=""><img src="../../assets/images/5.png" alt=""></a></swiper-slide>
+    <div class="lunbo">
+      <swiper ref="mySwiper" :options="swiperOptions">
+      <swiper-slide><a href=""><img src="../assets/images/1.png" alt=""></a></swiper-slide>
+      <swiper-slide><a href=""><img src="../assets/images/2.png" alt=""></a></swiper-slide>
+      <swiper-slide><a href=""><img src="../assets/images/3.png" alt=""></a></swiper-slide>
+      <swiper-slide><a href=""><img src="../assets/images/4.png" alt=""></a></swiper-slide>
+      <swiper-slide><a href=""><img src="../assets/images/5.png" alt=""></a></swiper-slide>
       <!-- <div class="swiper-pagination" slot="pagination"></div> -->
     </swiper>
+    </div>
+    
     <!-- 轮播结束 -->
     <div class="title">
       <span>手机</span>
@@ -30,7 +32,7 @@
         <li>
           <div class="primary">
             <p class="sub01">
-              <img src="../../assets/images/p1.png" alt />
+              <img src="../assets/images/p1.png" alt />
             </p>
             <p class="content01">
               <span>HUAWEI P40 Pro+</span>
@@ -40,7 +42,7 @@
         <li>
           <div class="primary">
             <p class="sub01">
-              <img src="../../assets/images/p1.png" alt />
+              <img src="../assets/images/p1.png" alt />
             </p>
             <p class="content01">
               <span>HUAWEI P40 Pro+</span>
@@ -50,7 +52,7 @@
         <li>
           <div class="primary">
             <p class="sub01">
-              <img src="../../assets/images/p1.png" alt />
+              <img src="../assets/images/p1.png" alt />
             </p>
             <p class="content01">
               <span>HUAWEI P40 Pro+</span>
@@ -60,7 +62,7 @@
         <li>
           <div class="primary">
             <p class="sub01">
-              <img src="../../assets/images/p1.png" alt />
+              <img src="../assets/images/p1.png" alt />
             </p>
             <p class="content01">
               <span>HUAWEI P40 Pro+</span>
@@ -70,7 +72,7 @@
         <li>
           <div class="primary">
             <p class="sub01">
-              <img src="../../assets/images/p1.png" alt />
+              <img src="../assets/images/p1.png" alt />
             </p>
             <p class="content01">
               <span>HUAWEI P40 Pro+</span>
@@ -80,7 +82,7 @@
         <li>
           <div class="primary">
             <p class="sub01">
-              <img src="../../assets/images/p1.png" alt />
+              <img src="../assets/images/p1.png" alt />
             </p>
             <p class="content01">
               <span>HUAWEI P40 Pro+</span>
@@ -90,7 +92,7 @@
         <li>
           <div class="primary">
             <p class="sub01">
-              <img src="../../assets/images/p1.png" alt />
+              <img src="../assets/images/p1.png" alt />
             </p>
             <p class="content01">
               <span>HUAWEI P40 Pro+</span>
@@ -100,7 +102,7 @@
         <li>
           <div class="primary">
             <p class="sub01">
-              <img src="../../assets/images/p1.png" alt />
+              <img src="../assets/images/p1.png" alt />
             </p>
             <p class="content01">
               <span>HUAWEI P40 Pro+</span>
@@ -110,7 +112,7 @@
         <li>
           <div class="primary">
             <p class="sub01">
-              <img src="../../assets/images/p1.png" alt />
+              <img src="../assets/images/p1.png" alt />
             </p>
             <p class="content01">
               <span>HUAWEI P40 Pro+</span>
@@ -120,7 +122,7 @@
         <li>
           <div class="primary">
             <p class="sub01">
-              <img src="../../assets/images/p1.png" alt />
+              <img src="../assets/images/p1.png" alt />
             </p>
             <p class="content01">
               <span>HUAWEI P40 Pro+</span>
@@ -130,7 +132,7 @@
         <li>
           <div class="primary">
             <p class="sub01">
-              <img src="../../assets/images/p1.png" alt />
+              <img src="../assets/images/p1.png" alt />
             </p>
             <p class="content01">
               <span>HUAWEI P40 Pro+</span>
@@ -140,7 +142,7 @@
         <li>
           <div class="primary">
             <p class="sub01">
-              <img src="../../assets/images/p1.png" alt />
+              <img src="../assets/images/p1.png" alt />
             </p>
             <p class="content01">
               <span>HUAWEI P40 Pro+</span>
@@ -150,7 +152,7 @@
         <li>
           <div class="primary">
             <p class="sub01">
-              <img src="../../assets/images/p1.png" alt />
+              <img src="../assets/images/p1.png" alt />
             </p>
             <p class="content01">
               <span>HUAWEI P40 Pro+</span>
@@ -161,14 +163,14 @@
     </div>
     <!-- 笔记本 -->
     <div class="title">
-      <span>智慧屏&笔记本</span>
+      <span>智慧屏 笔记本</span>
     </div>
     <div class="con">
       <ul>
         <li>
           <div class="primary">
             <p class="sub01">
-              <img src="../../assets/images/b1.png" alt />
+              <img src="../assets/images/b1.png" alt />
             </p>
             <p class="content01">
               <span>华为智慧屏 V65i</span>
@@ -178,7 +180,7 @@
         <li>
           <div class="primary">
             <p class="sub01">
-              <img src="../../assets/images/b2.png" alt />
+              <img src="../assets/images/b2.png" alt />
             </p>
             <p class="content01">
               <span>华为智慧屏 X65</span>
@@ -188,7 +190,7 @@
         <li>
           <div class="primary">
             <p class="sub01">
-              <img src="../../assets/images/b3.png" alt />
+              <img src="../assets/images/b3.png" alt />
             </p>
             <p class="content01">
               <span>华为智慧屏 V55i</span>
@@ -198,7 +200,7 @@
         <li>
           <div class="primary">
             <p class="sub01">
-              <img src="../../assets/images/b1.png" alt />
+              <img src="../assets/images/b1.png" alt />
             </p>
             <p class="content01">
               <span>HUAWEI P40 Pro+</span>
@@ -208,7 +210,7 @@
         <li>
           <div class="primary">
             <p class="sub01">
-              <img src="../../assets/images/b1.png" alt />
+              <img src="../assets/images/b1.png" alt />
             </p>
             <p class="content01">
               <span>HUAWEI P40 Pro+</span>
@@ -218,7 +220,7 @@
         <li>
           <div class="primary">
             <p class="sub01">
-              <img src="../../assets/images/b1.png" alt />
+              <img src="../assets/images/b1.png" alt />
             </p>
             <p class="content01">
               <span>HUAWEI P40 Pro+</span>
@@ -228,7 +230,7 @@
         <li>
           <div class="primary">
             <p class="sub01">
-              <img src="../../assets/images/b2.png" alt />
+              <img src="../assets/images/b2.png" alt />
             </p>
             <p class="content01">
               <span>HUAWEI P40 Pro+</span>
@@ -238,7 +240,7 @@
         <li>
           <div class="primary">
             <p class="sub01">
-              <img src="../../assets/images/b2.png" alt />
+              <img src="../assets/images/b2.png" alt />
             </p>
             <p class="content01">
               <span>HUAWEI P40 Pro+</span>
@@ -248,7 +250,7 @@
         <li>
           <div class="primary">
             <p class="sub01">
-              <img src="../../assets/images/b2.png" alt />
+              <img src="../assets/images/b2.png" alt />
             </p>
             <p class="content01">
               <span>HUAWEI P40 Pro+</span>
@@ -258,7 +260,7 @@
         <li>
           <div class="primary">
             <p class="sub01">
-              <img src="../../assets/images/b3.png" alt />
+              <img src="../assets/images/b3.png" alt />
             </p>
             <p class="content01">
               <span>MateBook14 2020款</span>
@@ -268,7 +270,7 @@
         <li>
           <div class="primary">
             <p class="sub01">
-              <img src="../../assets/images/b3.png" alt />
+              <img src="../assets/images/b3.png" alt />
             </p>
             <p class="content01">
               <span>荣耀笔记本 14</span>
@@ -278,7 +280,7 @@
         <li>
           <div class="primary">
             <p class="sub01">
-              <img src="../../assets/images/b3.png" alt />
+              <img src="../assets/images/b3.png" alt />
             </p>
             <p class="content01">
               <span>MateBook D 14</span>
@@ -346,17 +348,27 @@ export default {
   height: 100%;
 }
 /* 轮播插件 */
-.swiper-container {
-  width: 273px;
-  height: 40px;
+.lunbo {
+  width: 250px;
+  height: 35.7px;
+  margin: 0 auto;
+  /* background-color: red; */
+}
+/* .swiper-container {
+  width: 250px;
+  height: 35.7px;
   margin: 0 auto;
   background-color: red;
-}
+} */
 
 .swiper-container .swiper-slide {
-  width: 83px;
-  height: 40px;
-  margin-left: 5px;
+  width: 50px;
+  height: 36px;
+  margin-left: 3px;
+}
+.swiper-container img {
+  width: 100%;
+  height: 100%;
 }
 /* 标题之下 */
 .title {
