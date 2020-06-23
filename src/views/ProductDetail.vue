@@ -1,7 +1,7 @@
 <template>
   <div class="product-container">
     <!-- 头部 -->
-    <div class="header">
+    <div class="header" v-if="show">
       <div class="back" @click="back"></div>
       <div class="nav">
         <div class="nav-detail">商品</div>
@@ -69,6 +69,10 @@
             </span>
             <span class="detail-span">HUAWEI P40 Pro 5G 全网通 8GB+128GB（零度白）</span>
           </p>
+          <!-- 红字描述 -->
+          <div class="p-promotion">
+            <span>①享6期分期免息 ②整点限量赠好礼。老用户加赠延保，点击进入老用户专场>>>以旧换新最高补贴1000元，购机赠送同程旅游900元出行大礼包</span>
+          </div>
         </div>
 
         <!-- 促销信息 -->
@@ -273,6 +277,7 @@
       </div>
       <!-- 规格参数 -->
       <div class="new-specification">
+        <div class="icon-mask-specify"></div>
         <div class="new-spe-title">规格参数</div>
         <div class="new-spe-content">
           <div class="spe-detail">
@@ -355,6 +360,7 @@ export default {
   },
   data() {
     return {
+      show:true,
       current: 0,
       count: 1,
       colorIndex: 4
@@ -384,24 +390,6 @@ export default {
 </script>
 
 <style scoped>
-/* 最大宽度介于414-361的设备：iphone(678)p */
-/* @media only screen and (max-width: 414px) and (min-width: 361px) {
-  html {
-    font-size: 23px !important;
-  }
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-html,
-body,
-#app {
-  width: 100%;
-  height: 100%;
-} */
-
 a {
   text-decoration: none;
 }
@@ -525,15 +513,33 @@ img {
   -webkit-box-orient: vertical;
   top: 0.1em;
 }
+
+/* 红字描述 */
+.p-promotion{
+  font-size: .55rem;
+  color: #888;
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp:2;
+  -webkit-box-orient: vertical;
+  position: relative;
+}
+
+.p-promotion span{
+  color: #ca141d;
+}
+
 /* 促销信息 */
 .pro-box {
   padding: 0.55rem 0.8rem 0.55rem 0;
-  margin: 0 0 0 0.8rem;
+  margin: 0rem 0 0 0.8rem;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   max-width: 100%;
-  height: 5.48rem;
+  height: 4.38rem;
 }
 .pro-box-content {
   flex-grow: 1;
@@ -1039,6 +1045,17 @@ img {
     #ffffff 100%
   );
   height: 11.43rem;
+  position: relative;
+}
+
+.icon-mask-specify {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-size: contain;
+  background-image: url("../assets/images/mask.png");
 }
 
 .new-spe-title {
@@ -1089,6 +1106,7 @@ img {
   width: 8rem;
   height: 1.5rem;
   line-height: 1.5rem;
+  z-index: 100;
 }
 
 .pro-detail-img {
@@ -1182,7 +1200,7 @@ img {
   border-radius: 0.93rem;
   display: flex;
   align-items: center;
-  justify-content: center;  
+  justify-content: center;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
