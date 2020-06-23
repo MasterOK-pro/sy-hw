@@ -16,6 +16,9 @@ export default {
     HomePageFooter: HomePageFooter,
     /* es6简写，组件选项对象和自定义标签名同名 */
     MineBody
+  },
+  activated () {
+    this.$store.commit('currentPath', 'mine');
   }
 };
 </script>

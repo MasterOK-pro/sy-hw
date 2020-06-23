@@ -6,7 +6,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     appRefuse: Boolean, //判定首页顶部'建议使用app'的提示框，显示与否
-    pathName: 'home'
+    pathName: ''
   },
   mutations: {
     /* app显示控制 */
@@ -18,7 +18,6 @@ export default new Vuex.Store({
     },
     currentPath (state, str) {
       state.pathName = str;
-      console.log(state.pathName);
     }
   }
 })

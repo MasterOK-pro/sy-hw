@@ -81,6 +81,9 @@ export default {
       this.clicked = index;
       this.componentName = "Qhc" + index;
     }
+  },
+  activated () {
+    this.$store.commit('currentPath', 'classify');
   }
 };
 </script>
