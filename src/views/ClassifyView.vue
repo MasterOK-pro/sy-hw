@@ -38,7 +38,7 @@
  
 import HomePageFooter from "../components/HomePageFooter.vue";
 import Com0 from "../components/sub-components/com0.vue";
-import Com1 from "../components/sub-components/com1.vue";
+
 // import { Swiper, SwiperSlide } from "vue-awesome-swiper";
 // import "swiper/css/swiper.css";
 
@@ -47,7 +47,7 @@ export default {
     
     HomePageFooter: HomePageFooter,
     Com0:Com0,
-    Com1:Com1,
+   
         com2: {
             template: `
             <div class="zujian1">
