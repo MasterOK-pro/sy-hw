@@ -591,10 +591,10 @@ var ProductList = [
         price:5299,
       
         swiperImg:[
-            require("../assets/images/rongyaopad-sw1.png"),
-            require("../assets/images/rongyaopad-sw2.png"),
-            require("../assets/images/rongyaopad-sw3.png"),
-            require("../assets/images/rongyaopad-sw4.png"),
+            require("../assets/images/matepadpro-sw1.png"),
+            require("../assets/images/matepadpro-sw2.png"),
+            require("../assets/images/matepadpro-sw3.png"),
+            require("../assets/images/matepadpro-sw4.png"),
            
         ],
        
@@ -604,10 +604,10 @@ var ProductList = [
         },
         classify:"book",/* 分类 */
         introImg:[
-            require("../assets/images/rongyaopad-dt1.png"),
-            require("../assets/images/rongyaopad-dt2.png"),
-            require("../assets/images/rongyaopad-dt3.png"),
-            require("../assets/images/rongyaopad-dt4.png"),
+            require("../assets/images/matepadpro-dt1.png"),
+            require("../assets/images/matepadpro-dt2.png"),
+            require("../assets/images/matepadpro-dt3.png"),
+            require("../assets/images/matepadpro-dt4.png"),
          
         ]
 
