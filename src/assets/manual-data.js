@@ -354,7 +354,7 @@ var ProductList = [
         },
         classify:"book",/* 分类 */
         introImg:[
-            require("../assets/images/MateBookXPro-dt1.jpg"),
+            require("../assets/images/MateBookXPro-dt1.png"),
             require("../assets/images/MateBookXPro-dt2.jpg"),
             require("../assets/images/MateBookXPro-dt3.jpg"),
             require("../assets/images/MateBookXPro-dt4.jpg"),
@@ -369,10 +369,10 @@ var ProductList = [
         price:3799,
         oldPrice:"4199",
         swiperImg:[
-            require("../assets/images/MateBook-rongyao14-sw1.png"),
-            require("../assets/images/MateBook-rongyao14-sw2.png"),
-            require("../assets/images/MateBook-rongyao14-sw3.png"),
-            require("../assets/images/MateBook-rongyao14-sw4.png"),
+            require("../assets/images/matebook-rongyao14-sw1.png"),
+            require("../assets/images/matebook-rongyao14-sw2.png"),
+            require("../assets/images/matebook-rongyao14-sw3.png"),
+            require("../assets/images/matebook-rongyao14-sw4.png"),
            
         ],
        
@@ -382,10 +382,10 @@ var ProductList = [
         },
         classify:"book",/* 分类 */
         introImg:[
-            require("../assets/images/MateBook-rongyao14-dt1.jpg"),
-            require("../assets/images/MateBook-rongyao14-dt2.jpg"),
-            require("../assets/images/MateBook-rongyao14-dt3.jpg"),
-            require("../assets/images/MateBook-rongyao14-dt4.jpg"),
+            require("../assets/images/matebook-rongyao14-dt1.jpg"),
+            require("../assets/images/matebook-rongyao14-dt2.jpg"),
+            require("../assets/images/matebook-rongyao14-dt3.jpg"),
+            require("../assets/images/matebook-rongyao14-dt4.jpg"),
          
         ]
 

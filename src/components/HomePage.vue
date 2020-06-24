@@ -496,7 +496,7 @@
       </div>
       <div class="homepage-rcmd-body">
         <swiper class="swiper" :options="swiperOptionRcmd">
-          <swiper-slide class="rcmd-item" v-for="(item,index) of phoneSwiper" :key='index'>
+          <swiper-slide class="rcmd-item" v-for="(item,index) of phoneSwiper" :key="index">
             <a href>
               <div class="img-area">
                 <p class="p-tag">
@@ -505,7 +505,7 @@
                     width="100%"
                     height=".6rem"
                     style="background-color: #FF6A6E;"
-                    v-if='item.installment'
+                    v-if="item.installment"
                   >
                     <text
                       x="50%"
@@ -518,9 +518,7 @@
                   </svg>
                 </p>
                 <p class="p-img">
-                  <img
-                    :src="item.swiperImg[0]"
-                  />
+                  <img :src="item.swiperImg[0]" />
                 </p>
                 <p class="p-promotion">{{item.desc}}</p>
               </div>
@@ -529,8 +527,9 @@
               </p>
               <p class="p-price">
                 <b>
-                  <em>¥</em>{{item.price}}
-                  <del v-if='item.oldPrice'>{{item.oldPrice}}</del>
+                  <em>¥</em>
+                  {{item.price}}
+                  <del v-if="item.oldPrice">{{item.oldPrice}}</del>
                 </b>
               </p>
             </a>
@@ -613,7 +612,7 @@
                 </b>
               </p>
             </a>
-          </swiper-slide> -->
+          </swiper-slide>-->
         </swiper>
       </div>
       <div class="channel-footer">
@@ -639,7 +638,7 @@ import ToTop from "../components/ToTop.vue";
 import { Swiper, SwiperSlide } from "vue-awesome-swiper";
 import "swiper/css/swiper.css";
 
-import Product from '../assets/manual-data.js'
+import Product from "../assets/manual-data.js";
 
 export default {
   data() {
@@ -708,11 +707,11 @@ export default {
     this.showTop = false;
   },
   computed: {
-    phoneSwiper () {
+    phoneSwiper() {
       let list = [];
       for (let item of Product) {
         if (item.desc) {
-          list.push (item);
+          list.push(item);
         }
       }
       return list;
@@ -1159,6 +1158,13 @@ h2 {
   color: #333;
   font-size: 0.6rem;
   text-align: center;
+}
+.rcmd-item-name span {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .p-price {
   font-size: 0.65rem;
