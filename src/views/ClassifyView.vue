@@ -134,7 +134,7 @@ li {
 .da3{
   display: inline-block;
   position: absolute;
-  top: 0.3rem;
+  top: 0.25rem;
   left:0.5rem;
 }
 .search input {
@@ -186,7 +186,7 @@ li {
   /* background-color: aqua; */
 }
 .left > .list > li {
-  width: 4.9rem;
+  width: 4rem;
   height: 2.5rem;
   padding: 16px 0px;
   padding-left: 16px;
@@ -194,6 +194,7 @@ li {
 }
 .bor {
   color: orangered;
+  border-right:2px solid orangered
 }
 /* .left>.list>li span:hover{
     border-right:2px solid orangered;
@@ -202,7 +203,7 @@ li {
 .left > .list > li span {
   display: inline-block;
   /* border-right:1px solid orangered; */
-  width: 4.3rem;
+  width: 4rem;
   height: 0.9rem;
   /* background-color: palegoldenrod; */
 }
