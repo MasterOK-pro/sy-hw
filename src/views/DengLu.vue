@@ -17,7 +17,9 @@
       </div>
       <!-- 主体 -->
       <div class="centent">
-        <div class="main iconfont">
+          <component :is="componentName" @click="changDeng"></component>
+
+        <!-- <div class="main iconfont">
           <div class="countryCode">
             <div class="c-left">
               <span>国家/地区</span>
@@ -38,9 +40,9 @@
             <div class="btn-login">登录/注册</div>
           </div>
           <div class="password">
-            <strong>密码登录</strong>
+            <strong @click="changDeng(index)">密码登录</strong>
           </div>
-        </div>
+        </div> -->
       </div>
       <!-- 下部 -->
       <div class="footer">
@@ -79,7 +81,34 @@
 </template>
 
 <script>
-export default {};
+import Deng0 from "../components/Deng0.vue";
+import Deng1 from "../components/Deng1.vue";
+export default {
+  components: {
+    Deng0: Deng0,
+    Deng1: Deng1
+  },
+  data() {
+    return {
+      
+      clicked: 0,
+      // currentView: 'Com0',
+      componentName: "Deng0"
+    };
+  },
+  methods:{
+      changDeng(index){
+          this.componentName = "Deng"+index;
+          if (index==0) {
+            document.title = '华为账号-短信验证码登录'
+          }
+          if (index==1) {
+            document.title = '华为账号-登录'
+          }
+          console.log(this.$route)
+      }
+  }
+};
 </script>
 
 <style scoped>
@@ -99,6 +128,7 @@ export default {};
 .wrap {
   width: 100%;
   height: 100%;
+  background-color: white;
 }
 /* 上部样式 */
 .header {
@@ -183,7 +213,7 @@ export default {};
   outline: none;
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  background: rgb(249, 249, 249);
+ 
 }
 .verify {
   width: 16.5rem;
@@ -193,6 +223,7 @@ export default {};
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+ 
 }
 .verify input {
   display: inline-block;
@@ -201,7 +232,7 @@ export default {};
   outline: none;
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  background: rgb(249, 249, 249);
+  background-color: white;
 }
 .get-verify {
   width: 5rem;

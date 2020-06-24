@@ -5,8 +5,8 @@
     <div class="wrap">
       <div class="header iconfont">
         <div class="search"  @click="$router.push('search')">
-          <a href>
-            <img src="../assets/images/da.png" alt />
+          <a href class="da3">
+            <img src="../assets/images/da3.png" alt />
           </a>
           <input type="text" placeholder="P40 pro" disabled/>
         </div>
@@ -69,7 +69,7 @@ export default {
         ""
       ],
       clicked: 0,
-      // currentView: 'Com0',
+     
       componentName: "Qhc0"
     };
   },
@@ -105,7 +105,7 @@ li {
 .wrap {
   width: 100%;
   height: 100%;
-  
+   background-color: white;
  
 }
 /* 上部 */
@@ -116,11 +116,12 @@ li {
   padding-top: 5px;
   padding-left: 15px;
   display: flex;
+   background-color: white;
 }
 .search {
   width: 14.6rem;
   height: 1.6rem;
-  background-color: rgba(245, 245, 245);
+   background-color:rgb(249, 249, 249);
   border-radius: 1rem;
   border: 1px solid rgba(0, 0, 0, 0.2);
   position: relative;
@@ -130,7 +131,12 @@ li {
   padding-left: 8px;
   line-height: 28px;
 }
-
+.da3{
+  display: inline-block;
+  position: absolute;
+  top: 0.25rem;
+  left:0.5rem;
+}
 .search input {
   display: inline-block;
   height: 1.5rem;
@@ -140,7 +146,7 @@ li {
   left: 1.6rem;
   width: 11.5rem;
   border: none;
-  background-color: rgba(245, 245, 245);
+  background-color:rgb(249, 249, 249);
 }
 .icon {
   /* background-color: silver; */
@@ -180,7 +186,7 @@ li {
   /* background-color: aqua; */
 }
 .left > .list > li {
-  width: 4.9rem;
+  width: 4rem;
   height: 2.5rem;
   padding: 16px 0px;
   padding-left: 16px;
@@ -188,6 +194,7 @@ li {
 }
 .bor {
   color: orangered;
+  border-right:2px solid orangered
 }
 /* .left>.list>li span:hover{
     border-right:2px solid orangered;
@@ -196,7 +203,7 @@ li {
 .left > .list > li span {
   display: inline-block;
   /* border-right:1px solid orangered; */
-  width: 4.3rem;
+  width: 4rem;
   height: 0.9rem;
   /* background-color: palegoldenrod; */
 }

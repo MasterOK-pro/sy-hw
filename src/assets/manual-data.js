@@ -4,8 +4,8 @@ var ProductList = [
         price:5988,
         oldPrice:"",/* 首页 */
         swiperImg:[
-            require("../assets/images/swiper-1.jpg"),
             require("../assets/images/swiper-2.png"),
+            require("../assets/images/swiper-1.jpg"),
             require("../assets/images/swiper-3.png"),
             require("../assets/images/swiper-4.png"),
             require("../assets/images/swiper-5.png"),
@@ -119,8 +119,8 @@ var ProductList = [
         price:6399,
         oldPrice:"",
         swiperImg:[
-            require("../assets/images/mate30pro-sw1.png"),
             require("../assets/images/mate30pro-sw2.png"),
+            require("../assets/images/mate30pro-sw1.png"),
             require("../assets/images/mate30pro-sw3.png"),
             require("../assets/images/mate30pro-sw4.png"),
            
