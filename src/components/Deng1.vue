@@ -1,43 +1,58 @@
 <template>
   <div class="main iconfont">
-    
     <div class="phone">
-      <input type="text" placeholder="手机号/邮件地址/华为号" />
+      <input type="text" placeholder="手机号/邮件地址/华为号" :value="usrName"/>
     </div>
 
     <div class="verify">
-      <input type="text" placeholder="密码" />
-     
+      <input type="password" placeholder="密码" :value="usrPws"/>
     </div>
 
     <div class="duanxing">
-        <div class="dx-l" > 
-            <span @click="changDeng(0)"> 短信验证码登录</span>   
-        </div>
-        <div class="dx-r">
-            忘记密码
-        </div>
+      <div class="dx-l">
+        <span @click="changDeng(0)">短信验证码登录</span>
+      </div>
+      <div class="dx-r">忘记密码</div>
     </div>
 
     <div class="btn-wrap">
-      <div class="btn-login">登录</div>
+      <div class="btn-login" @click="login">登录</div>
     </div>
     <div class="password">
       <strong>
-          <a href="https://id1.cloud.huawei.com/CAS/mobile/standard/register/wapRegister.html?reqClientType=26&loginChannel=26000002&countryCode=cn&loginUrl=https%3A%2F%2Fid1.cloud.huawei.com%2FCAS%2Fmobile%2Fstandard%2FwapLogin.html&lang=zh-cn&themeName=huawei&service=https%3A%2F%2Fm.vmall.com%2Faccount%2Fcaslogin%3Furl%3Dhttps%253A%252F%252Fm.vmall.com%252Fpersonal#/wapRegister/userAgreement"> 注册账号</a>
-    </strong>
+        <a
+          href="https://id1.cloud.huawei.com/CAS/mobile/standard/register/wapRegister.html?reqClientType=26&loginChannel=26000002&countryCode=cn&loginUrl=https%3A%2F%2Fid1.cloud.huawei.com%2FCAS%2Fmobile%2Fstandard%2FwapLogin.html&lang=zh-cn&themeName=huawei&service=https%3A%2F%2Fm.vmall.com%2Faccount%2Fcaslogin%3Furl%3Dhttps%253A%252F%252Fm.vmall.com%252Fpersonal#/wapRegister/userAgreement"
+        >注册账号</a>
+      </strong>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-    methods: {
-        changDeng (index) {
-            this.$emit('click',index)
-        }
+  data () {
+    return {
+      usrName: '',
+      usrPws: ''
     }
-}
+  },
+  computed: {
+    userInfo () {
+      return this.$store.state.usrInfo;
+    }
+  },
+  methods: {
+    changDeng(index) {
+      this.$emit("click", index);
+    },
+    login() {
+      if ( (this.usrName==this.userInfo.name) && (this.usrPws==this.userInfo.pwd) ) {
+        this.$store.commit ('login');
+        localStorage.setItem ('login',JSON.stringify(true));
+      }
+    }
+  }
+};
 </script>
 
 <style scoped>
@@ -137,25 +152,24 @@ export default {
   width: 16.5rem;
   height: 1.8rem;
   margin: 0.8rem auto;
-background-color: rgb(242, 242, 242);
+  background-color: rgb(242, 242, 242);
   color: white;
   border-radius: 20px;
   text-align: center;
   line-height: 1.8rem;
   font-size: 0.8rem;
 }
-.password a{
-    color: #007DFF;
-   
+.password a {
+  color: #007dff;
 }
 
-.duanxing{
-    width: 15.6rem;
-    height: 1.2rem;
-    display: flex;
-    justify-content: space-between;
-    margin: 16px 5px;
-    font-size: 14px;
-    color: #007DFF;
+.duanxing {
+  width: 15.6rem;
+  height: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  margin: 16px 5px;
+  font-size: 14px;
+  color: #007dff;
 }
 </style>

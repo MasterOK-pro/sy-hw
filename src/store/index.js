@@ -25,6 +25,9 @@ export default new Vuex.Store({
     },
     currentPath (state, str) {
       state.pathName = str;
+    },
+    login (state) {
+      state.usrInfo.login = true;
     }
   }
 })
