@@ -6,7 +6,14 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     appRefuse: Boolean, //判定首页顶部'建议使用app'的提示框，显示与否
-    pathName: ''
+    pathName: '',
+    /* 测试用户信息 */
+    usrInfo: {
+      login: false,
+      name: 'HuaWei',
+      pwd: 'huawei',
+      usrHeader: require('../../public/imgs/cat.jpg')
+    }
   },
   mutations: {
     /* app显示控制 */

@@ -105,6 +105,8 @@ li {
 .wrap {
   width: 100%;
   height: 100%;
+  
+ 
 }
 /* 上部 */
 .header {
@@ -131,19 +133,19 @@ li {
 
 .search input {
   display: inline-block;
-  height: 30px;
+  height: 1.5rem;
   position: absolute;
   font-size: 16px;
   color: red;
-  left: 33px;
-  width: 230px;
+  left: 1.6rem;
+  width: 11.5rem;
   border: none;
   background-color: rgba(245, 245, 245);
 }
 .icon {
   /* background-color: silver; */
-  width: 37px;
-  height: 25px;
+  width: 1.9rem;
+  height: 1.3rem;
   margin-top: 4px;
   margin-left: 5px;
   font-size: 25px;
@@ -154,14 +156,15 @@ li {
 .main {
   display: flex;
   width: 100%;
-  height: 540px;
+  height: 27rem;
+ 
 }
 /* 左半部 */
 .left {
   width: 27%;
   /* height: 718px; */
   /* background-color: rgb(222, 228, 141); */
-  height: 530px;
+  height: 26.5rem;
   overflow-y: auto;
 }
 
@@ -193,8 +196,8 @@ li {
 .left > .list > li span {
   display: inline-block;
   /* border-right:1px solid orangered; */
-  width: 86px;
-  height: 18px;
+  width: 4.3rem;
+  height: 0.9rem;
   /* background-color: palegoldenrod; */
 }
 
@@ -205,41 +208,41 @@ li {
   overflow-y: auto;
 }
 .boxa1 {
-  width: 252px;
-  height: 70px;
+  width: 12.6rem;
+  height: 3.5rem;
   margin: 8px 8px 0px 12.5px;
 }
 .boxa2 {
-  width: 252px;
-  height: 70px;
+  width: 12.6rem;
+  height: 3.5rem;
   margin: 8px 8px 0px 12.5px;
 }
 .zujian1 .boxa1 a {
   display: inline-block;
-  width: 252px;
-  height: 70px;
+  width: 12.6rem;
+  height: 3.5rem;
 }
 .zujian1 img {
-  width: 252px;
-  height: 70px;
+  width: 12.6rem;
+  height:3.5rem;
 }
 
 /* 标题之下 */
 .title {
-  width: 273px;
-  height: 42px;
+  width: 13.6rem;
+  height: 2.1rem;
   /* background-color: sandybrown; */
   text-align: center;
-  line-height: 42px;
+  line-height: 2.1rem;
 }
 .con {
-  width: 250px;
+  width:12.5rem;
   /* height: 562px; */
   /* background-color: slateblue; */
   margin-left: 12px;
 }
 .con ul {
-  width: 250px;
+  width: 12.5rem;
   /* height: 562px; */
   display: flex;
   justify-content: space-between;
@@ -257,8 +260,8 @@ li {
   margin: 0 auto;
 }
 .primary {
-  width: 66px;
-  height: 94px;
+  width: 3.3rem;
+  height: 4.7rem;
   margin: 8px auto;
   /* background-color: thistle; */
 }
