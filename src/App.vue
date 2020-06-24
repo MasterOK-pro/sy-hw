@@ -14,6 +14,12 @@ export default {
     } else {
       this.$store.state.appRefuse = false;
     }
+    /* 从本地获取登录记录 */
+    if (localStorage.getItem('login')) {
+      this.$store.state.usrInfo.login = JSON.parse(localStorage.getItem('login'));
+    } else {
+      this.$store.state.usrInfo.login = false;
+    }
   }
 };
 </script>

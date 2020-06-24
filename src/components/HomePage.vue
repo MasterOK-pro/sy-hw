@@ -496,7 +496,7 @@
       </div>
       <div class="homepage-rcmd-body">
         <swiper class="swiper" :options="swiperOptionRcmd">
-          <swiper-slide class="rcmd-item">
+          <swiper-slide class="rcmd-item" v-for="(item,index) of phoneSwiper" :key='index'>
             <a href>
               <div class="img-area">
                 <p class="p-tag">
@@ -505,6 +505,7 @@
                     width="100%"
                     height=".6rem"
                     style="background-color: #FF6A6E;"
+                    v-if='item.installment'
                   >
                     <text
                       x="50%"
@@ -518,22 +519,23 @@
                 </p>
                 <p class="p-img">
                   <img
-                    src="https://res0.vmallres.com/pimages//product/6972453164971/428_428_AEEDD8A45E7E18EA7F10E0386C1104EEB994C561C391C803mp.png"
+                    :src="item.swiperImg[0]"
                   />
                 </p>
-                <p class="p-promotion">购机赠耳机</p>
+                <p class="p-promotion">{{item.desc}}</p>
               </div>
               <p class="rcmd-item-name">
-                <span>华为畅享Z 5G</span>
+                <span>{{item.name}}</span>
               </p>
               <p class="p-price">
                 <b>
-                  <em>¥</em>2199
+                  <em>¥</em>{{item.price}}
+                  <del v-if='item.oldPrice'>{{item.oldPrice}}</del>
                 </b>
               </p>
             </a>
           </swiper-slide>
-          <swiper-slide class="rcmd-item">
+          <!-- <swiper-slide class="rcmd-item">
             <a href>
               <div class="img-area">
                 <p class="p-img">
@@ -611,7 +613,7 @@
                 </b>
               </p>
             </a>
-          </swiper-slide>
+          </swiper-slide> -->
         </swiper>
       </div>
       <div class="channel-footer">
@@ -636,6 +638,8 @@ import ToTop from "../components/ToTop.vue";
 
 import { Swiper, SwiperSlide } from "vue-awesome-swiper";
 import "swiper/css/swiper.css";
+
+import Product from '../assets/manual-data.js'
 
 export default {
   data() {
@@ -674,15 +678,17 @@ export default {
     /* 首页滚轮事件 */
     homepageScroll() {
       let scrollTop = event.target.scrollTop;
-      /* 隐藏appHint */
-      if (scrollTop > 0) {
-        this.$store.commit("appRefused");
-        this.topFixed = true;
-      }
-      /* 显示apphint */
-      if (scrollTop == 0) {
-        this.$store.commit("appReceive");
-        this.topFixed = false;
+      if (!localStorage.getItem("appRefuse")) {
+        /* 隐藏appHint */
+        if (scrollTop > 0) {
+          this.$store.commit("appRefused");
+          this.topFixed = true;
+        }
+        /* 显示apphint */
+        if (scrollTop == 0) {
+          this.$store.commit("appReceive");
+          this.topFixed = false;
+        }
       }
       /* 显示返回顶部 */
       if (scrollTop > 720) {
@@ -694,8 +700,22 @@ export default {
       }
     },
     /* 前往搜索页面 */
-    goSearchPage () {
-      this.$router.push ('search');
+    goSearchPage() {
+      this.$router.push("search");
+    }
+  },
+  activated() {
+    this.showTop = false;
+  },
+  computed: {
+    phoneSwiper () {
+      let list = [];
+      for (let item of Product) {
+        if (item.desc) {
+          list.push (item);
+        }
+      }
+      return list;
     }
   }
 };
@@ -1072,7 +1092,7 @@ a {
   background: none;
   font-size: 0.55rem;
   text-overflow: ellipsis;
-  line-height: 1.2;
+  line-height: 1.2rem;
 }
 .p-promotion del {
   color: #9b9b9b;
