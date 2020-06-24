@@ -40,7 +40,7 @@
   </div>
 </template>
 
-<script scoped>
+<script>
 export default {
   computed: {
     pathName() {
@@ -55,7 +55,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .footer {
   max-width: 100%;
   display: flex;
