@@ -52,56 +52,56 @@
         <van-swipe-item>
           <div class="img-div">
             <div class="icon-btn-left" @click="goBack"></div>
-            <img src="../assets/images/swiper-1.jpg" alt />
+            <img v-if="ProductObject" :src="ProductObject.swiperImg[0]" alt />
             <div class="icon-btn-right" @click="menuShow=!menuShow"></div>
           </div>
         </van-swipe-item>
         <van-swipe-item>
           <div class="img-div">
             <div class="icon-btn-left" @click="goBack"></div>
-            <img src="../assets/images/swiper-2.png" alt />
+            <img v-if="ProductObject" :src="ProductObject.swiperImg[1]" alt />
             <div class="icon-btn-right" @click="menuShow=!menuShow"></div>
           </div>
         </van-swipe-item>
         <van-swipe-item>
           <div class="img-div">
             <div class="icon-btn-left" @click="goBack"></div>
-            <img src="../assets/images/swiper-3.png" alt />
+            <img v-if="ProductObject" :src="ProductObject.swiperImg[2]" alt />
             <div class="icon-btn-right" @click="menuShow=!menuShow"></div>
           </div>
         </van-swipe-item>
         <van-swipe-item>
           <div class="img-div">
             <div class="icon-btn-left" @click="goBack"></div>
-            <img src="../assets/images/swiper-4.png" alt />
+            <img v-if="ProductObject" :src="ProductObject.swiperImg[3]" alt />
             <div class="icon-btn-right" @click="menuShow=!menuShow"></div>
           </div>
         </van-swipe-item>
         <van-swipe-item>
           <div class="img-div">
             <div class="icon-btn-left" @click="goBack"></div>
-            <img src="../assets/images/swiper-5.png" alt />
+            <img v-if="ProductObject" :src="ProductObject.swiperImg[0]" alt />
             <div class="icon-btn-right" @click="menuShow=!menuShow"></div>
           </div>
         </van-swipe-item>
         <van-swipe-item>
           <div class="img-div">
             <div class="icon-btn-left" @click="goBack"></div>
-            <img src="../assets/images/swiper-6.png" alt />
+            <img v-if="ProductObject" :src="ProductObject.swiperImg[1]" alt />
             <div class="icon-btn-right" @click="menuShow=!menuShow"></div>
           </div>
         </van-swipe-item>
         <van-swipe-item>
           <div class="img-div">
             <div class="icon-btn-left" @click="goBack"></div>
-            <img src="../assets/images/swiper-7.png" alt />
+            <img v-if="ProductObject" :src="ProductObject.swiperImg[2]" alt />
             <div class="icon-btn-right" @click="menuShow=!menuShow"></div>
           </div>
         </van-swipe-item>
         <van-swipe-item>
           <div class="img-div">
             <div class="icon-btn-left" @click="goBack"></div>
-            <img src="../assets/images/swiper-8.png" alt />
+            <img v-if="ProductObject" :src="ProductObject.swiperImg[3]" alt />
             <div class="icon-btn-right" @click="menuShow=!menuShow"></div>
           </div>
         </van-swipe-item>
@@ -115,9 +115,9 @@
           <p class="p-price">
             <span class="pro-price">
               <small>￥</small>
-              <span>5988</span>
+              <span>{{ProductObject.price}}</span>
             </span>
-            <span class="detail-span">HUAWEI P40 Pro 5G 全网通 8GB+128GB（零度白）</span>
+            <span class="detail-span">{{ProductObject.name}}</span>
           </p>
           <!-- 红字描述 -->
           <div class="p-promotion">
@@ -157,13 +157,13 @@
             <div class="color-choice">
               <div
                 class="color-detail"
-                @click="colorChoice(1)"
-                :class="[colorIndex== 1 ? 'active':'']"
-              >亮黑色</div>
-              <div class="color-detail" @click="colorChoice(2)" :class="{active:colorIndex==2}">深海蓝</div>
+                @click="colorChoice(index)"
+                :class="[colorIndex== index ? 'active':'']" v-for="(item,index) in ProductObject.config.color" :key="item.index"
+              >{{item}}</div>
+              <!-- <div class="color-detail" @click="colorChoice(2)" :class="{active:colorIndex==2}">深海蓝</div>
               <div class="color-detail" @click="colorChoice(3)" :class="{active:colorIndex==3}">晨曦金</div>
               <div class="color-detail" @click="colorChoice(4)" :class="{active:colorIndex==4}">零度白</div>
-              <div class="color-detail" @click="colorChoice(5)" :class="{active:colorIndex==5}">冰霜银</div>
+              <div class="color-detail" @click="colorChoice(5)" :class="{active:colorIndex==5}">冰霜银</div> -->
             </div>
           </div>
           <!-- 版本 -->
@@ -172,10 +172,12 @@
             <div class="version-choice">
               <div
                 class="version-detail"
-                @click="colorChoice(6)"
-                :class="{active:colorIndex==6}"
-              >5G全网通 8GB+256GB</div>
-              <div
+                @click="versionChioce(index)"
+                :class="{active:versionIndex==index}"
+                v-for="(item,index) in ProductObject.config.version"
+                :key="item.index"
+              >{{item}}</div>
+              <!-- <div
                 class="version-detail"
                 @click="colorChoice(7)"
                 :class="{active:colorIndex==7}"
@@ -184,7 +186,7 @@
                 class="version-detail"
                 @click="colorChoice(8)"
                 :class="{active:colorIndex==8}"
-              >5G全网通 6GB+128GB</div>
+              >5G全网通 6GB+128GB</div>-->
             </div>
           </div>
           <!-- 类型 -->
@@ -351,28 +353,28 @@
       </div>
 
       <p id="detail-four">
-        <img src="../assets/images/pro-detail-1.jpg" alt class="pro-detail-img" />
+        <img :src="ProductObject.introImg[0]" alt class="pro-detail-img" />
       </p>
       <p>
-        <img src="../assets/images/pro-detail-2.jpg" alt class="pro-detail-img" />
+        <img :src="ProductObject.introImg[1]" alt class="pro-detail-img" />
       </p>
       <p>
-        <img src="../assets/images/pro-detail-3.jpg" alt class="pro-detail-img" />
+        <img :src="ProductObject.introImg[2]" alt class="pro-detail-img" />
       </p>
       <p>
-        <img src="../assets/images/pro-detail-4.jpg" alt class="pro-detail-img" />
+        <img :src="ProductObject.introImg[3]" alt class="pro-detail-img" />
       </p>
       <p>
-        <img src="../assets/images/pro-detail-5.jpg" alt class="pro-detail-img" />
+        <img :src="ProductObject.introImg[0]" alt class="pro-detail-img" />
       </p>
       <p>
-        <img src="../assets/images/pro-detail-6.jpg" alt class="pro-detail-img" />
+        <img :src="ProductObject.introImg[1]" alt class="pro-detail-img" />
       </p>
       <p>
-        <img src="../assets/images/pro-detail-7.jpg" alt class="pro-detail-img" />
+        <img :src="ProductObject.introImg[2]" alt class="pro-detail-img" />
       </p>
       <p>
-        <img src="../assets/images/pro-detail-8.jpg" alt class="pro-detail-img" />
+        <img :src="ProductObject.introImg[3]" alt class="pro-detail-img" />
       </p>
     </div>
 
@@ -394,7 +396,7 @@
       </div>
 
       <div class="pro-property-right">
-        <div class="button-round">加入购物车</div>
+        <div class="button-round" @click="toCart">加入购物车</div>
         <div class="button-round-primary">立即购买</div>
       </div>
     </div>
@@ -431,8 +433,35 @@
 
 <script>
 import ProductReviewSwiper from "./ProductReviewSwiper.vue";
+import Product from "../assets/manual-data.js";
 
 export default {
+  activated(){
+    this.name = this.$route.query.name;
+  },
+  computed: {
+    myProduct() {
+      let list = [];
+      for (let item of Product) {
+        if (item.name) {
+          list.push(item);
+        }
+      }
+      return list;
+    },
+
+    ProductObject() {
+      for (let i = 0; i < this.myProduct.length; i++) {
+        if (this.myProduct[i].name.includes(this.name)) {
+          return this.myProduct[i];
+        }
+      }
+    }
+  },
+
+  // mounted() {
+  //   console.log(this.ProductObject);
+  // },
   components: {
     "my-swiper": ProductReviewSwiper
   },
@@ -445,7 +474,9 @@ export default {
       itemIndex: 1,
       menuShow: false,
       opa: 0,
-      overlayShow: false
+      overlayShow: false,
+      versionIndex: 0,
+      name:""
     };
   },
   methods: {
@@ -455,7 +486,7 @@ export default {
       // let scrollTop = document.documentElement.scrollTop||document.body.scrollTop||ele.scrollTop;
 
       let scrollTop = event.target.scrollTop;
-      console.log(scrollTop);
+      // console.log(scrollTop);
       if (scrollTop > 90) {
         this.menuShow = false;
       }
@@ -490,6 +521,9 @@ export default {
       this.colorIndex = index;
       // console.log(this.colorIndex);
     },
+    versionChioce(index) {
+      this.versionIndex = index;
+    },
     toHome() {
       this.$router.push("/");
     },
@@ -518,6 +552,9 @@ export default {
     },
     overlayClick() {
       this.overlayShow = true;
+    },
+    toCart() {
+      this.$router.push("cart");
     }
   }
 };

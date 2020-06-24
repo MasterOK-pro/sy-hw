@@ -21,11 +21,11 @@
           </label>
           <div class="sc-pro-href">
             <p class="p-img">
-              <img :src="item.img" alt @click="toPro" />
+              <img :src="item.img" alt @click="toPro(index)" />
             </p>
             <div class="sc-pro-info">
               <p class="p-name">
-                <span>{{item.desc}}</span>
+                <span>{{item.name}}</span>
               </p>
               <p class="sku-line">
                 <span class="fonts">{{item.config}}</span>
@@ -93,6 +93,7 @@
 
 <script>
 import HomePageFooter from "../components/HomePageFooter.vue";
+import Product from "../assets/manual-data.js";
 
 export default {
   components: {
@@ -131,31 +132,41 @@ export default {
         }
       });
       return totalCount;
+    },
+
+    myProduct(){
+      let list = [];
+      for(let item of Product){
+        if(item.name){
+          list.push(item);
+        }
+      }
+      return list;
     }
   },
   mounted() {
     let cartList = [
       {
-        img: require("../assets/images/cart-img-1.png"),
-        desc:
-          "荣耀X10 麒麟820双模5G九频 90Hz全速屏 RYYB高感光摄影 6GB+128GB（竞速蓝）",
-        config: " 竞速蓝,全网通 6GB+128GB,官方标配",
-        price: "2199",
+        img: require("../assets/images/cart-img-3.png"),
+        name:
+          "HUAWEI P40 Pro 5G 全网通 8GB+128GB（零度白）",
+        config: "零度白,5G全网通 8GB+128GB,官方标配",
+        price: "5988",
         count: 1
       },
       {
         img: require("../assets/images/cart-img-2.png"),
-        desc:
-          "荣耀30 Pro 50倍超稳远摄 超感光高清夜拍 双模5G 麒麟990 5G SoC 8GB+128GB 幻夜黑",
+        name:
+          "HUAWEI P40 Pro+ 5G 全网通 8GB+128GB（陶瓷黑）",
         config: " 幻夜黑,Pro 8GB+128GB,官方标配",
-        price: "3999",
+        price: "8888",
         count: 1
       },
       {
-        img: require("../assets/images/cart-img-3.png"),
-        desc: "HUAWEI P40 5G 全网通 8GB+128GB（零度白）",
-        config: " 零度白,5G全网通 8GB+128GB,官方标配",
-        price: "4488",
+        img: require("../assets/images/cart-img-1.png"),
+        name: "荣耀30 Pro 50倍超稳远摄 超感光高清夜拍 双模5G 麒麟990 5G SoC 8GB+128GB 幻夜黑",
+        config: "竞速蓝,全网通 6GB+128GB,官方标配",
+        price: "3999",
         count: 1
       }
     ];
@@ -166,8 +177,11 @@ export default {
     this.cartList = cartList;
   },
   methods: {
-    toPro(){
-      this.$router.push("product");
+    toPro(index){
+      this.$router.push({path:"Product",query:{name:this.cartList[index].name}});
+      // this.$route.meta.title = this.myProduct[index].name;
+      document.title = this.myProduct[index].name;
+      console.log(this.$route.query.name);
     },
     reduce(index) {
       if (this.cartList[index].count > 1) {
