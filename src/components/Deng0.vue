@@ -20,13 +20,19 @@
       <div class="btn-login">登录/注册</div>
     </div>
     <div class="password">
-      <strong @click="changDeng(index)">密码登录</strong>
+      <strong @click="changDeng(1)">密码登录</strong>
     </div>
   </div>
 </template>
 
 <script>
-
+export default {
+    methods: {
+        changDeng (index) {
+            this.$emit('click',index)
+        }
+    }
+}
 </script>
 
 <style scoped>
@@ -79,7 +85,7 @@
   outline: none;
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  background: rgb(249, 249, 249);
+   background-color: white;
 }
 .verify {
   width: 16.5rem;
@@ -97,7 +103,7 @@
   outline: none;
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  background: rgb(249, 249, 249);
+   background-color: white;
 }
 .get-verify {
   width: 5rem;
