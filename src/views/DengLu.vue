@@ -17,6 +17,8 @@
       </div>
       <!-- 主体 -->
       <div class="centent">
+          <component :is="componentName"></component>
+
         <div class="main iconfont">
           <div class="countryCode">
             <div class="c-left">
@@ -38,7 +40,7 @@
             <div class="btn-login">登录/注册</div>
           </div>
           <div class="password">
-            <strong>密码登录</strong>
+            <strong @click="changDeng(index)">密码登录</strong>
           </div>
         </div>
       </div>
@@ -79,7 +81,20 @@
 </template>
 
 <script>
-export default {};
+import Deng0 from "../components/Deng0.vue";
+import Deng1 from "../components/Deng1.vue";
+export default {
+  components: {
+    Deng0: Deng0,
+    Deng1: Deng1
+  },
+  methods:{
+      changDeng(index){
+          this.clicked = index;
+          this.componentName = "Deng"+index;
+      }
+  }
+};
 </script>
 
 <style scoped>
