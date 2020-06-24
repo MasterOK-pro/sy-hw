@@ -1,6 +1,6 @@
 <template>
   <div class="app-hint" v-if="!show">
-    <span class="app-hint-close" @click="$store.commit('appRefused')"></span>
+    <span class="app-hint-close" @click="closeAppHint"></span>
     <span class="app-hint-logo"></span>
     <span class="hint-mid-text">
       <p>来华为商城APP</p>
@@ -17,6 +17,12 @@ export default {
   computed: {
     show() {
       return this.$store.state.appRefuse;
+    }
+  },
+  methods: {
+    closeAppHint() {
+      this.$store.commit("appRefused");
+      localStorage.setItem("appRefuse", JSON.stringify(this.show));
     }
   }
 };
