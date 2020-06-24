@@ -6,7 +6,7 @@
         <div class="center">
           <div class="head-logo">
             <a href>
-              <img src="./images/huawei-logo.png" alt />
+              <img src="../../public/imgs/denglu-huawei-logo.png" alt />
             </a>
           </div>
         </div>
@@ -51,10 +51,10 @@
         </div>
         <div class="second-picture">
           <div class="p1 pic">
-            <img src="./images/qq.png" alt />
+            <img src="../../public/imgs/denglu-qq.png" alt />
           </div>
           <div class="p2 pic">
-            <img src="./images/zhifu.png" alt />
+            <img src="../../public/imgs/denglu-zhifu.png" alt />
           </div>
         </div>
         <div class="footer-end">
@@ -70,7 +70,7 @@
 export default {};
 </script>
 
-<style lang="less">
+<style scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

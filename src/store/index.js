@@ -12,6 +12,7 @@ export default new Vuex.Store({
     /* app显示控制 */
     appRefused (state) {
       state.appRefuse = true;
+      localStorage.setItem('appRefuse',JSON.stringify(state.appRefuse));
     },
     appReceive (state) {
       state.appRefuse = false;

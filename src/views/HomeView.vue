@@ -20,6 +20,12 @@ export default {
     HomePage: HomePage,
     HomePageFooter: HomePageFooter,
     AppHint
+  },
+  created () {
+    this.$store.commit('currentPath', 'home');
+  },
+  activated () {
+    this.$store.commit('currentPath', 'home');
   }
 };
 </script>

@@ -9,6 +9,7 @@ import Mine from '../views/MineView.vue'
 import ProductDetail from '../views/ProductDetail.vue'
 import SearchView from '../views/SearchView.vue'
 import Discover from '../views/Discover.vue'
+import DengLu from '../views/DengLu.vue'
 
 Vue.use(VueRouter)
 
@@ -41,6 +42,10 @@ Vue.use(VueRouter)
     {
       path: '/discover',
       component: Discover
+    },
+    {
+      path: '/login',
+      component: DengLu
     }
 ]
 

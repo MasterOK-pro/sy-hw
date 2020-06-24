@@ -8,7 +8,12 @@
 <script>
 export default {
   created() {
-    this.$store.state.appRefuse = false;
+    /* 获取是否已经拒绝使用客户端的记录 */
+    if (localStorage.getItem('appRefuse')) {
+      this.$store.state.appRefuse = JSON.parse(localStorage.getItem('appRefuse'));
+    } else {
+      this.$store.state.appRefuse = false;
+    }
   }
 };
 </script>
