@@ -48,12 +48,12 @@
           <van-icon name="chat-o" size="1.2rem" />
         </div>
       </div>
-      <div class="mid-body-top-dfltUser">
+      <div class="mid-body-top-dfltUser" @click="$router.push('login')">
         <img src="../../public/imgs/app-mine-user-dflt.png" alt />
         <div class="mid-body-top-login">
           <p>登录/注册</p>
           <p class="sign-in">
-            <span>@</span>
+            <span></span>
             <span>签到领积分</span>
           </p>
         </div>
@@ -250,6 +250,7 @@
       </ul>
     </div>
     <copyright></copyright>
+    <to-top :show="showTop"></to-top>
   </div>
 </template>
 
@@ -257,6 +258,8 @@
 import MineVipSwiper from "./MineVipSwiper.vue";
 import MineLiveSwiper from "./MineLiveSwiper.vue";
 import Copyright from "./Copyright";
+import ToTop from "./ToTop.vue";
+
 export default {
   mounted() {
     let ticketTop = document.querySelector(".mid-body-ticket");
@@ -268,10 +271,11 @@ export default {
     this.rem = topBar.getBoundingClientRect().height / 2;
     this.rem = Math.round(this.rem);
 
-    this.ticHeight -= 2*this.rem;
+    this.ticHeight -= 2 * this.rem;
   },
   data() {
     return {
+      showTop: false, // 不显示'返回顶部'
       viprightList: [
         {
           value: 100,
@@ -301,35 +305,45 @@ export default {
   components: {
     MineVipSwiper,
     MineLiveSwiper,
-    Copyright
+    Copyright,
+    ToTop
   },
   methods: {
     scroll() {
-      let bottomUsr = this.rem*3;
+      let bottomUsr = this.rem * 3;
+      let scrollTop = event.target.scrollTop;
 
       /* 计算代金券顶部至视窗头的距离 */
       let ticketTop = document.querySelector(".mid-body-ticket");
       let ticTop = ticketTop.getBoundingClientRect().top;
       /* 代金券底部 */
-      let ticBottom = ticTop + 3.4*this.rem;
+      let ticBottom = ticTop + 3.4 * this.rem;
       // console.log(ticTop,this.textOpacity);
 
       /* 计算topBarBox透明度 */
-      if (ticBottom >= 2*this.rem) {
-        this.backOpacity = (this.ticHeight - ticBottom + 2*this.rem) / this.ticHeight;
+      if (ticBottom >= 2 * this.rem) {
+        this.backOpacity =
+          (this.ticHeight - ticBottom + 2 * this.rem) / this.ticHeight;
       }
-      if (ticBottom <= 2*this.rem) {
+      if (ticBottom <= 2 * this.rem) {
         this.backOpacity = 1;
       }
       /* 计算'登录注册'透明度 */
-      if (ticTop <= 2*this.rem) {
-        this.textOpacity = (2*this.rem - ticTop)/(2*this.rem);
+      if (ticTop <= 2 * this.rem) {
+        this.textOpacity = (2 * this.rem - ticTop) / (2 * this.rem);
       }
       if (ticTop < 0) {
         this.textOpacity = 1;
       }
-      if (ticTop > 2*this.rem) {
+      if (ticTop > 2 * this.rem) {
         this.textOpacity = 0;
+      }
+      /* '回到顶部'显示控制 */
+      if (scrollTop > 720) {
+        this.showTop = true;
+      }
+      if (scrollTop <= 720) {
+        this.showTop = false;
       }
     }
   }
@@ -444,6 +458,15 @@ export default {
   display: flex;
   align-items: center;
 }
+.sign-in > span:first-child {
+  display: block;
+  width: 0.7rem;
+  height: 0.7rem;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAABwCAMAAAB8U0MtAAAAnFBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+TINBkAAAAM3RSTlMA9vzw2xDeDdXBkAfz4q1XKevPl4k+CsrFZ2IVNAS4tLFQTUW7p0gsJeVwX6CCfi8uHh111AfAAAAB0ElEQVRYw+3X626jMBAFYCAJmHsWCAQScm96Sbu77Xn/d6vHTasW0hhTVWoqnz+jjPVJFjZEY+j8ztxEy//N3l3AxlLoAqzRmlnAlRT+AdBojXnL/Q746Lm2bVsA7I8JecvktUivT7l1AGnMsu2eBugQa96CGTolOnUMqBzHoYfjfMyct6a8bnm1W3DIuyPJUx0A1qcwAcLGUs6BJ4VzNtw21yaR50jg57kUuN/3gv4KSHtAfwEgUIf5DjwLZZi75NhMCvdhuH7XdqbkEnISGPLF+K07enG0IIO3vFqHV1eQK4STwbVFshK9WUJuOup2AWKSKN+c63S9OWsh74wZEy7vfuU2JokH4Xa5yl3dkxRZ+GqXfHuUS1/17ZgE5CJyalDIqO7zPo6zsr7ET8c5OOVwc979s4DbVtcDj3k24Fm14A315ZkYrVRd5F/jRK6vhubZ2NHE0NHRuYTouUPPHXru+E7oZyErRbWTSgWm4Dkca6wAAwK7Y10owEFf6BGIe2zVf2DFgWo2TKqffY6/Fm5Wy5h+xwXLfAUYg6fknmqqAAtA/HmsqJp1d8gA8dFZqsKMgHfc8r3CVv3UNO9pgitZ6OVKx1HXeu7Qc4fOl/IMGP3M8KZ8O7sAAAAASUVORK5CYII=)
+    no-repeat bottom center;
+  background-size: 100%;
+  margin-right: 0.1rem;
+}
 .sign-in > span:last-child {
   margin-left: 0.1rem;
 }
@@ -547,7 +570,7 @@ export default {
   height: 4.5rem;
   padding: 0 0.5rem;
 }
-.van-swipe-item{
+.van-swipe-item {
   width: 100%;
   padding-right: 0.5rem;
 }
@@ -556,8 +579,8 @@ export default {
   border-radius: 0.25rem 0.25rem;
 }
 .van-swipe__indicators {
-  bottom: 0.2rem!important;
-  left: 85%!important;
+  bottom: 0.2rem !important;
+  left: 85% !important;
 }
 /* vmall样式 */
 .vmall .content-status-item {

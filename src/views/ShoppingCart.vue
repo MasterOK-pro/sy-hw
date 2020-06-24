@@ -16,6 +16,9 @@ export default {
     EmptyCart:EmptyCart,
     FullCart:FullCart
   },
+  activated () {
+    this.$store.commit('currentPath', 'cart');
+  }
 };
 </script>
 

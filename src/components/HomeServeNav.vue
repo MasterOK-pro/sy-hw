@@ -1,48 +1,48 @@
 <template>
   <swiper class="swiper serve-nav" :options="swiperOption">
     <swiper-slide>
-      <div class="serve-item">
+      <a class="serve-item" href="https://m.vmall.com/member/privilege">
           <i class="serve-img" style="background-position-x:0%"></i>
           <p class="serve-title">会员领券</p>
-      </div>
-      <div class="serve-item">
+      </a>
+      <a class="serve-item" href="https://msale.vmall.com/hwsmh.html">
           <i class="serve-img" style="background-position-x:11.11%"></i>
           <p class="serve-title">华为数码</p>
-      </div>
-      <div class="serve-item">
+      </a>
+      <a class="serve-item" href="https://msale.vmall.com/hw5g.html">
           <i class="serve-img" style="background-position-x:22.22%"></i>
           <p class="serve-title">5G频道</p>
-      </div>
-      <div class="serve-item">
+      </a>
+      <a class="serve-item" href="https://msale.vmall.com/honorhome.html">
           <i class="serve-img" style="background-position-x:33.33%"></i>
           <p class="serve-title">荣耀数码</p>
-      </div>
-      <div class="serve-item">
+      </a>
+      <a class="serve-item" href="https://vmall-m.aihuishou.com/">
           <i class="serve-img" style="background-position-x:44.44%"></i>
           <p class="serve-title">以旧换新</p>
-      </div>
+      </a>
     </swiper-slide>
     <swiper-slide>
-      <div class="serve-item">
+      <a class="serve-item" href="https://m.vmall.com/member/inviteGift">
           <i class="serve-img" style="background-position-x:55.55%"></i>
           <p class="serve-title">邀请有礼</p>
-      </div>
-      <div class="serve-item">
+      </a>
+      <a class="serve-item" href="https://m.vmall.com/live/home">
           <i class="serve-img" style="background-position-x:66.66%"></i>
           <p class="serve-title">直播特惠</p>
-      </div>
-      <div class="serve-item">
+      </a>
+      <a class="serve-item" href="https://m.vmall.com/openTest">
           <i class="serve-img" style="background-position-x:77.77%"></i>
           <p class="serve-title">众测</p>
-      </div>
-      <div class="serve-item">
+      </a>
+      <a class="serve-item" href="https://msale.vmall.com/points.html">
           <i class="serve-img" style="background-position-x:88.88%"></i>
           <p class="serve-title">积分商城</p>
-      </div>
-      <div class="serve-item">
+      </a>
+      <a class="serve-item" href="https://msale.vmall.com/smarthome.html">
           <i class="serve-img" style="background-position-x:99.99%"></i>
           <p class="serve-title">生态产品</p>
-      </div>
+      </a>
     </swiper-slide>
     <div class="swiper-pagination" slot="pagination"></div>
   </swiper>
@@ -71,6 +71,9 @@ export default {
 };
 </script>
 <style scoped>
+.serve-nav{
+    position: relative;
+}
 .swiper-slide{
     display: flex;
     align-items: center;
@@ -99,6 +102,7 @@ export default {
 </style>
 <style>
 .serve-nav .swiper-pagination{
-    position: absolute;
+    position: relative;
+    bottom: 0.2rem;
 }
 </style>

@@ -7,9 +7,14 @@
 </template>
 <script>
 export default {
-  created () {
-    this.$store.state.appRefuse = false;
-}
+  created() {
+    /* 获取是否已经拒绝使用客户端的记录 */
+    if (localStorage.getItem('appRefuse')) {
+      this.$store.state.appRefuse = JSON.parse(localStorage.getItem('appRefuse'));
+    } else {
+      this.$store.state.appRefuse = false;
+    }
+  }
 };
 </script>
 <style>
@@ -24,5 +29,6 @@ body,
 #app {
   width: 100%;
   height: 100%;
+  background-color: #f9f9f9;
 }
 </style>

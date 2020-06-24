@@ -1,5 +1,5 @@
 <template>
-  <div class="body-footer">
+  <div class="copyright-body">
       <p class="login">
         <a href>登录</a>
         <a href="https://club.huawei.com/thread-1144534-1-1.html">反馈</a>
@@ -65,35 +65,35 @@ export default {
 
 <style scoped>
 /* 页面底部版权相关 */
-.body-footer,
-.body-footer a {
+.copyright-body,
+.copyright-body a {
   padding: 0 0.15rem;
   background-color: #fff;
   color: #9b9b9b;
 }
-.body-footer p {
+.copyright-body p {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
 }
-.body-footer p:last-child {
+.copyright-body p:last-child {
   display: block;
   text-align: center;
 }
 /* 登录行 */
-.body-footer .login {
+.copyright-body .login {
   height: 2rem;
   border-bottom: 1px solid #eaeaea;
 }
-.body-footer .login a {
+.copyright-body .login a {
   display: inline-block;
   width: 3.5rem;
   text-align: center;
   color: #333;
   font-size: 0.7rem;
 }
-.body-footer .login a:first-child::before {
+.copyright-body .login a:first-child::before {
   content: "";
   width: 1px;
   height: 1rem;
@@ -103,17 +103,17 @@ export default {
   left: 50%;
 }
 /* 设备行 */
-.body-footer .device {
+.copyright-body .device {
   padding: 0.5rem 0;
 }
-.body-footer .device a {
+.copyright-body .device a {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 1.8rem;
   margin-left: 1.8rem;
 }
-.body-footer .device a:first-child {
+.copyright-body .device a:first-child {
   margin-left: 0;
 }
 .device img {
@@ -121,12 +121,12 @@ export default {
   height: 1.8rem;
 }
 .device a.active {
-  color: #4d4d4d;
+  color: #4d4d4d!important;
 }
 .device a span {
   font-size: 0.6rem;
 }
-.body-footer .copyright {
+.copyright-body .copyright {
   padding: 0.25rem 0 0.9rem;
   font-size: 0.6rem;
 }
