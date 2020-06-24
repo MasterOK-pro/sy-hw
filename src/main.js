@@ -4,8 +4,9 @@ import router from './router'
 import store from './store'
 import Vant from 'vant';
 import 'vant/lib/index.css';
-import {Swipe, SwipeItem, Icon} from 'vant';
+import {Swipe, SwipeItem, Icon, CountDown} from 'vant';
 Vue.use(Vant);
+Vue.use(CountDown);
 import './css/style.css'
 
 import 'vant/lib/index.css'

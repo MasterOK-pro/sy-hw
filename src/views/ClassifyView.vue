@@ -4,11 +4,11 @@
     <!-- app首页底部导航按钮 -->
     <div class="wrap">
       <div class="header iconfont">
-        <div class="search">
+        <div class="search"  @click="$router.push('search')">
           <a href>
             <img src="../assets/images/da.png" alt />
           </a>
-          <input type="text" placeholder="P40 pro" />
+          <input type="text" placeholder="P40 pro" disabled/>
         </div>
         <div class="icon">
           <a href>
@@ -81,6 +81,9 @@ export default {
       this.clicked = index;
       this.componentName = "Qhc" + index;
     }
+  },
+  activated () {
+    this.$store.commit('currentPath', 'classify');
   }
 };
 </script>

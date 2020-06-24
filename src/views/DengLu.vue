@@ -6,7 +6,7 @@
         <div class="center">
           <div class="head-logo">
             <a href>
-              <img src="./images/huawei-logo.png" alt />
+              <img src="../../public/imgs/denglu-huawei-logo.png" alt />
             </a>
           </div>
         </div>
@@ -70,7 +70,7 @@
 export default {};
 </script>
 
-<style lang="less">
+<style scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
