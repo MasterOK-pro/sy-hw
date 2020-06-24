@@ -60,49 +60,49 @@
           <div class="img-div">
             <div class="icon-btn-left" @click="goBack"></div>
             <img src="../assets/images/swiper-2.png" alt />
-            <div class="icon-btn-right"></div>
+            <div class="icon-btn-right" @click="menuShow=!menuShow"></div>
           </div>
         </van-swipe-item>
         <van-swipe-item>
           <div class="img-div">
             <div class="icon-btn-left" @click="goBack"></div>
             <img src="../assets/images/swiper-3.png" alt />
-            <div class="icon-btn-right"></div>
+            <div class="icon-btn-right" @click="menuShow=!menuShow"></div>
           </div>
         </van-swipe-item>
         <van-swipe-item>
           <div class="img-div">
             <div class="icon-btn-left" @click="goBack"></div>
             <img src="../assets/images/swiper-4.png" alt />
-            <div class="icon-btn-right"></div>
+            <div class="icon-btn-right" @click="menuShow=!menuShow"></div>
           </div>
         </van-swipe-item>
         <van-swipe-item>
           <div class="img-div">
             <div class="icon-btn-left" @click="goBack"></div>
             <img src="../assets/images/swiper-5.png" alt />
-            <div class="icon-btn-right"></div>
+            <div class="icon-btn-right" @click="menuShow=!menuShow"></div>
           </div>
         </van-swipe-item>
         <van-swipe-item>
           <div class="img-div">
             <div class="icon-btn-left" @click="goBack"></div>
             <img src="../assets/images/swiper-6.png" alt />
-            <div class="icon-btn-right"></div>
+            <div class="icon-btn-right" @click="menuShow=!menuShow"></div>
           </div>
         </van-swipe-item>
         <van-swipe-item>
           <div class="img-div">
             <div class="icon-btn-left" @click="goBack"></div>
             <img src="../assets/images/swiper-7.png" alt />
-            <div class="icon-btn-right"></div>
+            <div class="icon-btn-right" @click="menuShow=!menuShow"></div>
           </div>
         </van-swipe-item>
         <van-swipe-item>
           <div class="img-div">
             <div class="icon-btn-left" @click="goBack"></div>
             <img src="../assets/images/swiper-8.png" alt />
-            <div class="icon-btn-right"></div>
+            <div class="icon-btn-right" @click="menuShow=!menuShow"></div>
           </div>
         </van-swipe-item>
         <template #indicator>
