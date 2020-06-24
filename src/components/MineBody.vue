@@ -88,7 +88,7 @@
       <div class="content-status">
         <a href class="content-status-item">
           <van-icon name="pending-payment" />
-          <p @click="toProduct">待付款</p>
+          <p>待付款</p>
         </a>
         <a href class="content-status-item">
           <van-icon name="send-gift-o" />
@@ -309,9 +309,6 @@ export default {
     ToTop
   },
   methods: {
-    toProduct() {
-      this.$router.push("product");
-    },
     scroll() {
       let bottomUsr = this.rem * 3;
       let scrollTop = event.target.scrollTop;

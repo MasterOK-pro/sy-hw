@@ -21,7 +21,7 @@
           </label>
           <div class="sc-pro-href">
             <p class="p-img">
-              <img :src="item.img" alt />
+              <img :src="item.img" alt @click="toPro" />
             </p>
             <div class="sc-pro-info">
               <p class="p-name">
@@ -166,6 +166,9 @@ export default {
     this.cartList = cartList;
   },
   methods: {
+    toPro(){
+      this.$router.push("product");
+    },
     reduce(index) {
       if (this.cartList[index].count > 1) {
         this.cartList[index].count--;
