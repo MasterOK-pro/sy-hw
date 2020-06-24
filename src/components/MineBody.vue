@@ -349,6 +349,9 @@ export default {
         this.showTop = false;
       }
     }
+  },
+  activated () {
+    this.showTop = false;
   }
 };
 </script>
@@ -516,7 +519,6 @@ export default {
 .mid-body-content {
   background: #fff;
   border-radius: 0.5rem;
-  margin-bottom: 0.4rem;
   margin-left: 0.45rem;
   margin-right: 0.45rem;
   padding: 0 0.5rem 0.5rem;

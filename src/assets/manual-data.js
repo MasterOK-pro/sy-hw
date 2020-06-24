@@ -4,14 +4,14 @@ var ProductList = [
         price:5988,
         oldPrice:"",/* 首页 */
         swiperImg:[
-            "../assets/images/swiper-1.jpg",
-            "../assets/images/swiper-2.jpg",
-            "../assets/images/swiper-3.jpg",
-            "../assets/images/swiper-4.jpg",
-            "../assets/images/swiper-5.jpg",
-            "../assets/images/swiper-6.jpg",
-            "../assets/images/swiper-7.jpg",
-            "../assets/images/swiper-8.jpg",
+            require("../assets/images/swiper-1.jpg"),
+            require("../assets/images/swiper-2.png"),
+            require("../assets/images/swiper-3.png"),
+            require("../assets/images/swiper-4.png"),
+            require("../assets/images/swiper-5.png"),
+            require("../assets/images/swiper-6.png"),
+            require("../assets/images/swiper-7.png"),
+            require("../assets/images/swiper-8.png"),
         ],
         desc:"全系优惠100元",/* 首页优惠信息 */
         config:{
@@ -20,14 +20,14 @@ var ProductList = [
         },
         classify:"phone",/* 分类 */
         introImg:[
-            "../assets/images/pro-detail-1.jpg",
-            "../assets/images/pro-detail-2.jpg",
-            "../assets/images/pro-detail-3.jpg",
-            "../assets/images/pro-detail-4.jpg",
-            "../assets/images/pro-detail-5.jpg",
-            "../assets/images/pro-detail-6.jpg",
-            "../assets/images/pro-detail-7.jpg",
-            "../assets/images/pro-detail-8.jpg",
+            require("../assets/images/pro-detail-1.jpg"),
+            require("../assets/images/pro-detail-2.jpg"),
+            require("../assets/images/pro-detail-3.jpg"),
+            require("../assets/images/pro-detail-4.jpg"),
+            require("../assets/images/pro-detail-5.jpg"),
+            require("../assets/images/pro-detail-6.jpg"),
+            require("../assets/images/pro-detail-7.jpg"),
+            require("../assets/images/pro-detail-8.jpg"),
         ]
 
     },
@@ -37,10 +37,10 @@ var ProductList = [
         price:8888,
         oldPrice:"",
         swiperImg:[
-            "../assets/images/Pro+5G-sw1.jpg",
-            "../assets/images/Pro+5G-sw2.jpg",
-            "../assets/images/Pro+5G-sw3.jpg",
-            "../assets/images/Pro+5G-sw4.jpg",
+            require("../assets/images/Pro+5G-sw1.png"),
+            require("../assets/images/Pro+5G-sw2.png"),
+            require("../assets/images/Pro+5G-sw3.png"),
+            require("../assets/images/Pro+5G-sw4.png"),
            
         ],
        
@@ -50,10 +50,10 @@ var ProductList = [
         },
         classify:"phone",
         introImg:[
-            "../assets/images/Pro+5G-dt1.jpg",
-            "../assets/images/Pro+5G-dt2.jpg",
-            "../assets/images/Pro+5G-dt3.jpg",
-            "../assets/images/Pro+5G-dt4.jpg",
+            require("../assets/images/Pro+5G-dt1.jpg"),
+            require("../assets/images/Pro+5G-dt2.jpg"),
+            require("../assets/images/Pro+5G-dt3.jpg"),
+            require("../assets/images/Pro+5G-dt4.jpg"),
            
         ]
 
@@ -64,10 +64,10 @@ var ProductList = [
         price:3999,
         oldPrice:"",
         swiperImg:[
-            "../assets/images/rongyao30pro-sw1.jpg",
-            "../assets/images/rongyao30pro-sw2.jpg",
-            "../assets/images/rongyao30pro-sw3.jpg",
-            "../assets/images/rongyao30pro-sw4.jpg",
+            require("../assets/images/rongyao30pro-sw1.png"),
+            require("../assets/images/rongyao30pro-sw2.png"),
+            require("../assets/images/rongyao30pro-sw3.png"),
+            require("../assets/images/rongyao30pro-sw4.png"),
            
         ],
         
@@ -77,10 +77,10 @@ var ProductList = [
         },
         classify:"phone",
         introImg:[
-            "../assets/images/Pro+5G-dt1.jpg",
-            "../assets/images/Pro+5G-dt2.jpg",
-            "../assets/images/Pro+5G-dt3.jpg",
-            "../assets/images/Pro+5G-dt4.jpg",
+            require("../assets/images/Pro+5G-dt1.jpg"),
+            require("../assets/images/Pro+5G-dt2.jpg"),
+            require("../assets/images/Pro+5G-dt3.jpg"),
+            require("../assets/images/Pro+5G-dt4.jpg"),
            
         ]
 
@@ -91,10 +91,10 @@ var ProductList = [
         price:3999,
         oldPrice:"",
         swiperImg:[
-            "../assets/images/rongyao30-sw1.jpg",
-            "../assets/images/rongyao30-sw2.jpg",
-            "../assets/images/rongyao30-sw3.jpg",
-            "../assets/images/rongyao30-sw4.jpg",
+            require("../assets/images/rongyao30-sw1.png"),
+            require("../assets/images/rongyao30-sw2.png"),
+            require("../assets/images/rongyao30-sw3.png"),
+            require("../assets/images/rongyao30-sw4.png"),
            
         ],
         
@@ -104,10 +104,10 @@ var ProductList = [
         },
         classify:"phone",
         introImg:[
-            "../assets/images/rongyao30-dt1.jpg",
-            "../assets/images/rongyao30-dt2.jpg",
-            "../assets/images/rongyao30-dt3.jpg",
-            "../assets/images/rongyao30-dt4.jpg",
+            require("../assets/images/rongyao30-dt1.jpg"),
+            require("../assets/images/rongyao30-dt2.jpg"),
+            require("../assets/images/rongyao30-dt3.jpg"),
+            require("../assets/images/rongyao30-dt4.jpg"),
            
         ]
 
@@ -119,24 +119,24 @@ var ProductList = [
         price:6399,
         oldPrice:"",
         swiperImg:[
-            "../assets/images/mate30pro-sw1.jpg",
-            "../assets/images/mate30pro-sw2.jpg",
-            "../assets/images/mate30pro-sw3.jpg",
-            "../assets/images/mate30pro-sw4.jpg",
+            require("../assets/images/mate30pro-sw1.png"),
+            require("../assets/images/mate30pro-sw2.png"),
+            require("../assets/images/mate30pro-sw3.png"),
+            require("../assets/images/mate30pro-sw4.png"),
            
         ],
         desc:"6期免息|赠配件好礼",
-        
+        installment: true,
         config:{
             color:["亮黑色","星河银","翡冷翠","罗兰紫","丹霞橙（素皮）","青山黛（素皮）"],
             version:["5G全网通"]
         },
         classify:"phone",
         introImg:[
-            "../assets/images/mate30pro-dt1.jpg",
-            "../assets/images/mate30pro-dt2.jpg",
-            "../assets/images/mate30pro-dt3.jpg",
-            "../assets/images/mate30pro-dt4.jpg",
+            require("../assets/images/mate30pro-dt1.jpg"),
+            require("../assets/images/mate30pro-dt2.jpg"),
+            require("../assets/images/mate30pro-dt3.jpg"),
+            require("../assets/images/mate30pro-dt4.jpg"),
            
         ]
 
@@ -147,10 +147,10 @@ var ProductList = [
         price:3399,
         oldPrice:"3899",/* 首页 */
         swiperImg:[
-            "../assets/images/rongyaov30-sw1.png",
-            "../assets/images/rongyaov30-sw2.png",
-            "../assets/images/rongyaov30-sw3.png",
-            "../assets/images/rongyaov30-sw4.png",
+            require("../assets/images/rongyaov30-sw1.png"),
+            require("../assets/images/rongyaov30-sw2.png"),
+            require("../assets/images/rongyaov30-sw3.png"),
+            require("../assets/images/rongyaov30-sw4.png"),
            
         ],
         desc:" 优惠500 部分送无线充",/* 首页优惠信息 */
@@ -160,10 +160,10 @@ var ProductList = [
         },
         classify:"phone",/* 分类 */
         introImg:[
-            "../assets/images/rongyaov30-dt1.jpg",
-            "../assets/images/rongyaov30-dt2.jpg",
-            "../assets/images/rongyaov30-dt3.jpg",
-            "../assets/images/rongyaov30-dt4.jpg",
+            require("../assets/images/rongyaov30-dt1.jpg"),
+            require("../assets/images/rongyaov30-dt2.jpg"),
+            require("../assets/images/rongyaov30-dt3.jpg"),
+            require("../assets/images/rongyaov30-dt4.jpg"),
          
         ]
     },
@@ -173,10 +173,10 @@ var ProductList = [
         price:2399,
        
         swiperImg:[
-            "../assets/images/nava7se-sw1.png",
-            "../assets/images/nava7se-sw2.png",
-            "../assets/images/nava7se-sw3.png",
-            "../assets/images/nava7se-sw4.png",
+            require("../assets/images/nava7se-sw1.png"),
+            require("../assets/images/nava7se-sw2.png"),
+            require("../assets/images/nava7se-sw3.png"),
+            require("../assets/images/nava7se-sw4.png"),
            
         ],
         desc:" 6期免息|赠配件好礼",/* 首页优惠信息 */
@@ -186,10 +186,10 @@ var ProductList = [
         },
         classify:"phone",/* 分类 */
         introImg:[
-            "../assets/images/nava7se-dt1.jpg",
-            "../assets/images/nava7se-dt2.jpg",
-            "../assets/images/nava7se-dt3.jpg",
-            "../assets/images/nava7se-dt4.jpg",
+            require("../assets/images/nava7se-dt1.jpg"),
+            require("../assets/images/nava7se-dt2.jpg"),
+            require("../assets/images/nava7se-dt3.jpg"),
+            require("../assets/images/nava7se-dt4.jpg"),
          
         ]
 
@@ -200,23 +200,24 @@ var ProductList = [
         price:2099,
         oldPrice:"2699",
         swiperImg:[
-            "../assets/images/rongyao20-sw1.png",
-            "../assets/images/rongyao20-sw2.png",
-            "../assets/images/rongyao20-sw3.png",
-            "../assets/images/rongyao20-sw4.png",
+            require("../assets/images/rongyao20-sw1.png"),
+            require("../assets/images/rongyao20-sw2.png"),
+            require("../assets/images/rongyao20-sw3.png"),
+            require("../assets/images/rongyao20-sw4.png"),
            
         ],
         desc:"  最高直降600元  ",
+        installment: true,
         config:{
             color:["幻夜星河","蓝水翡翠","冰岛幻境"],
             version:["全网通 8GB+256GB","全网通 8GB+128GB"]
         },
         classify:"phone",/* 分类 */
         introImg:[
-            "../assets/images/rongyao20-dt1.jpg",
-            "../assets/images/rongyao20-dt2.jpg",
-            "../assets/images/rongyao20-dt3.jpg",
-            "../assets/images/rongyao20-dt4.jpg",
+            require("../assets/images/rongyao20-dt1.jpg"),
+            require("../assets/images/rongyao20-dt2.jpg"),
+            require("../assets/images/rongyao20-dt3.jpg"),
+            require("../assets/images/rongyao20-dt4.jpg"),
          
         ]
 
@@ -228,10 +229,10 @@ var ProductList = [
         price:1599,
        
         swiperImg:[
-            "../assets/images/rongyao20s-sw1.png",
-            "../assets/images/rongyao20s-sw1.png",
-            "../assets/images/rongyao20s-sw3.png",
-            "../assets/images/rongyao20s-sw4.png",
+            require("../assets/images/rongyao20s-sw1.png"),
+            require("../assets/images/rongyao20s-sw1.png"),
+            require("../assets/images/rongyao20s-sw3.png"),
+            require("../assets/images/rongyao20s-sw4.png"),
            
         ],
        
@@ -241,10 +242,10 @@ var ProductList = [
         },
         classify:"phone",/* 分类 */
         introImg:[
-            "../assets/images/rongyao20s-dt1.jpg",
-            "../assets/images/rongyao20s-dt2.jpg",
-            "../assets/images/rongyao20s-dt3.jpg",
-            "../assets/images/rongyao20s-dt4.jpg",
+            require("../assets/images/rongyao20s-dt1.jpg"),
+            require("../assets/images/rongyao20s-dt2.jpg"),
+            require("../assets/images/rongyao20s-dt3.jpg"),
+            require("../assets/images/rongyao20s-dt4.jpg"),
          
         ]
 
@@ -256,10 +257,10 @@ var ProductList = [
         price:1099,
        
         swiperImg:[
-            "../assets/images/rongyao9x-sw1.png",
-            "../assets/images/rongyao9x-sw2.png",
-            "../assets/images/rongyao9x-sw3.png",
-            "../assets/images/rongyao9x-sw4.png",
+            require("../assets/images/rongyao9x-sw1.png"),
+            require("../assets/images/rongyao9x-sw2.png"),
+            require("../assets/images/rongyao9x-sw3.png"),
+            require("../assets/images/rongyao9x-sw4.png"),
            
         ],
        
@@ -269,10 +270,10 @@ var ProductList = [
         },
         classify:"phone",/* 分类 */
         introImg:[
-            "../assets/images/rongyao9x-dt1.jpg",
-            "../assets/images/rongyao9x-dt2.jpg",
-            "../assets/images/rongyao9x-dt3.jpg",
-            "../assets/images/rongyao9x-dt4.jpg",
+            require("../assets/images/rongyao9x-dt1.jpg"),
+            require("../assets/images/rongyao9x-dt2.jpg"),
+            require("../assets/images/rongyao9x-dt3.jpg"),
+            require("../assets/images/rongyao9x-dt4.jpg"),
          
         ]
 
@@ -284,10 +285,10 @@ var ProductList = [
         price:1599,
        
         swiperImg:[
-            "../assets/images/maimang8-sw1.png",
-            "../assets/images/maimang8-sw2.png",
-            "../assets/images/maimang8-sw3.png",
-            "../assets/images/maimang8-sw4.png",
+            require("../assets/images/maimang8-sw1.png"),
+            require("../assets/images/maimang8-sw2.png"),
+            require("../assets/images/maimang8-sw3.png"),
+            require("../assets/images/maimang8-sw4.png"),
            
         ],
        
@@ -297,10 +298,10 @@ var ProductList = [
         },
         classify:"phone",/* 分类 */
         introImg:[
-            "../assets/images/maimang8-dt1.jpg",
-            "../assets/images/maimang8-dt2.jpg",
-            "../assets/images/maimang8-dt3.jpg",
-            "../assets/images/maimang8-dt4.jpg",
+            require("../assets/images/maimang8-dt1.jpg"),
+            require("../assets/images/maimang8-dt2.jpg"),
+            require("../assets/images/maimang8-dt3.jpg"),
+            require("../assets/images/maimang8-dt4.jpg"),
          
         ]
 
@@ -312,10 +313,10 @@ var ProductList = [
         price:1299,
        
         swiperImg:[
-            "../assets/images/changxiang10-sw1.png",
-            "../assets/images/changxiang10-sw2.png",
-            "../assets/images/changxiang10-sw3.png",
-            "../assets/images/changxiang10-sw4.png",
+            require("../assets/images/changxiang10-sw1.png"),
+            require("../assets/images/changxiang10-sw2.png"),
+            require("../assets/images/changxiang10-sw3.png"),
+            require("../assets/images/changxiang10-sw4.png"),
            
         ],
        
@@ -325,10 +326,10 @@ var ProductList = [
         },
         classify:"phone",/* 分类 */
         introImg:[
-            "../assets/images/changxiang10-dt1.jpg",
-            "../assets/images/changxiang10-dt2.jpg",
-            "../assets/images/changxiang10-dt3.jpg",
-            "../assets/images/changxiang10-dt4.jpg",
+            require("../assets/images/changxiang10-dt1.jpg"),
+            require("../assets/images/changxiang10-dt2.jpg"),
+            require("../assets/images/changxiang10-dt3.jpg"),
+            require("../assets/images/changxiang10-dt4.jpg"),
          
         ]
 
@@ -340,10 +341,10 @@ var ProductList = [
         price:9999,
        
         swiperImg:[
-            "../assets/images/MateBookXPro-sw1.png",
-            "../assets/images/MateBookXPro-sw2.png",
-            "../assets/images/MateBookXPro-sw3.png",
-            "../assets/images/MateBookXPro-sw4.png",
+            require("../assets/images/MateBookXPro-sw1.png"),
+            require("../assets/images/MateBookXPro-sw2.png"),
+            require("../assets/images/MateBookXPro-sw3.png"),
+            require("../assets/images/MateBookXPro-sw4.png"),
            
         ],
        
@@ -353,10 +354,10 @@ var ProductList = [
         },
         classify:"book",/* 分类 */
         introImg:[
-            "../assets/images/MateBookXPro-dt1.jpg",
-            "../assets/images/MateBookXPro-dt2.jpg",
-            "../assets/images/MateBookXPro-dt3.jpg",
-            "../assets/images/MateBookXPro-dt4.jpg",
+            require("../assets/images/MateBookXPro-dt1.jpg"),
+            require("../assets/images/MateBookXPro-dt2.jpg"),
+            require("../assets/images/MateBookXPro-dt3.jpg"),
+            require("../assets/images/MateBookXPro-dt4.jpg"),
          
         ]
 
@@ -368,10 +369,10 @@ var ProductList = [
         price:3799,
         oldPrice:"4199",
         swiperImg:[
-            "../assets/images/MateBook-rongyao14-sw1.png",
-            "../assets/images/MateBook-rongyao14-sw2.png",
-            "../assets/images/MateBook-rongyao14-sw3.png",
-            "../assets/images/MateBook-rongyao14-sw4.png",
+            require("../assets/images/MateBook-rongyao14-sw1.png"),
+            require("../assets/images/MateBook-rongyao14-sw2.png"),
+            require("../assets/images/MateBook-rongyao14-sw3.png"),
+            require("../assets/images/MateBook-rongyao14-sw4.png"),
            
         ],
        
@@ -381,10 +382,10 @@ var ProductList = [
         },
         classify:"book",/* 分类 */
         introImg:[
-            "../assets/images/MateBook-rongyao14-dt1.jpg",
-            "../assets/images/MateBook-rongyao14-dt2.jpg",
-            "../assets/images/MateBook-rongyao14-dt3.jpg",
-            "../assets/images/MateBook-rongyao14-dt4.jpg",
+            require("../assets/images/MateBook-rongyao14-dt1.jpg"),
+            require("../assets/images/MateBook-rongyao14-dt2.jpg"),
+            require("../assets/images/MateBook-rongyao14-dt3.jpg"),
+            require("../assets/images/MateBook-rongyao14-dt4.jpg"),
          
         ]
 
@@ -396,10 +397,10 @@ var ProductList = [
         price:3899,
         oldPrice:"4199",
         swiperImg:[
-            "../assets/images/rongyao15-sw1.png",
-            "../assets/images/rongyao15-sw2.png",
-            "../assets/images/rongyao15-sw3.png",
-            "../assets/images/rongyao15-sw4.png",
+            require("../assets/images/rongyao15-sw1.png"),
+            require("../assets/images/rongyao15-sw2.png"),
+            require("../assets/images/rongyao15-sw3.png"),
+            require("../assets/images/rongyao15-sw4.png"),
            
         ],
        
@@ -409,10 +410,10 @@ var ProductList = [
         },
         classify:"book",/* 分类 */
         introImg:[
-            "../assets/images/rongyao15-dt1.jpg",
-            "../assets/images/rongyao15-dt2.jpg",
-            "../assets/images/rongyao15-dt3.jpg",
-            "../assets/images/rongyao15-dt4.jpg",
+            require("../assets/images/rongyao15-dt1.jpg"),
+            require("../assets/images/rongyao15-dt2.jpg"),
+            require("../assets/images/rongyao15-dt3.jpg"),
+            require("../assets/images/rongyao15-dt4.jpg"),
          
         ]
 
@@ -424,10 +425,10 @@ var ProductList = [
         price:4699,
       
         swiperImg:[
-            "../assets/images/rongyao15-sw1.png",
-            "../assets/images/rongyao15-sw2.png",
-            "../assets/images/rongyao15-sw3.png",
-            "../assets/images/rongyao15-sw4.png",
+            require("../assets/images/rongyao15-sw1.png"),
+            require("../assets/images/rongyao15-sw2.png"),
+            require("../assets/images/rongyao15-sw3.png"),
+            require("../assets/images/rongyao15-sw4.png"),
            
         ],
        
@@ -437,10 +438,10 @@ var ProductList = [
         },
         classify:"book",/* 分类 */
         introImg:[
-            "../assets/images/rongyao15-dt1.jpg",
-            "../assets/images/rongyao15-dt2.jpg",
-            "../assets/images/rongyao15-dt3.jpg",
-            "../assets/images/rongyao15-dt4.jpg",
+            require("../assets/images/rongyao15-dt1.jpg"),
+            require("../assets/images/rongyao15-dt2.jpg"),
+            require("../assets/images/rongyao15-dt3.jpg"),
+            require("../assets/images/rongyao15-dt4.jpg"),
          
         ]
 
@@ -451,10 +452,10 @@ var ProductList = [
         price:5999,
       
         swiperImg:[
-            "../assets/images/rongyao15-sw1.png",
-            "../assets/images/rongyao15-sw2.png",
-            "../assets/images/rongyao15-sw3.png",
-            "../assets/images/rongyao15-sw4.png",
+            require("../assets/images/rongyao15-sw1.png"),
+            require("../assets/images/rongyao15-sw2.png"),
+            require("../assets/images/rongyao15-sw3.png"),
+            require("../assets/images/rongyao15-sw4.png"),
            
         ],
        
@@ -464,10 +465,10 @@ var ProductList = [
         },
         classify:"book",/* 分类 */
         introImg:[
-            "../assets/images/rongyao15-dt1.jpg",
-            "../assets/images/rongyao15-dt2.jpg",
-            "../assets/images/rongyao15-dt3.jpg",
-            "../assets/images/rongyao15-dt4.jpg",
+            require("../assets/images/rongyao15-dt1.jpg"),
+            require("../assets/images/rongyao15-dt2.jpg"),
+            require("../assets/images/rongyao15-dt3.jpg"),
+            require("../assets/images/rongyao15-dt4.jpg"),
          
         ]
 
@@ -479,10 +480,10 @@ var ProductList = [
         price:4299,
       
         swiperImg:[
-            "../assets/images/rongyao15-sw1.png",
-            "../assets/images/rongyao15-sw2.png",
-            "../assets/images/rongyao15-sw3.png",
-            "../assets/images/rongyao15-sw4.png",
+            require("../assets/images/rongyao15-sw1.png"),
+            require("../assets/images/rongyao15-sw2.png"),
+            require("../assets/images/rongyao15-sw3.png"),
+            require("../assets/images/rongyao15-sw4.png"),
            
         ],
        
@@ -492,10 +493,10 @@ var ProductList = [
         },
         classify:"book",/* 分类 */
         introImg:[
-            "../assets/images/rongyao15-dt1.jpg",
-            "../assets/images/rongyao15-dt2.jpg",
-            "../assets/images/rongyao15-dt3.jpg",
-            "../assets/images/rongyao15-dt4.jpg",
+            require("../assets/images/rongyao15-dt1.jpg"),
+            require("../assets/images/rongyao15-dt2.jpg"),
+            require("../assets/images/rongyao15-dt3.jpg"),
+            require("../assets/images/rongyao15-dt4.jpg"),
          
         ]
 
@@ -507,10 +508,10 @@ var ProductList = [
         price:5999,
       
         swiperImg:[
-            "../assets/images/rongyao15-sw1.png",
-            "../assets/images/rongyao15-sw2.png",
-            "../assets/images/rongyao15-sw3.png",
-            "../assets/images/rongyao15-sw4.png",
+            require("../assets/images/rongyao15-sw1.png"),
+            require("../assets/images/rongyao15-sw2.png"),
+            require("../assets/images/rongyao15-sw3.png"),
+            require("../assets/images/rongyao15-sw4.png"),
            
         ],
        
@@ -520,10 +521,10 @@ var ProductList = [
         },
         classify:"book",/* 分类 */
         introImg:[
-            "../assets/images/rongyao15-dt1.jpg",
-            "../assets/images/rongyao15-dt2.jpg",
-            "../assets/images/rongyao15-dt3.jpg",
-            "../assets/images/rongyao15-dt4.jpg",
+            require("../assets/images/rongyao15-dt1.jpg"),
+            require("../assets/images/rongyao15-dt2.jpg"),
+            require("../assets/images/rongyao15-dt3.jpg"),
+            require("../assets/images/rongyao15-dt4.jpg"),
          
         ]
 
@@ -534,10 +535,10 @@ var ProductList = [
         price:5999,
       
         swiperImg:[
-            "../assets/images/rongyao15-sw1.png",
-            "../assets/images/rongyao15-sw2.png",
-            "../assets/images/rongyao15-sw3.png",
-            "../assets/images/rongyao15-sw4.png",
+            require("../assets/images/rongyao15-sw1.png"),
+            require("../assets/images/rongyao15-sw2.png"),
+            require("../assets/images/rongyao15-sw3.png"),
+            require("../assets/images/rongyao15-sw4.png"),
            
         ],
        
@@ -547,10 +548,10 @@ var ProductList = [
         },
         classify:"book",/* 分类 */
         introImg:[
-            "../assets/images/rongyao15-dt1.jpg",
-            "../assets/images/rongyao15-dt2.jpg",
-            "../assets/images/rongyao15-dt3.jpg",
-            "../assets/images/rongyao15-dt4.jpg",
+            require("../assets/images/rongyao15-dt1.jpg"),
+            require("../assets/images/rongyao15-dt2.jpg"),
+            require("../assets/images/rongyao15-dt3.jpg"),
+            require("../assets/images/rongyao15-dt4.jpg"),
          
         ]
 
@@ -562,10 +563,10 @@ var ProductList = [
         price:4299,
       
         swiperImg:[
-            "../assets/images/rongyao15-sw1.png",
-            "../assets/images/rongyao15-sw2.png",
-            "../assets/images/rongyao15-sw3.png",
-            "../assets/images/rongyao15-sw4.png",
+            require("../assets/images/rongyao15-sw1.png"),
+            require("../assets/images/rongyao15-sw2.png"),
+            require("../assets/images/rongyao15-sw3.png"),
+            require("../assets/images/rongyao15-sw4.png"),
            
         ],
        
@@ -575,10 +576,10 @@ var ProductList = [
         },
         classify:"book",/* 分类 */
         introImg:[
-            "../assets/images/rongyao15-dt1.jpg",
-            "../assets/images/rongyao15-dt2.jpg",
-            "../assets/images/rongyao15-dt3.jpg",
-            "../assets/images/rongyao15-dt4.jpg",
+            require("../assets/images/rongyao15-dt1.jpg"),
+            require("../assets/images/rongyao15-dt2.jpg"),
+            require("../assets/images/rongyao15-dt3.jpg"),
+            require("../assets/images/rongyao15-dt4.jpg"),
          
         ]
 
@@ -590,10 +591,10 @@ var ProductList = [
         price:5299,
       
         swiperImg:[
-            "../assets/images/rongyaopad-sw1.png",
-            "../assets/images/rongyaopad-sw2.png",
-            "../assets/images/rongyaopad-sw3.png",
-            "../assets/images/rongyaopad-sw4.png",
+            require("../assets/images/rongyaopad-sw1.png"),
+            require("../assets/images/rongyaopad-sw2.png"),
+            require("../assets/images/rongyaopad-sw3.png"),
+            require("../assets/images/rongyaopad-sw4.png"),
            
         ],
        
@@ -603,10 +604,10 @@ var ProductList = [
         },
         classify:"book",/* 分类 */
         introImg:[
-            "../assets/images/rongyaopad-dt1.png",
-            "../assets/images/rongyaopad-dt2.png",
-            "../assets/images/rongyaopad-dt3.png",
-            "../assets/images/rongyaopad-dt4.png",
+            require("../assets/images/rongyaopad-dt1.png"),
+            require("../assets/images/rongyaopad-dt2.png"),
+            require("../assets/images/rongyaopad-dt3.png"),
+            require("../assets/images/rongyaopad-dt4.png"),
          
         ]
 
@@ -618,10 +619,10 @@ var ProductList = [
         price:2199,
       
         swiperImg:[
-            "../assets/images/matepadpro-sw1.png",
-            "../assets/images/matepadpro-sw2.png",
-            "../assets/images/matepadpro-sw3.png",
-            "../assets/images/matepadpro-sw4.png",
+            require("../assets/images/matepadpro-sw1.png"),
+            require("../assets/images/matepadpro-sw2.png"),
+            require("../assets/images/matepadpro-sw3.png"),
+            require("../assets/images/matepadpro-sw4.png"),
            
         ],
        
@@ -631,10 +632,10 @@ var ProductList = [
         },
         classify:"book",/* 分类 */
         introImg:[
-            "../assets/images/matepadpro-dt1.png",
-            "../assets/images/matepadpro-dt2.png",
-            "../assets/images/matepadpro-dt3.png",
-            "../assets/images/matepadpro-dt4.png",
+            require("../assets/images/matepadpro-dt1.png"),
+            require("../assets/images/matepadpro-dt2.png"),
+            require("../assets/images/matepadpro-dt3.png"),
+            require("../assets/images/matepadpro-dt4.png"),
          
         ]
 
@@ -646,10 +647,10 @@ var ProductList = [
         price:1199,
       
         swiperImg:[
-            "../assets/images/rongyaopad5-sw1.png",
-            "../assets/images/rongyaopad5-sw2.png",
-            "../assets/images/rongyaopad5-sw3.png",
-            "../assets/images/rongyaopad5-sw4.png",
+            require("../assets/images/rongyaopad5-sw1.png"),
+            require("../assets/images/rongyaopad5-sw2.png"),
+            require("../assets/images/rongyaopad5-sw3.png"),
+            require("../assets/images/rongyaopad5-sw4.png"),
            
         ],
        
@@ -659,10 +660,10 @@ var ProductList = [
         },
         classify:"book",/* 分类 */
         introImg:[
-            "../assets/images/rongyaopad5-dt1.png",
-            "../assets/images/rongyaopad5-dt2.png",
-            "../assets/images/rongyaopad5-dt3.png",
-            "../assets/images/rongyaopad5-dt4.png",
+            require("../assets/images/rongyaopad5-dt1.png"),
+            require("../assets/images/rongyaopad5-dt2.png"),
+            require("../assets/images/rongyaopad5-dt3.png"),
+            require("../assets/images/rongyaopad5-dt4.png"),
          
         ]
 
@@ -674,10 +675,10 @@ var ProductList = [
         price:2699,
       
         swiperImg:[
-            "../assets/images/rongyaopad5-sw1.png",
-            "../assets/images/rongyaopad5-sw2.png",
-            "../assets/images/rongyaopad5-sw3.png",
-            "../assets/images/rongyaopad5-sw4.png",
+            require("../assets/images/rongyaopad5-sw1.png"),
+            require("../assets/images/rongyaopad5-sw2.png"),
+            require("../assets/images/rongyaopad5-sw3.png"),
+            require("../assets/images/rongyaopad5-sw4.png"),
            
         ],
        
@@ -687,10 +688,10 @@ var ProductList = [
         },
         classify:"book",/* 分类 */
         introImg:[
-            "../assets/images/rongyaopad5-dt1.png",
-            "../assets/images/rongyaopad5-dt2.png",
-            "../assets/images/rongyaopad5-dt3.png",
-            "../assets/images/rongyaopad5-dt4.png",
+            require("../assets/images/rongyaopad5-dt1.png"),
+            require("../assets/images/rongyaopad5-dt2.png"),
+            require("../assets/images/rongyaopad5-dt3.png"),
+            require("../assets/images/rongyaopad5-dt4.png"),
          
         ]
 
@@ -702,10 +703,10 @@ var ProductList = [
         price:949,
       
         swiperImg:[
-            "../assets/images/rongyaopad5-sw1.png",
-            "../assets/images/rongyaopad5-sw2.png",
-            "../assets/images/rongyaopad5-sw3.png",
-            "../assets/images/rongyaopad5-sw4.png",
+            require("../assets/images/rongyaopad5-sw1.png"),
+            require("../assets/images/rongyaopad5-sw2.png"),
+            require("../assets/images/rongyaopad5-sw3.png"),
+            require("../assets/images/rongyaopad5-sw4.png"),
            
         ],
        
@@ -715,10 +716,10 @@ var ProductList = [
         },
         classify:"book",/* 分类 */
         introImg:[
-            "../assets/images/rongyaopad5-dt1.png",
-            "../assets/images/rongyaopad5-dt2.png",
-            "../assets/images/rongyaopad5-dt3.png",
-            "../assets/images/rongyaopad5-dt4.png",
+            require("../assets/images/rongyaopad5-dt1.png"),
+            require("../assets/images/rongyaopad5-dt2.png"),
+            require("../assets/images/rongyaopad5-dt3.png"),
+            require("../assets/images/rongyaopad5-dt4.png"),
          
         ]
 
@@ -730,10 +731,10 @@ var ProductList = [
         price:1799,
       
         swiperImg:[
-            "../assets/images/rongyaopad5-sw1.png",
-            "../assets/images/rongyaopad5-sw2.png",
-            "../assets/images/rongyaopad5-sw3.png",
-            "../assets/images/rongyaopad5-sw4.png",
+            require("../assets/images/rongyaopad5-sw1.png"),
+            require("../assets/images/rongyaopad5-sw2.png"),
+            require("../assets/images/rongyaopad5-sw3.png"),
+            require("../assets/images/rongyaopad5-sw4.png"),
            
         ],
        
@@ -743,10 +744,10 @@ var ProductList = [
         },
         classify:"book",/* 分类 */
         introImg:[
-            "../assets/images/rongyaopad5-dt1.png",
-            "../assets/images/rongyaopad5-dt2.png",
-            "../assets/images/rongyaopad5-dt3.png",
-            "../assets/images/rongyaopad5-dt4.png",
+            require("../assets/images/rongyaopad5-dt1.png"),
+            require("../assets/images/rongyaopad5-dt2.png"),
+            require("../assets/images/rongyaopad5-dt3.png"),
+            require("../assets/images/rongyaopad5-dt4.png"),
          
         ]
 
@@ -758,4 +759,4 @@ var ProductList = [
 
 
 ];
-export {ProductList};
+export default ProductList;

@@ -65,6 +65,9 @@ export default {
 
 <style scoped>
 /* 页面底部版权相关 */
+.copyright-body{
+  margin-top: 0.5rem;
+}
 .copyright-body,
 .copyright-body a {
   padding: 0 0.15rem;
