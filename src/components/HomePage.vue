@@ -497,7 +497,7 @@
       <div class="homepage-rcmd-body">
         <swiper class="swiper" :options="swiperOptionRcmd">
           <swiper-slide class="rcmd-item" v-for="(item,index) of phoneSwiper" :key="index">
-            <a href>
+            <router-link :to='"/product?name="+item.name'>
               <div class="img-area">
                 <p class="p-tag">
                   <svg
@@ -532,7 +532,7 @@
                   <del v-if="item.oldPrice">{{item.oldPrice}}</del>
                 </b>
               </p>
-            </a>
+            </router-link>
           </swiper-slide>
         </swiper>
       </div>

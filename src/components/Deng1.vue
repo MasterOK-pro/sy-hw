@@ -1,11 +1,11 @@
 <template>
   <div class="main iconfont">
     <div class="phone">
-      <input type="text" placeholder="手机号/邮件地址/华为号" :value="usrName"/>
+      <input type="text" placeholder="手机号/邮件地址/华为号" v-model="usrName"/>
     </div>
 
     <div class="verify">
-      <input type="password" placeholder="密码" :value="usrPws"/>
+      <input type="password" placeholder="密码" v-model="usrPwd"/>
     </div>
 
     <div class="duanxing">
@@ -33,7 +33,7 @@ export default {
   data () {
     return {
       usrName: '',
-      usrPws: ''
+      usrPwd: ''
     }
   },
   computed: {
@@ -46,9 +46,9 @@ export default {
       this.$emit("click", index);
     },
     login() {
-      if ( (this.usrName==this.userInfo.name) && (this.usrPws==this.userInfo.pwd) ) {
-        this.$store.commit ('login');
-        localStorage.setItem ('login',JSON.stringify(true));
+      if ( (this.usrName==this.userInfo.name) && (this.usrPwd==this.userInfo.pwd) ) {
+        this.$store.commit ('login')
+        this.$router.replace('mine');
       }
     }
   }

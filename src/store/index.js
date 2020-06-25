@@ -28,6 +28,7 @@ export default new Vuex.Store({
     },
     login (state) {
       state.usrInfo.login = true;
+      localStorage.setItem ('login', JSON.stringify(true));
     }
   }
 })

@@ -1,7 +1,7 @@
 <template>
   <div class="copyright-body">
       <p class="login">
-        <a href>登录</a>
+        <router-link v-if="!($store.state.usrInfo.login)" to='/login'>登录</router-link>
         <a href="https://club.huawei.com/thread-1144534-1-1.html">反馈</a>
       </p>
       <p class="device">

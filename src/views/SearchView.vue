@@ -21,7 +21,7 @@
       </div>
     </div>
     <div class="alternative">
-      <component :is="compName"></component>
+      <component :is="compName" :list='nameList'></component>
     </div>
   </div>
 </template>
@@ -30,11 +30,29 @@
 import Hot from '../components/search-page/Hot.vue'
 import SearchList from '../components/search-page/SearchList.vue'
 
+import Product from "../assets/manual-data.js";
+
 export default {
   data () {
     return {
       compName: 'hot',
       inputMsg: ''
+    }
+  },
+  computed: {
+    nameList () {
+      let list = [];
+      for (let item of Product) {
+        if (item.name.startsWith(this.inputMsg)) {
+          list.push (item.name);
+        }
+      }
+      return list;
+      // return Product.filter ((item)=>{
+      //   if (item.name.startsWith (this.inputMsg) ) {
+      //     return item.name;
+      //   }
+      // })
     }
   },
   components: {
@@ -43,7 +61,7 @@ export default {
   },
   methods: {
     input () {
-      // console.log()
+      // console.log(this.nameList)
     },
     /* 点击返回 */
     goBack () {
@@ -58,6 +76,9 @@ export default {
         this.compName = 'hot';
       }
     }
+  },
+  activated () {
+    this.inputMsg = '';
   }
 };
 </script>

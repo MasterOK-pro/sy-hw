@@ -2,16 +2,16 @@
   <div class="hot">
     <div class="title">热门搜索</div>
     <div class="hot-box">
-      <div class="hot-item top3">畅享20 Pro</div>
-      <div class="hot-item top3">P40 Pro +</div>
-      <div class="hot-item">荣耀10X</div>
-      <div class="hot-item top3">荣耀平板V6</div>
-      <div class="hot-item">P40 Pro</div>
-      <div class="hot-item">Mate30 Pro 5G</div>
-      <div class="hot-item">荣耀30</div>
-      <div class="hot-item">NOVA7 5G</div>
-      <div class="hot-item">Play4T</div>
-      <div class="hot-item">P40</div>
+      <a href="https://m.vmall.com/product/ord-2601010222703.html" class="hot-item top3">畅享20 Pro</a>
+      <a href="https://m.vmall.com/product/ord-2601010220301.html" class="hot-item top3">P40 Pro +</a>
+      <a href="https://m.vmall.com/product/10086397382774.html" class="hot-item">荣耀10X</a>
+      <a class="hot-item top3">荣耀平板V6</a>
+      <a class="hot-item">P40 Pro</a>
+      <a class="hot-item">Mate30 Pro 5G</a>
+      <a class="hot-item">荣耀30</a>
+      <a class="hot-item">NOVA7 5G</a>
+      <a class="hot-item">Play4T</a>
+      <a class="hot-item">P40</a>
     </div>
   </div>
 </template>

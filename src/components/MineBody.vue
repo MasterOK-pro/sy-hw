@@ -34,7 +34,7 @@
 
       <div class="mine-topbar-box" :style="{opacity: backOpacity+''}">
         <div class="mine-topbar">
-          <div class="mine-topbar-left" :style="{opacity: textOpacity+''}">
+          <div v-if='!usrInfo.login' class="mine-topbar-left" :style="{opacity: textOpacity+''}">
             <img src="../../public/imgs/app-mine-user-dflt.png" alt class="topbar-left-user" />
             <router-link to>登录/注册</router-link>
           </div>
@@ -48,10 +48,20 @@
           <van-icon name="chat-o" size="1.2rem" />
         </div>
       </div>
-      <div class="mid-body-top-dfltUser" @click="$router.push('login')">
+      <div v-if='!usrInfo.login' class="mid-body-top-dfltUser" @click="$router.push('login')">
         <img src="../../public/imgs/app-mine-user-dflt.png" alt />
         <div class="mid-body-top-login">
           <p>登录/注册</p>
+          <p class="sign-in">
+            <span></span>
+            <span>签到领积分</span>
+          </p>
+        </div>
+      </div>
+      <div v-else class="mid-body-top-dfltUser">
+        <img :src="usrInfo.usrHeader" alt />
+        <div class="mid-body-top-login">
+          <p>{{usrInfo.name}}</p>
           <p class="sign-in">
             <span></span>
             <span>签到领积分</span>
@@ -302,6 +312,11 @@ export default {
       rem: 0
     };
   },
+  computed: {
+    usrInfo () {
+      return this.$store.state.usrInfo;
+    }
+  },
   components: {
     MineVipSwiper,
     MineLiveSwiper,
@@ -442,6 +457,7 @@ export default {
 .mid-body-top-dfltUser img {
   height: 3rem;
   width: 3rem;
+  border-radius: 50%;
 }
 .mid-body-top-login {
   margin-left: 0.45rem;

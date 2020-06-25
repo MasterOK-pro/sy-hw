@@ -5,167 +5,19 @@
         <img src="../assets/images/a3.jpg" alt />
       </a>
     </div>
-    
-    <div class="title">
-      <span>荣耀 V系列</span>
-    </div>
-    <div class="con">
-      <ul>
-        <li>
-          <div class="primary">
-            <p class="sub01">
-              <img src="../assets/images/p4.png" alt />
-            </p>
-            <p class="content01">
-              <span>荣耀v30</span>
-            </p>
-          </div>
-        </li>
-        <li>
-          <div class="primary">
-            <p class="sub01">
-              <img src="../assets/images/p4.png" alt />
-            </p>
-            <p class="content01">
-              <span>荣耀v30</span>
-            </p>
-          </div>
-        </li>
-        <li>
-          <div class="primary">
-            <p class="sub01">
-              <img src="../assets/images/p4.png" alt />
-            </p>
-            <p class="content01">
-              <span>荣耀v30</span>
-            </p>
-          </div>
-        </li>
-      </ul>
-    </div>
     <!-- 笔记本 -->
     <div class="title">
-      <span>荣耀 HONOR系列</span>
+      <span>华为笔记本</span>
     </div>
     <div class="con">
       <ul>
-        <li>
+        <li v-for="(item, index) of list" :key="index" @click='$router.push("product?name="+item.name)'>
           <div class="primary">
             <p class="sub01">
-              <img src="../assets/images/p5.png" alt />
+              <img :src="item.swiperImg[0]" alt />
             </p>
             <p class="content01">
-              <span>荣耀30pro</span>
-            </p>
-          </div>
-        </li>
-        <li>
-          <div class="primary">
-            <p class="sub01">
-              <img src="../assets/images/p5.png" alt />
-            </p>
-            <p class="content01">
-              <span>荣耀30pro</span>
-            </p>
-          </div>
-        </li>
-        <li>
-          <div class="primary">
-            <p class="sub01">
-              <img src="../assets/images/p5.png" alt />
-            </p>
-            <p class="content01">
-              <span>荣耀30pro</span>
-            </p>
-          </div>
-        </li>
-        <li>
-          <div class="primary">
-            <p class="sub01">
-              <img src="../assets/images/p5.png" alt />
-            </p>
-            <p class="content01">
-              <span>荣耀30pro</span>
-            </p>
-          </div>
-        </li>
-        <li>
-          <div class="primary">
-            <p class="sub01">
-              <img src="../assets/images/p5.png" alt />
-            </p>
-            <p class="content01">
-              <span>荣耀30pro</span>
-            </p>
-          </div>
-        </li>
-        <li>
-          <div class="primary">
-            <p class="sub01">
-              <img src="../assets/images/p5.png" alt />
-            </p>
-            <p class="content01">
-              <span>荣耀30pro</span>
-            </p>
-          </div>
-        </li>
-        <li>
-          <div class="primary">
-            <p class="sub01">
-              <img src="../assets/images/p5.png" alt />
-            </p>
-            <p class="content01">
-              <span>荣耀30pro</span>
-            </p>
-          </div>
-        </li>
-        <li>
-          <div class="primary">
-            <p class="sub01">
-              <img src="../assets/images/p5.png" alt />
-            </p>
-            <p class="content01">
-              <span>荣耀30pro</span>
-            </p>
-          </div>
-        </li>
-        <li>
-          <div class="primary">
-            <p class="sub01">
-              <img src="../assets/images/p5.png" alt />
-            </p>
-            <p class="content01">
-              <span>荣耀30pro</span>
-            </p>
-          </div>
-        </li>
-        <li>
-          <div class="primary">
-            <p class="sub01">
-              <img src="../assets/images/p5.png" alt />
-            </p>
-            <p class="content01">
-              <span>荣耀30pro</span>
-            </p>
-          </div>
-        </li>
-        <li>
-          <div class="primary">
-            <p class="sub01">
-              <img src="../assets/images/p5.png" alt />
-            </p>
-            <p class="content01">
-              <span>荣耀30pro</span>
-            </p>
-          </div>
-        </li>
-        <li>
-          <div class="primary">
-            <p class="sub01">
-              <img src="../assets/images/p5.png" alt />
-            </p>
-            <p class="content01">
-              <span>荣耀30pro</span>
+              <span>{{item.name.split(' ').splice(0,1)[0]}}</span>
             </p>
           </div>
         </li>
@@ -175,8 +27,20 @@
 </template>
 
 <script>
+import Product from "../assets/manual-data.js";
+
 export default {
-  
+  computed: {
+    list () {
+      let arr = [];
+      for (let item of Product) {
+        if (item.classify == 'book') {
+          arr.push (item);
+        }
+      }
+      return arr;
+    }
+  }
 };
 </script>
  

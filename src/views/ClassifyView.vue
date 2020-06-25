@@ -4,11 +4,11 @@
     <!-- app首页底部导航按钮 -->
     <div class="wrap">
       <div class="header iconfont">
-        <div class="search"  @click="$router.push('search')">
+        <div class="search" @click="$router.push('search')">
           <a href class="da3">
             <img src="../assets/images/da3.png" alt />
           </a>
-          <input type="text" placeholder="P40 pro" disabled/>
+          <input type="text" placeholder="P40 pro" disabled />
         </div>
         <div class="icon">
           <a href>
@@ -41,15 +41,15 @@ import HomePageFooter from "../components/HomePageFooter.vue";
 import Qhc0 from "../components/Qhc0.vue";
 import Qhc1 from "../components/Qhc1.vue";
 import Qhc2 from "../components/Qhc2.vue";
-
+import Qhc3 from "../components/Qhc3.vue";
 
 export default {
   components: {
     HomePageFooter: HomePageFooter,
     Qhc0: Qhc0,
-     Qhc1: Qhc1,
-      Qhc2: Qhc2,
-
+    Qhc1: Qhc1,
+    Qhc2: Qhc2,
+    Qhc3
   },
   data() {
     return {
@@ -69,7 +69,7 @@ export default {
         ""
       ],
       clicked: 0,
-     
+
       componentName: "Qhc0"
     };
   },
@@ -82,8 +82,8 @@ export default {
       this.componentName = "Qhc" + index;
     }
   },
-  activated () {
-    this.$store.commit('currentPath', 'classify');
+  activated() {
+    this.$store.commit("currentPath", "classify");
   }
 };
 </script>
@@ -105,8 +105,7 @@ li {
 .wrap {
   width: 100%;
   height: 100%;
-   background-color: white;
- 
+  background-color: white;
 }
 /* 上部 */
 .header {
@@ -116,12 +115,12 @@ li {
   padding-top: 5px;
   padding-left: 15px;
   display: flex;
-   background-color: white;
+  background-color: white;
 }
 .search {
   width: 14.6rem;
   height: 1.6rem;
-   background-color:rgb(249, 249, 249);
+  background-color: rgb(249, 249, 249);
   border-radius: 1rem;
   border: 1px solid rgba(0, 0, 0, 0.2);
   position: relative;
@@ -131,11 +130,11 @@ li {
   padding-left: 8px;
   line-height: 28px;
 }
-.da3{
+.da3 {
   display: inline-block;
   position: absolute;
   top: 0.25rem;
-  left:0.5rem;
+  left: 0.5rem;
 }
 .search input {
   display: inline-block;
@@ -146,7 +145,7 @@ li {
   left: 1.6rem;
   width: 11.5rem;
   border: none;
-  background-color:rgb(249, 249, 249);
+  background-color: rgb(249, 249, 249);
 }
 .icon {
   /* background-color: silver; */
@@ -163,7 +162,6 @@ li {
   display: flex;
   width: 100%;
   height: 27rem;
- 
 }
 /* 左半部 */
 .left {
@@ -194,7 +192,7 @@ li {
 }
 .bor {
   color: orangered;
-  border-right:2px solid orangered
+  border-right: 2px solid orangered;
 }
 /* .left>.list>li span:hover{
     border-right:2px solid orangered;
@@ -231,7 +229,7 @@ li {
 }
 .zujian1 img {
   width: 12.6rem;
-  height:3.5rem;
+  height: 3.5rem;
 }
 
 /* 标题之下 */
@@ -243,7 +241,7 @@ li {
   line-height: 2.1rem;
 }
 .con {
-  width:12.5rem;
+  width: 12.5rem;
   /* height: 562px; */
   /* background-color: slateblue; */
   margin-left: 12px;

@@ -1,6 +1,6 @@
 var ProductList = [
     {
-        name:"HUAWEI P40 Pro 5G 全网通 8GB+128GB（零度白）",
+        name:"HUAWEI P40 Pro 5G 全网通 8GB 128GB（零度白）",
         price:5988,
         oldPrice:"",/* 首页 */
         swiperImg:[
@@ -16,7 +16,7 @@ var ProductList = [
         desc:"全系优惠100元",/* 首页优惠信息 */
         config:{
             color:["亮黑色","深海蓝","晨曦金","零度白","冰霜银"],
-            version:["5G全网通 8GB+256GB","5G全网通 8GB+128GB","5G全网通 6GB+128GB"]
+            version:["5G全网通 8GB 256GB","5G全网通 8GB 128GB","5G全网通 6GB 128GB"]
         },
         classify:"phone",/* 分类 */
         introImg:[
@@ -31,9 +31,9 @@ var ProductList = [
         ]
 
     },
-    // HUAWEI P40 Pro+ 5G 全网通 8GB+128GB（陶瓷黑）
+    // HUAWEI P40 Pro+ 5G 全网通 8GB 128GB（陶瓷黑）
     {
-        name:"HUAWEI P40 Pro+ 5G 全网通 8GB+128GB（陶瓷黑）",
+        name:"HUAWEI P40 Pro+ 5G 全网通 8GB 128GB（陶瓷黑）",
         price:8888,
         oldPrice:"",
         swiperImg:[
@@ -46,7 +46,7 @@ var ProductList = [
        
         config:{
             color:["陶瓷白","陶瓷黑"],
-            version:["5G全网通 8GB+256GB","5G全网通 8GB+512GB"]
+            version:["5G全网通 8GB 256GB","5G全网通 8GB 512GB"]
         },
         classify:"phone",
         introImg:[
@@ -60,7 +60,7 @@ var ProductList = [
     },
     // 荣耀30Pro
     {
-        name:"荣耀30 Pro 50倍超稳远摄 超感光高清夜拍 双模5G 麒麟990 5G SoC 8GB+128GB 幻夜黑",
+        name:"荣耀30 Pro 50倍超稳远摄 超感光高清夜拍 双模5G 麒麟990 5G SoC 8GB 128GB 幻夜黑",
         price:3999,
         oldPrice:"",
         swiperImg:[
@@ -73,7 +73,7 @@ var ProductList = [
         
         config:{
             color:["幻夜黑","绿野仙踪","钛空银","霓裳紫","流光幻境"],
-            version:["Pro 8GB+128GB","Pro 8GB+256GB","Pro+ 8GB+128GB","Pro+ 12GB+256GB"]
+            version:["Pro 8GB 128GB","Pro 8GB 256GB","Pro+ 8GB 128GB","Pro+ 12GB 256GB"]
         },
         classify:"phone",
         introImg:[
@@ -87,7 +87,7 @@ var ProductList = [
     },
     // 荣耀30
     {
-        name:"荣耀30 50倍超稳远摄 超感光高清夜拍 40W超级快充 双模5G 8GB+128GB 钛空银",
+        name:"荣耀30 50倍超稳远摄 超感光高清夜拍 40W超级快充 双模5G 8GB 128GB 钛空银",
         price:3999,
         oldPrice:"",
         swiperImg:[
@@ -100,7 +100,7 @@ var ProductList = [
         
         config:{
             color:["幻夜黑","绿野仙踪","钛空银","霓裳紫","流光幻境"],
-            version:["全网通6GB+128GB","全网通8GB+128GB","全网通8GB+256GB"]
+            version:["全网通6GB 128GB","全网通8GB 128GB","全网通8GB 256GB"]
         },
         classify:"phone",
         introImg:[
@@ -115,7 +115,7 @@ var ProductList = [
 
     // HUAWEI Mate 30 Pro 5G
     {
-        name:"HUAWEI Mate 30 Pro 5G 全网通 8GB+256GB 麒麟990 双4000万徕卡电影四摄（青山黛）",
+        name:"HUAWEI Mate 30 Pro 5G 全网通 8GB 256GB 麒麟990 双4000万徕卡电影四摄（青山黛）",
         price:6399,
         oldPrice:"",
         swiperImg:[
@@ -143,7 +143,7 @@ var ProductList = [
     },
     // 荣耀V30 PRO
     {
-        name:"荣耀V30 PRO 双模5G 麒麟990 5G SOC芯片 突破性相机矩阵 双超级快充 8GB+128GB 冰岛幻境 李现同款",
+        name:"荣耀V30 PRO 双模5G 麒麟990 5G SOC芯片 突破性相机矩阵 双超级快充 8GB 128GB 冰岛幻境 李现同款",
         price:3399,
         oldPrice:"3899",/* 首页 */
         swiperImg:[
@@ -156,7 +156,7 @@ var ProductList = [
         desc:" 优惠500 部分送无线充",/* 首页优惠信息 */
         config:{
             color:["冰岛幻境","幻夜星河","魅海星蓝"],
-            version:["5G全网通 8GB+256GB","5G全网通 8GB+128GB"]
+            version:["5G全网通 8GB 256GB","5G全网通 8GB 128GB"]
         },
         classify:"phone",/* 分类 */
         introImg:[
@@ -169,7 +169,7 @@ var ProductList = [
     },
      // HUAWEI nova 7 SE 5G
      {
-        name:"HUAWEI nova 7 SE 5G 6400万高清四摄 40W超级快充 麒麟820 5G SoC芯片 8GB+128GB 全网通版（银月星辉）",
+        name:"HUAWEI nova 7 SE 5G 6400万高清四摄 40W超级快充 麒麟820 5G SoC芯片 8GB 128GB 全网通版（银月星辉）",
         price:2399,
        
         swiperImg:[
@@ -182,7 +182,7 @@ var ProductList = [
         desc:" 6期免息|赠配件好礼",/* 首页优惠信息 */
         config:{
             color:["幻夜黑","银月星辉","绮境森林","仲夏紫"],
-            version:["5G全网通 8GB+256GB","5G全网通 8GB+128GB"]
+            version:["5G全网通 8GB 256GB","5G全网通 8GB 128GB"]
         },
         classify:"phone",/* 分类 */
         introImg:[
@@ -196,7 +196,7 @@ var ProductList = [
     },
     // 荣耀20 PRO
     {
-        name:"荣耀20 PRO 4800万全焦段AI四摄 麒麟980全网通版8GB+128GB 蓝水翡翠",
+        name:"荣耀20 PRO 4800万全焦段AI四摄 麒麟980全网通版8GB 128GB 蓝水翡翠",
         price:2099,
         oldPrice:"2699",
         swiperImg:[
@@ -210,7 +210,7 @@ var ProductList = [
         installment: true,
         config:{
             color:["幻夜星河","蓝水翡翠","冰岛幻境"],
-            version:["全网通 8GB+256GB","全网通 8GB+128GB"]
+            version:["全网通 8GB 256GB","全网通 8GB 128GB"]
         },
         classify:"phone",/* 分类 */
         introImg:[
@@ -225,7 +225,7 @@ var ProductList = [
 
     // 荣耀20S
     {
-        name:"荣耀20S 3200万人像超级夜景 4800万超广角AI三摄 麒麟810旗舰级芯片 全网通版6GB+128GB 蝶羽白",
+        name:"荣耀20S 3200万人像超级夜景 4800万超广角AI三摄 麒麟810旗舰级芯片 全网通版6GB 128GB 蝶羽白",
         price:1599,
        
         swiperImg:[
@@ -238,7 +238,7 @@ var ProductList = [
        
         config:{
             color:["蝶羽白","蝶羽黑"],
-            version:["全网通 6GB+128GB","全网通 8GB+128GB"]
+            version:["全网通 6GB 128GB","全网通 8GB 128GB"]
         },
         classify:"phone",/* 分类 */
         introImg:[
@@ -253,7 +253,7 @@ var ProductList = [
 
      // 荣耀9x
      {
-        name:"荣耀9X 麒麟810 4000mAh超强续航 4800万超清夜拍 6.59英寸升降全面屏 全网通 4GB+64GB（魅海蓝）",
+        name:"荣耀9X 麒麟810 4000mAh超强续航 4800万超清夜拍 6.59英寸升降全面屏 全网通 4GB 64GB（魅海蓝）",
         price:1099,
        
         swiperImg:[
@@ -266,7 +266,7 @@ var ProductList = [
        
         config:{
             color:["幻夜黑","魅海蓝","魅焰红","冰岛白"],
-            version:["全网通 4GB+64GB","全网通 6GB+64GB","全网通 6GB+128GB","全网通 8GB+128GB"]
+            version:["全网通 4GB 64GB","全网通 6GB 64GB","全网通 6GB 128GB","全网通 8GB 128GB"]
         },
         classify:"phone",/* 分类 */
         introImg:[
@@ -281,7 +281,7 @@ var ProductList = [
 
     // 麦芒8
     {
-        name:"华为麦芒8 6G+128G 全网通版（极光蓝）2400万超广角AI三摄  6GB+128GB超大存储  6.21英寸珍珠屏",
+        name:"华为麦芒8 6G 128G 全网通版（极光蓝）2400万超广角AI三摄  6GB 128GB超大存储  6.21英寸珍珠屏",
         price:1599,
        
         swiperImg:[
@@ -294,7 +294,7 @@ var ProductList = [
        
         config:{
             color:["极光蓝"],
-            version:["全网通 6GB+128GB"]
+            version:["全网通 6GB 128GB"]
         },
         classify:"phone",/* 分类 */
         introImg:[
@@ -309,7 +309,7 @@ var ProductList = [
 
      // 畅享10
      {
-        name:"华为畅享10 6GB+64GB 全网通版（幻夜黑）",
+        name:"华为畅享10 6GB 64GB 全网通版（幻夜黑）",
         price:1299,
        
         swiperImg:[
@@ -322,7 +322,7 @@ var ProductList = [
        
         config:{
             color:["幻夜黑","极光蓝","天空之境","相思红"],
-            version:["全网通 4GB+64GB","全网通 4GB+128GB","全网通 6GB+64GB","全网通 6GB+128GB"]
+            version:["全网通 4GB 64GB","全网通 4GB 128GB","全网通 6GB 64GB","全网通 6GB 128GB"]
         },
         classify:"phone",/* 分类 */
         introImg:[
@@ -448,7 +448,7 @@ var ProductList = [
     },
     // MateBook 13 2020款
     {
-        name:"HUAWEI MateBook 13 2020款 独显 i5-10210U 16GB 512GB（皓月银）2K触控屏 第十代英特尔处理器 Windows版华为笔记本电脑",
+        name:"HUAWEI MateBook 13 2020款 独显 i5 10210U 16GB 512GB（皓月银）2K触控屏 第十代英特尔处理器 Windows版华为笔记本电脑",
         price:5999,
       
         swiperImg:[
@@ -585,9 +585,9 @@ var ProductList = [
 
     },
 
-     // （HUAWEI MatePad Pro 5G 10.8英寸 8GB+256GB 全网通（青山黛）
+     // （HUAWEI MatePad Pro 5G 10.8英寸 8GB 256GB 全网通（青山黛）
      {
-        name:"（HUAWEI MatePad Pro 5G 10.8英寸 8GB+256GB 全网通（青山黛）",
+        name:"（HUAWEI MatePad Pro 5G 10.8英寸 8GB 256GB 全网通（青山黛）",
         price:5299,
       
         swiperImg:[
@@ -613,9 +613,9 @@ var ProductList = [
 
     },
 
-    // 【订金】荣耀平板V6 10.4英寸 6GB+64GB WiFi（幻夜黑 ）麒麟985旗舰芯片 全球首款Wifi6+平板 2K全面屏 多屏协同
+    // 【订金】荣耀平板V6 10.4英寸 6GB 64GB WiFi（幻夜黑 ）麒麟985旗舰芯片 全球首款Wifi6+平板 2K全面屏 多屏协同
     {
-        name:"【订金】荣耀平板V6 10.4英寸 6GB+64GB WiFi（幻夜黑 ）麒麟985旗舰芯片 全球首款Wifi6+平板 2K全面屏 多屏协同",
+        name:"【订金】荣耀平板V6 10.4英寸 6GB 64GB WiFi（幻夜黑 ）麒麟985旗舰芯片 全球首款Wifi6+平板 2K全面屏 多屏协同",
         price:2199,
       
         swiperImg:[
@@ -628,7 +628,7 @@ var ProductList = [
        
         config:{
             color:["幻夜黑"],
-            version:["WiFi  6GB+64GB","WiFi 6GB+128GB"]
+            version:["WiFi  6GB 64GB","WiFi 6GB 128GB"]
         },
         classify:"book",/* 分类 */
         introImg:[
@@ -641,9 +641,9 @@ var ProductList = [
 
     },
 
-    // 荣耀平板5 10.1英寸 3GB+32GB WIFI标准版（苍穹灰）
+    // 荣耀平板5 10.1英寸 3GB 32GB WIFI标准版（苍穹灰）
     {
-        name:"荣耀平板5 10.1英寸 3GB+32GB WIFI标准版（苍穹灰）",
+        name:"荣耀平板5 10.1英寸 3GB 32GB WIFI标准版（苍穹灰）",
         price:1199,
       
         swiperImg:[
@@ -656,7 +656,7 @@ var ProductList = [
        
         config:{
             color:["冰川蓝","苍穹灰"],
-            version:["WiFi 3GB+32GB","全网通 4GB+64GB"]
+            version:["WiFi 3GB 32GB","全网通 4GB 64GB"]
         },
         classify:"book",/* 分类 */
         introImg:[
@@ -669,9 +669,9 @@ var ProductList = [
 
     },
 
-     // 华为平板 M6 10.8英寸 4GB+128GB WiFi（香槟金）麒麟980芯片  2K高清屏   应用分屏 一屏两用 哈曼卡顿调音 四声道四扬声器
+     // 华为平板 M6 10.8英寸 4GB 128GB WiFi（香槟金）麒麟980芯片  2K高清屏   应用分屏 一屏两用 哈曼卡顿调音 四声道四扬声器
      {
-        name:"华为平板 M6 10.8英寸 4GB+128GB WiFi（香槟金）麒麟980芯片  2K高清屏   应用分屏 一屏两用 哈曼卡顿调音 四声道四扬声器",
+        name:"华为平板 M6 10.8英寸 4GB 128GB WiFi（香槟金）麒麟980芯片  2K高清屏   应用分屏 一屏两用 哈曼卡顿调音 四声道四扬声器",
         price:2699,
       
         swiperImg:[
@@ -684,7 +684,7 @@ var ProductList = [
        
         config:{
             color:["冰川蓝","苍穹灰"],
-            version:["WiFi 3GB+32GB","全网通 4GB+64GB"]
+            version:["WiFi 3GB 32GB","全网通 4GB 64GB"]
         },
         classify:"book",/* 分类 */
         introImg:[
@@ -697,9 +697,9 @@ var ProductList = [
 
     },
 
-     // 荣耀平板5 8英寸 3GB+32GB WIFI标准版（苍穹灰）麒麟710芯片 杜比音效 全高清屏
+     // 荣耀平板5 8英寸 3GB 32GB WIFI标准版（苍穹灰）麒麟710芯片 杜比音效 全高清屏
      {
-        name:"荣耀平板5 8英寸 3GB+32GB WIFI标准版（苍穹灰）麒麟710芯片 杜比音效 全高清屏",
+        name:"荣耀平板5 8英寸 3GB 32GB WIFI标准版（苍穹灰）麒麟710芯片 杜比音效 全高清屏",
         price:949,
       
         swiperImg:[
@@ -712,7 +712,7 @@ var ProductList = [
        
         config:{
             color:["冰川蓝","苍穹灰"],
-            version:["WiFi 3GB+32GB","全网通 4GB+64GB"]
+            version:["WiFi 3GB 32GB","全网通 4GB 64GB"]
         },
         classify:"book",/* 分类 */
         introImg:[
@@ -725,9 +725,9 @@ var ProductList = [
 
     },
 
-     // 华为平板 M5 青春版 8.0英寸 4GB+128GB 全网通版（深空灰）智能声控平板 哈曼卡顿调音 麒麟710芯片
+     // 华为平板 M5 青春版 8.0英寸 4GB 128GB 全网通版（深空灰）智能声控平板 哈曼卡顿调音 麒麟710芯片
      {
-        name:"华为平板 M5 青春版 8.0英寸 4GB+128GB 全网通版（深空灰）智能声控平板 哈曼卡顿调音 麒麟710芯片",
+        name:"华为平板 M5 青春版 8.0英寸 4GB 128GB 全网通版（深空灰）智能声控平板 哈曼卡顿调音 麒麟710芯片",
         price:1799,
       
         swiperImg:[
@@ -740,7 +740,7 @@ var ProductList = [
        
         config:{
             color:["冰川蓝","苍穹灰"],
-            version:["WiFi 3GB+32GB","全网通 4GB+64GB"]
+            version:["WiFi 3GB 32GB","全网通 4GB 64GB"]
         },
         classify:"book",/* 分类 */
         introImg:[

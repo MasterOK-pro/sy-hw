@@ -105,7 +105,7 @@ export default {
           if (index==1) {
             document.title = '华为账号-登录'
           }
-          console.log(this.$route)
+          // console.log(this.$route)
       }
   }
 };
