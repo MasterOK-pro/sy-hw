@@ -48,7 +48,7 @@ export default {
     login() {
       if ( (this.usrName==this.userInfo.name) && (this.usrPwd==this.userInfo.pwd) ) {
         this.$store.commit ('login')
-        this.$router.replace('mine');
+        this.$router.go(-1);
       }
     }
   }

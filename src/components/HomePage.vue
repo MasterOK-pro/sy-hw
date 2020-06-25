@@ -28,7 +28,7 @@
           </div>
           <div class="sysbtn">
             <img src="../../public/imgs/app-search-msg.png" alt />
-            <span>登录</span>
+            <span v-if='!$store.state.usrInfo.login' @click='$router.push("login")'>登录</span>
           </div>
         </div>
         <!-- 顶部文字滑块导航 -->
@@ -731,6 +731,7 @@ a {
   display: flex;
   align-items: center;
   width: 4.5rem;
+  justify-content: flex-end;
 }
 .sysbtn img {
   width: 1.2rem;
