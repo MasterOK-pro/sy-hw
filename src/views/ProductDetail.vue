@@ -554,7 +554,7 @@ export default {
       this.overlayShow = true;
     },
     toCart() {
-      this.$store.commit("addCount",this.ProductObject.name);
+      // this.$store.commit("addCount",this.ProductObject.name);
       this.$router.push("cart");
     }
   }

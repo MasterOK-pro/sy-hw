@@ -147,7 +147,31 @@ export default {
     }
   },
   mounted() {
-    let cartList = this.$store.state.myCart;
+    let cartList = [
+{
+        img: require("../assets/images/cart-img-3.png"),
+        name:
+          "HUAWEI P40 Pro 5G 全网通 8GB 128GB（零度白）",
+        config: "零度白,5G全网通 8GB+128GB,官方标配",
+        price: "5988",
+        count: 1
+      },
+      {
+        img: require("../assets/images/cart-img-2.png"),
+        name:
+          "HUAWEI P40 Pro+ 5G 全网通 8GB 128GB（陶瓷黑）",
+        config: " 幻夜黑,Pro 8GB+128GB,官方标配",
+        price: "8888",
+        count: 1
+      },
+      {
+        img: require("../assets/images/cart-img-1.png"),
+        name: "荣耀30 Pro 50倍超稳远摄 超感光高清夜拍 双模5G 麒麟990 5G SoC 8GB 128GB 幻夜黑",
+        config: "竞速蓝,全网通 6GB+128GB,官方标配",
+        price: "3999",
+        count: 1
+      }
+    ];
     cartList.map(item => {
       item.checked = false;
     });
