@@ -3,7 +3,8 @@
     <!-- 头部 -->
     <div class="full-cart-header">
       <p>购物车</p>
-      <span class="edit">编辑</span>
+      <span class="edit" v-if="myShow" @click="myClick">编辑</span>
+      <span class="edit" v-else @click="myClick2">完成</span>
     </div>
 
     <!-- 中间 -->
@@ -102,7 +103,8 @@ export default {
   data() {
     return {
       cartList: [],
-      allChecked: false
+      allChecked: false,
+      myShow:true
     };
   },
 
@@ -145,32 +147,7 @@ export default {
     }
   },
   mounted() {
-    let cartList = [
-      {
-        img: require("../assets/images/cart-img-3.png"),
-        name:
-          "HUAWEI P40 Pro 5G 全网通 8GB+128GB（零度白）",
-        config: "零度白,5G全网通 8GB+128GB,官方标配",
-        price: "5988",
-        count: 1
-      },
-      {
-        img: require("../assets/images/cart-img-2.png"),
-        name:
-          "HUAWEI P40 Pro+ 5G 全网通 8GB+128GB（陶瓷黑）",
-        config: " 幻夜黑,Pro 8GB+128GB,官方标配",
-        price: "8888",
-        count: 1
-      },
-      {
-        img: require("../assets/images/cart-img-1.png"),
-        name: "荣耀30 Pro 50倍超稳远摄 超感光高清夜拍 双模5G 麒麟990 5G SoC 8GB+128GB 幻夜黑",
-        config: "竞速蓝,全网通 6GB+128GB,官方标配",
-        price: "3999",
-        count: 1
-      }
-    ];
-
+    let cartList = this.$store.state.myCart;
     cartList.map(item => {
       item.checked = false;
     });
@@ -199,6 +176,16 @@ export default {
       this.cartList.map(item => (allSelected = item.checked && allSelected));
       // 若全选为false，则商品都不选中
       this.cartList.map(item => (item.checked = !allSelected));
+    },
+     myClick(){
+      this.myShow =false;
+      this.cartList.map(item =>{
+        item.checked = false;
+      })
+    },
+    myClick2(){
+      this.myShow =true;
+      
     }
   }
 };
