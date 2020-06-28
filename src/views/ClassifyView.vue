@@ -42,6 +42,12 @@ import Qhc0 from "../components/Qhc0.vue";
 import Qhc1 from "../components/Qhc1.vue";
 import Qhc2 from "../components/Qhc2.vue";
 import Qhc3 from "../components/Qhc3.vue";
+import Qhc4 from "../components/Qhc4.vue";
+import Qhc5 from "../components/Qhc5.vue";
+import Qhc6 from "../components/Qhc6.vue";
+import Qhc7 from "../components/Qhc7.vue";
+import Qhc8 from "../components/Qhc8.vue";
+import Qhc9 from "../components/Qhc9.vue";
 
 export default {
   components: {
@@ -49,7 +55,13 @@ export default {
     Qhc0: Qhc0,
     Qhc1: Qhc1,
     Qhc2: Qhc2,
-    Qhc3
+    Qhc3:Qhc3,
+    Qhc4:Qhc4,
+    Qhc5:Qhc5,
+    Qhc6:Qhc6,
+    Qhc7:Qhc7,
+    Qhc8:Qhc8,
+    Qhc9:Qhc9,
   },
   data() {
     return {

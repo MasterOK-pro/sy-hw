@@ -10,10 +10,10 @@
       </div>
     </div>
     <div class="phone">
-      <input type="text" placeholder="手机号" />
+      <input type="text" placeholder="手机号" @input="inputFunction()" >
     </div>
     <div class="verify">
-      <input type="text" placeholder="短信验证码" />
+      <input type="text" placeholder="短信验证码" >
       <div class="get-verify">获取验证码</div>
     </div>
     <div class="btn-wrap">
@@ -30,6 +30,9 @@ export default {
     methods: {
         changDeng (index) {
             this.$emit('click',index)
+        },
+        inputFunction(){
+          
         }
     }
 }

@@ -7,7 +7,7 @@
     </div>
     <!-- 笔记本 -->
     <div class="title">
-      <span>智能穿戴&VR</span>
+      <span>耳机音箱</span>
     </div>
     <div class="con">
       <ul>
