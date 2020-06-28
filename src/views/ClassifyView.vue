@@ -48,6 +48,8 @@ import Qhc6 from "../components/Qhc6.vue";
 import Qhc7 from "../components/Qhc7.vue";
 import Qhc8 from "../components/Qhc8.vue";
 import Qhc9 from "../components/Qhc9.vue";
+import Qhc10 from "../components/Qhc10.vue";
+import Qhc11 from "../components/Qhc11.vue";
 
 export default {
   components: {
@@ -62,6 +64,8 @@ export default {
     Qhc7:Qhc7,
     Qhc8:Qhc8,
     Qhc9:Qhc9,
+    Qhc10:Qhc10,
+    Qhc11:Qhc11,
   },
   data() {
     return {

@@ -6,15 +6,17 @@
       </div>
       <div class="c-right">
         <span>中国 +86</span>
-        <span class="c-icon">></span>
+        <span class="c-icon">
+          <img src="../../public/imgs/denglu-right.png" alt />
+        </span>
       </div>
     </div>
     <div class="phone">
-      <input type="text" placeholder="手机号" @input="inputFunction()" >
+      <input type="text" placeholder="手机号" @input="inputFunction()" />
     </div>
     <div class="verify">
-      <input type="text" placeholder="短信验证码" >
-      <div class="get-verify">获取验证码</div>
+      <input type="text" placeholder="短信验证码" />
+      <div :class="{active:isActive,'get-verify':isGet}">获取验证码</div>
     </div>
     <div class="btn-wrap">
       <div class="btn-login">登录/注册</div>
@@ -27,15 +29,21 @@
 
 <script>
 export default {
-    methods: {
-        changDeng (index) {
-            this.$emit('click',index)
-        },
-        inputFunction(){
-          
-        }
+  data() {
+    return {
+      isActive: false,
+      isGet: true
+    };
+  },
+  methods: {
+    changDeng(index) {
+      this.$emit("click", index);
+    },
+    inputFunction() {
+      this.isActive = true;
     }
-}
+  }
+};
 </script>
 
 <style scoped>
@@ -52,7 +60,7 @@ export default {
   width: 15.6rem;
   height: 2rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   line-height: 40px;
   color: #191919;
   font-size: 16px;
@@ -63,16 +71,17 @@ export default {
   height: 2rem;
 }
 .c-right {
-  width: 5.6rem;
+  width: 6.6rem;
   height: 2rem;
   color: rgba(0, 0, 0, 0.5);
-  font-size: 16px;
+  font-size: 14px;
+  position: relative;
 }
-.c-right .c-ion {
+.c-right .c-icon {
   font-size: 20px;
-  display: inline-block;
-  font-weight: 900;
-  color: red;
+  position: absolute;
+  top: 3px;
+  right: 0px;
 }
 .phone {
   width: 16.35rem;
@@ -88,7 +97,7 @@ export default {
   outline: none;
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-   background-color: white;
+  background-color: white;
 }
 .verify {
   width: 16.5rem;
@@ -106,7 +115,7 @@ export default {
   outline: none;
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-   background-color: white;
+  background-color: white;
 }
 .get-verify {
   width: 5rem;
@@ -140,5 +149,8 @@ export default {
   margin-top: 16px;
   margin-bottom: 24px;
   font-size: 14px;
+}
+.active {
+  color: blue;
 }
 </style>
