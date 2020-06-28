@@ -9,7 +9,7 @@
 
     <!-- 中间 -->
     <div class="middle">
-      <div class="sc-pro-area" v-for="(item,index) in cartList " :key="item.price">
+      <div class="sc-pro-area" v-for="(item,index) in cartList " :key="index">
         <div class="pro-coupon">
           <i class="icon-coupon"></i>
           <p>领券直减10</p>
@@ -102,7 +102,6 @@ export default {
   },
   data() {
     return {
-      cartList: [],
       allChecked: false,
       myShow:true
     };
@@ -116,7 +115,7 @@ export default {
           totalPrice += parseFloat(item.price) * item.count;
         }
       });
-      let allChecked = true;
+      let allChecked = this.cartList.length > 0;
       for (let i = 0; i < this.cartList.length; i++) {
         if (this.cartList[i].checked === false) {
           allChecked = false;
@@ -144,38 +143,13 @@ export default {
         }
       }
       return list;
-    }
+    },
+      cartList(){
+          return this.$store.state.myCart;
+      }
   },
   mounted() {
-    let cartList = [
-{
-        img: require("../assets/images/cart-img-3.png"),
-        name:
-          "HUAWEI P40 Pro 5G 全网通 8GB 128GB（零度白）",
-        config: "零度白,5G全网通 8GB+128GB,官方标配",
-        price: "5988",
-        count: 1
-      },
-      {
-        img: require("../assets/images/cart-img-2.png"),
-        name:
-          "HUAWEI P40 Pro+ 5G 全网通 8GB 128GB（陶瓷黑）",
-        config: " 幻夜黑,Pro 8GB+128GB,官方标配",
-        price: "8888",
-        count: 1
-      },
-      {
-        img: require("../assets/images/cart-img-1.png"),
-        name: "荣耀30 Pro 50倍超稳远摄 超感光高清夜拍 双模5G 麒麟990 5G SoC 8GB 128GB 幻夜黑",
-        config: "竞速蓝,全网通 6GB+128GB,官方标配",
-        price: "3999",
-        count: 1
-      }
-    ];
-    cartList.map(item => {
-      item.checked = false;
-    });
-    this.cartList = cartList;
+
   },
   methods: {
     toPro(index){
@@ -209,7 +183,7 @@ export default {
     },
     myClick2(){
       this.myShow =true;
-      
+
     }
   }
 };

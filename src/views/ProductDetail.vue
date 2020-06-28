@@ -527,9 +527,6 @@ export default {
     toHome() {
       this.$router.push("/");
     },
-    toCart() {
-      this.$router.push("cart");
-    },
     myClick(index) {
       this.itemIndex = index;
       // console.log(this.itemIndex);
@@ -554,7 +551,15 @@ export default {
       this.overlayShow = true;
     },
     toCart() {
-      // this.$store.commit("addCount",this.ProductObject.name);
+        let product = {
+            img: this.ProductObject.swiperImg[0],
+            name: this.ProductObject.name,
+            config: '零度白,5G全网通 8GB+128GB,官方标配',
+            price: this.ProductObject.price,
+            checked:true,
+            count: 1
+        }
+      this.$store.commit("addCart",product);
       this.$router.push("cart");
     }
   }
