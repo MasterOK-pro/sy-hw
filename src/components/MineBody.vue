@@ -38,6 +38,10 @@
             <img src="../../public/imgs/app-mine-user-dflt.png" alt class="topbar-left-user" />
             <router-link to>登录/注册</router-link>
           </div>
+          <div v-else class="mine-topbar-left" :style="{opacity: textOpacity+''}">
+            <img :src="usrInfo.usrHeader" alt class="topbar-left-user" />
+            <div class="usr">{{usrInfo.name}}</div>
+          </div>
         </div>
       </div>
       <div class="mine-topbar-right">
@@ -364,6 +368,7 @@ export default {
   },
   activated () {
     this.showTop = false;
+    this.backOpacity = 0
   }
 };
 </script>
@@ -427,8 +432,11 @@ export default {
 .topbar-left-user {
   width: 1.2rem;
   margin-right: 0.5em;
+  border-radius: 50%;
 }
-
+.mine-topbar-left .usr{
+  color: #fff;
+}
 /* 顶栏右侧部分 */
 .mine-topbar-right {
   display: flex;

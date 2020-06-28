@@ -18,7 +18,7 @@
 
         <div class="pro-panels">
           <label for class="checkbox">
-            <input class="item-checkbox" v-model="item.checked" type="checkbox" />
+            <input class="item-checkbox" v-model="item.checked" type="checkbox" @click="checkBoxTest"/>
           </label>
           <div class="sc-pro-href">
             <p class="p-img">
@@ -70,7 +70,7 @@
     </div>
 
     <!-- 底部 -->
-    <div class="footer">
+    <div v-if="myShow" class="footer">
       <div class="input-wrap">
         <input
           class="footer-check select-all"
@@ -85,7 +85,21 @@
         <span>￥{{totalPrice}}</span>
       </div>
       <div class="action-right">
-        <a href class="action-btn">结算({{totalCount}})</a>
+        <a href class="action-btn count">结算({{totalCount}})</a>
+      </div>
+    </div>
+    <div v-else class="footer">
+      <div class="input-wrap">
+        <input
+          class="footer-check select-all"
+          v-model="allChecked"
+          @change="allSelect"
+          type="checkbox"
+        />
+        <span class="sc-all">全选</span>
+      </div>
+      <div class="action-right">
+        <a class="action-btn del" @click="dltItem">删除</a>
       </div>
     </div>
     <HomePageFooter></HomePageFooter>
@@ -102,7 +116,7 @@ export default {
   },
   data() {
     return {
-      allChecked: false,
+      allChecked: true,
       myShow:true
     };
   },
@@ -152,6 +166,9 @@ export default {
 
   },
   methods: {
+    checkBoxTest () {
+      // console.log (this.$store.state.myCart);
+    },
     toPro(index){
       this.$router.push({path:"Product",query:{name:this.cartList[index].name}});
       // this.$route.meta.title = this.myProduct[index].name;
@@ -180,10 +197,19 @@ export default {
       this.cartList.map(item =>{
         item.checked = false;
       })
+      this.allChecked = false;
     },
     myClick2(){
       this.myShow =true;
-
+    },
+    dltItem () {
+      this.$store.commit ('dltItem');
+      for (let item of this.cartList) {
+        if ( !item.checked ) {
+          this.allChecked = false;
+          break;
+        }
+      }
     }
   }
 };
@@ -567,11 +593,21 @@ input[type="checkbox"]:checked {
   justify-content: center;
 }
 
-.action-btn {
+.action-btn.count {
   width: 4.5rem;
   color: #fff;
   background-image: linear-gradient(90deg, #e43e2d, #ca141d);
   font-size: 0.75rem;
+  border-radius: 1rem;
+  padding: 0.5rem 0.8rem;
+  text-align: center;
+}
+.action-btn.del{
+  width: 4.5rem;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid rgba(51,51,51,.3);
+    font-size: 0.75rem;
   border-radius: 1rem;
   padding: 0.5rem 0.8rem;
   text-align: center;

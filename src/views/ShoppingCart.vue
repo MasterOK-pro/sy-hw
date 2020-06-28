@@ -1,5 +1,5 @@
 <template>
-  <component :is="componentName"></component>
+  <component :is="$store.state.myCart.length?componentName='FullCart':componentName='EmptyCart'"></component>
 </template>
 
 <script>

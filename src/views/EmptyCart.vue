@@ -30,7 +30,7 @@
                   <span>{{item.price}}</span>
                 </b>
               </p>
-              <i class="add-to-cart" @click="toProdcut"></i>
+              <i class="add-to-cart" @click="toProdcut(item.name)"></i>
             </li>
           </ul>
         </div>
@@ -52,8 +52,8 @@ export default {
       toHome(){
           this.$router.push("/");
       },
-      toProdcut(){
-          this.$router.push("product");
+      toProdcut(msg){
+          this.$router.push("product?name="+msg);
       }
   },
   data() {
@@ -71,12 +71,12 @@ export default {
         },
         {
           img: require("../assets/images/pro-3.png"),
-          name: "Mate 30 Pro 5G",
+          name: "HUAWEI Mate 30 Pro 5G",
           price: "6399"
         },
         {
           img: require("../assets/images/pro-4.png"),
-          name: "荣耀X10",
+          name: "荣耀9X",
           price: "2199"
         },
         {
@@ -86,7 +86,7 @@ export default {
         },
         {
           img: require("../assets/images/pro-6.png"),
-          name: "荣耀30S",
+          name: "华为麦芒8",
           price: "2399"
         }
       ]

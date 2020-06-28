@@ -501,6 +501,23 @@ export default {
         this.opa = 0;
         this.show = false;
       }
+
+      let oneTop = document.querySelector ('#detail-one').getBoundingClientRect().top;
+      if ( oneTop<=0 ) {
+        this.itemIndex = 1;
+      }
+      let twoTop = document.querySelector ('#detail-two').getBoundingClientRect().top;
+      if ( twoTop<=0 ) {
+        this.itemIndex = 2;
+      }
+      let threeTop = document.querySelector ('#detail-three').getBoundingClientRect().top;
+      if ( threeTop<=0 ) {
+        this.itemIndex = 3;
+      }
+      let fourTop = document.querySelector ('#detail-four').getBoundingClientRect().top;
+      if ( fourTop<=0 ) {
+        this.itemIndex = 4;
+      }
     },
 
     back() {

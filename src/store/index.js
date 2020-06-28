@@ -48,6 +48,14 @@ export default new Vuex.Store({
           break;
         }
       }
+    },
+    dltItem (state) {
+      for (let i = 0; i < state.myCart.length; i++) {
+        if ( state.myCart[i].checked ) {
+          state.myCart.splice (i, 1);
+          i--;
+        }
+      }
     }
   }
 })

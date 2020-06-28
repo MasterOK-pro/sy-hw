@@ -16,7 +16,7 @@
     </div>
 
     <div class="btn-wrap">
-      <div class="btn-login" @click="login">登录</div>
+      <div class="btn-login" @click="login" :class="{withmsg:usrPwd&&usrName}">登录</div>
     </div>
     <div class="password">
       <strong>
@@ -147,6 +147,9 @@ export default {
   border-radius: 20px;
   text-align: center;
   line-height: 36px;
+}
+.btn-login.withmsg{
+  background-color: #d4303d;
 }
 .password {
   width: 16.5rem;
