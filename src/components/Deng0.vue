@@ -5,7 +5,7 @@
         <span>国家/地区</span>
       </div>
       <div class="c-right">
-        <span>中国 +86</span>
+        <span class="c-area">中国 +86</span>
         <span class="c-icon">
           <img src="../../public/imgs/denglu-right.png" alt />
         </span>
@@ -81,7 +81,11 @@ export default {
   font-size: 20px;
   position: absolute;
   top: 3px;
-  right: 0px;
+  right: -5px;
+}
+.c-area {
+  position: absolute;
+   right:16px;
 }
 .phone {
   width: 16.35rem;
