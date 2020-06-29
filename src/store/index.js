@@ -16,7 +16,8 @@ export default new Vuex.Store({
     },
     myCart:[
 
-    ]
+    ],
+    num:0
   },
   mutations: {
     /* app显示控制 */
@@ -56,6 +57,9 @@ export default new Vuex.Store({
           i--;
         }
       }
+    },
+    totalCount(state,payload){
+      state.num = payload;
     }
   }
 })

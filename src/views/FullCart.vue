@@ -146,6 +146,7 @@ export default {
           totalCount += item.count;
         }
       });
+      this.$store.commit("totalCount",totalCount);
       return totalCount;
     },
 

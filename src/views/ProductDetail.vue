@@ -2,31 +2,31 @@
   <div class="product-container">
     <!-- 头部右侧菜单 -->
     <div class="header-menu" v-if="menuShow">
-      <div class="header-menu-item">
+      <div class="header-menu-item" @click="toHome">
         <div class="header-menu-icon">
           <div class="icon-menu-black"></div>
           <span>首页</span>
         </div>
       </div>
-      <div class="header-menu-item">
+      <div class="header-menu-item" @click="toSearch">
         <div class="header-menu-icon">
           <div class="icon-menu-black black-2"></div>
           <span>搜索</span>
         </div>
       </div>
-      <div class="header-menu-item">
+      <div class="header-menu-item" @click="toClassify">
         <div class="header-menu-icon">
           <div class="icon-menu-black black-3"></div>
           <span>分类</span>
         </div>
       </div>
-      <div class="header-menu-item">
+      <div class="header-menu-item" @click="toCar">
         <div class="header-menu-icon">
           <div class="icon-menu-black black-4"></div>
           <span>购物车</span>
         </div>
       </div>
-      <div class="header-menu-item">
+      <div class="header-menu-item" @click="toMine">
         <div class="header-menu-icon">
           <div class="icon-menu-black black-5"></div>
           <span>我的</span>
@@ -390,7 +390,7 @@
           <p>客服</p>
         </div>
         <div class="pro-property-left-item">
-          <div class="cart-img" @click="toCart"></div>
+          <van-icon name="shopping-cart-o" class="cart-img" :badge="$store.state.num" @click="$router.push('cart')"/>
           <p>购物车</p>
         </div>
       </div>
@@ -577,7 +577,22 @@ export default {
             count: 1
         }
       this.$store.commit("addCart",product);
+
+    },
+    toHome(){
+      this.$router.push("/");
+    },
+    toSearch(){
+      this.$router.push("search");
+    },
+    toClassify(){
+      this.$router.push("classify");
+    },
+    toCar(){
       this.$router.push("cart");
+    },
+    toMine(){
+      this.$router.push("mine");
     }
   }
 };
@@ -1440,13 +1455,13 @@ img {
   background-position: center center;
 }
 .cart-img {
-  width: 100%;
+  width: 1.2rem;
   height: 1.2rem;
-  background-image: url("../assets/images/pro-cart.png");
+  /* background-image: url("../assets/images/pro-cart.png");
   background-size: 1.2rem 1.2rem;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   margin: 0.25rem auto 0.1rem;
-  background-position: center center;
+  /* background-position: center center; */
 }
 
 .pro-property-right {
